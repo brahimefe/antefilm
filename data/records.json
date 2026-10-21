@@ -599,6 +599,382 @@
         ]
       },
       "gloss": "The political imagination in which the <em>camera record</em> — a Chinese presence that only protects, a citizen the state will reach anywhere, a passport as the last word — coincides with the <em>ground record</em>: mass evacuations of citizens, an overseas base opened in the week of release, and a labour record the protection does not cover. Rescue exceptionalism, filed from the other side of the world."
+    },
+    {
+      "slug": "the-martian",
+      "recNum": 7,
+      "year": 2015,
+      "title": "The Martian",
+      "director": "Scott",
+      "runtime": "144 min",
+      "gross": "USD 630M",
+      "grossNum": 630,
+      "studio": "20th Century Fox",
+      "filed": "21.10.2026",
+      "revised": "21.10.2026",
+      "imagination": "competent internationalism",
+      "status": "open",
+      "draft": true,
+      "threshold": {
+        "inCorpus": true,
+        "rank": 10,
+        "note": ""
+      },
+      "beckert": {
+        "imaginaryType": "integrative",
+        "payoffStructure": "positive-sum"
+      },
+      "construction": {
+        "camera": "A storm strands the botanist Mark Watney alone on Mars. The problem is built as <em>technical</em>: food, water, distance, time. The Mars programme itself, its rockets, its budget and its schedule, is given.",
+        "scene": null,
+        "ground": "Six days after the film opened, NASA published its Journey to Mars plan, aiming to land humans on Mars in the 2030s. The plan named no missions, no timeline for landings and no cost. The programme the film takes as given was on record as a concept without a budget.",
+        "sources": [
+          {
+            "text": "NASA (2015). NASA's Journey to Mars: Pioneering Next Steps in Space Exploration. 8 October 2015.",
+            "url": ""
+          },
+          {
+            "text": "Davis, J. (2015). NASA's Journey to Mars report: a plan to form a strategy for a concept. The Planetary Society, 12 October 2015.",
+            "url": "https://www.planetary.org/articles/20151009-nasas-j2m-strategy"
+          }
+        ],
+        "selectionNote": "This is a divergence record: the ground shows the imagination absent rather than enacted. Considered: NASA's 2015 budget request. Not filed: the plan speaks to the same construction directly."
+      },
+      "address": {
+        "camera": "Humanity is the crowd in Times Square, Trafalgar Square and Beijing, watching one American's rescue on giant screens. The crew is international in spirit and American in command.",
+        "scene": null,
+        "ground": "In the year of release, no American vehicle could carry astronauts to orbit. Since the shuttle's retirement in 2011 NASA had bought seats on Russian Soyuz rockets; in August 2015 it agreed to pay USD 490 million for six more, nearly USD 82 million a seat, after Congress underfunded the American replacement.",
+        "sources": [
+          {
+            "text": "CBS News (2015). NASA seats on Russian rockets will cost U.S. $490 million. 6 August 2015.",
+            "url": "https://www.cbsnews.com/news/nasa-seats-on-russian-rockets-will-cost-u-s-490-million"
+          }
+        ],
+        "selectionNote": "Considered: NASA astronaut corps demographics. Not filed: dependence on Russia bears more directly on who could stand in for humanity in space in 2015."
+      },
+      "exclusion": {
+        "camera": "The rescue turns on <em>cooperation</em>. China's space agency offers its secret booster, and the American and Chinese programmes work as one. The film presents this as the obvious thing scientists would do.",
+        "scene": null,
+        "ground": "The same word carries another file. Since April 2011 the Wolf Amendment, renewed in every appropriations act, has barred NASA from using its funds for any bilateral cooperation with China or Chinese-owned companies, or to host official Chinese visitors at its facilities.",
+        "sources": [
+          {
+            "text": "Department of Defense and Full-Year Continuing Appropriations Act, 2011, Public Law 112–10, section 1340 (the Wolf Amendment).",
+            "url": ""
+          },
+          {
+            "text": "Wikipedia (2026). Wolf Amendment, accessed 21 October 2026.",
+            "url": "https://en.wikipedia.org/wiki/Wolf_Amendment"
+          }
+        ],
+        "selectionNote": "Exclusion may range historically; the amendment was in force throughout the film's production and release. The statute itself should replace the encyclopedia source."
+      },
+      "prescription": {
+        "camera": "The remedy is <em>competence</em>: public institutions, science and shared effort. Every crew member comes home, and the film closes on Watney teaching new astronauts as the next mission launches.",
+        "scene": null,
+        "ground": "Policy prescribed a different remedy. In September 2014 NASA awarded up to USD 6.8 billion to two private companies, Boeing and SpaceX, to fly its astronauts. The public competence the film celebrates was being handed to the market.",
+        "sources": [
+          {
+            "text": "The Planetary Society (2014). NASA kicks off a private space race between Boeing and SpaceX. 17 September 2014.",
+            "url": "https://www.planetary.org/articles/20140917-nasa-kicks-off-private-race"
+          }
+        ],
+        "selectionNote": "Divergence record. Considered: the 2015 NASA Authorization debates. Not filed: the contracts are the enacted remedy."
+      },
+      "circulation": {
+        "productionSupport": "NASA worked closely with the production, according to the director; about 40 NASA staff attended a Washington screening.",
+        "scriptInvolvement": "Adapted by Drew Goddard from Andy Weir's novel; NASA reviewed technical accuracy and called the film mostly accurate.",
+        "distributionChannels": "20th Century Fox worldwide release, including mainland China.",
+        "authorityInfrastructure": "NASA announced evidence of liquid water on Mars on 28 September 2015, days before release; NASA denied timing it to the film.",
+        "onTheSameChannels": "US security and science agencies worked on over 800 films and 1,000 television titles, according to records obtained under freedom-of-information requests.",
+        "offTheSameChannels": "The legal bar on US–China space cooperation has no comparable channel to the public.",
+        "sources": [
+          {
+            "text": "The New Daily (2015). NASA denies conspiring with Hollywood. 30 September 2015.",
+            "url": "https://www.thenewdaily.com.au/life/entertainment/movies/2015/09/30/conspiracies-hollywood-the-red-planet"
+          },
+          {
+            "text": "University of Bath (2017). US government influence on films and television. 28 June 2017.",
+            "url": "https://bath.ac.uk/announcements/us-government-influence-on-films-and-television"
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — a public space programme taken for granted, cooperation with China as common sense, competence as the remedy — meets a <em>ground record</em> that runs the other way: a Mars plan without a budget, a country without its own way to orbit, cooperation with China barred by law, and astronaut transport handed to private firms. One of the corpus's rare integrative futures, and on record it was not being built."
+    },
+    {
+      "slug": "captain-marvel",
+      "recNum": 8,
+      "year": 2019,
+      "title": "Captain Marvel",
+      "director": "Boden / Fleck",
+      "runtime": "124 min",
+      "gross": "USD 1.13B",
+      "grossNum": 1131,
+      "studio": "Disney",
+      "filed": "21.10.2026",
+      "revised": "21.10.2026",
+      "imagination": "armed refuge",
+      "status": "open",
+      "draft": true,
+      "threshold": {
+        "inCorpus": true,
+        "rank": 5,
+        "note": ""
+      },
+      "beckert": {
+        "imaginaryType": "integrative",
+        "payoffStructure": "positive-sum"
+      },
+      "construction": {
+        "camera": "The Skrulls are built as shape-shifting <em>infiltrators</em>, enemies who can look like anyone. Halfway through, the film reveals them as refugees fleeing an empire's war of extermination.",
+        "scene": null,
+        "ground": "On 27 January 2017 the President signed an order titled \"Protecting the Nation from Foreign Terrorist Entry into the United States\". It suspended refugee admissions for 120 days, stopped Syrian refugees indefinitely and cut the year's ceiling from 110,000 to 50,000. Refugees were constructed as possible infiltrators.",
+        "sources": [
+          {
+            "text": "Executive Order 13769, 27 January 2017. Summary in Wikipedia (2026), accessed 21 October 2026.",
+            "url": "https://en.wikipedia.org/wiki/Executive_Order_13769"
+          }
+        ],
+        "selectionNote": "Considered: the March 2017 revised order (13780). Not filed: the January order states the construction most directly. The Federal Register text should replace the encyclopedia source."
+      },
+      "address": {
+        "camera": "The film ends with its heroine adopting the refugees as her cause. The \"we\" widens from a US Air Force pilot to a displaced people with children.",
+        "scene": null,
+        "ground": "The year the film was released, the United States admitted at most 30,000 refugees, and in September 2019 set the next year's ceiling at 18,000, the lowest since Congress created the resettlement programme in 1980.",
+        "sources": [
+          {
+            "text": "Pew Research Center (2019). Key facts about refugees to the U.S. 7 October 2019.",
+            "url": "https://www.pewresearch.org/short-reads/2019/10/07/key-facts-about-refugees-to-the-u-s/"
+          }
+        ],
+        "selectionNote": "Divergence record: the film widens the \"we\", the record narrows it. Considered: UNHCR's 2019 global resettlement figures. Not filed: the agent condition favours US policy."
+      },
+      "exclusion": {
+        "camera": "The emotional resolution is a <em>family</em> reunited: the Skrull commander finds his wife and daughter, hidden and alive.",
+        "scene": null,
+        "ground": "The same word carries another file. In January 2019 the Inspector General of the Department of Health and Human Services reported that the government may have separated thousands more migrant children from their parents than the 2,737 already identified, and that poor records left the true number unknown.",
+        "sources": [
+          {
+            "text": "Al Jazeera (2019). US may have separated 'thousands more' migrant children: audit. 17 January 2019 (on HHS OIG report OEI-BL-18-00511).",
+            "url": "https://www.aljazeera.com/news/2019/1/17/us-may-have-separated-thousands-more-migrant-children-audit"
+          }
+        ],
+        "selectionNote": "Exclusion may range historically; this record falls within the film's own period. The OIG report itself should be linked when finalised."
+      },
+      "prescription": {
+        "camera": "The remedy is an <em>empowered guardian</em> in space. Carol Danvers leaves Earth to protect the refugees across the galaxy, and Nick Fury drafts a plan for a new defence initiative.",
+        "scene": null,
+        "ground": "On 20 December 2019 the National Defense Authorization Act created the US Space Force, a sixth armed service within the Department of the Air Force — the service that had supported the film.",
+        "sources": [
+          {
+            "text": "Via Satellite (2019). Trump formally establishes Space Force. 23 December 2019.",
+            "url": "https://www.satellitetoday.com/government-military/2019/12/23/trump-formally-establishes-space-force/"
+          }
+        ],
+        "selectionNote": "Considered: the 2018 National Defense Strategy. Not filed: the Space Force is the enacted remedy closest to the film's guardian in orbit."
+      },
+      "circulation": {
+        "productionSupport": "US Air Force access to airmen, installations and aircraft; the star flew in an F-16 and toured an F-15 at Nellis Air Force Base, hosted by Brig. Gen. Jeannie Leavitt, the service's first female fighter pilot.",
+        "scriptInvolvement": "The Air Force has advised Marvel productions on the depiction of its pilots since Iron Man (2008).",
+        "distributionChannels": "Disney worldwide release; USD 1.13B.",
+        "authorityInfrastructure": "The Air Force said the film was not part of a recruiting strategy; the Air Force Academy later said it saw no unusual rise in women applicants after the film.",
+        "onTheSameChannels": "US security agencies worked on over 800 films and 1,000 television titles, according to records obtained under freedom-of-information requests.",
+        "offTheSameChannels": "The record of refugee admissions and family separation reached the public through inspectors general and courts, not through the studio channels that carried the film.",
+        "sources": [
+          {
+            "text": "Keller, J. (2018). 'Captain Marvel' is the recruiting tool of the Air Force's dreams. Task & Purpose, 18 September 2018.",
+            "url": "https://taskandpurpose.com/news/captain-marvel-air-force-recruiting/"
+          },
+          {
+            "text": "Military.com (2020). Captain Marvel effect? Air Force Academy sees most female applicants in 5 years. January 2020.",
+            "url": "https://military.com/daily-news/2020/01/05/captain-marvel-effect-air-force-academy-sees-most-female-applicants-5-years.html"
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — infiltrators revealed as refugees, a widened \"we\", a family reunited, a guardian sent into space — meets a <em>ground record</em> that kept only the last of these: refugees framed as terrorist entry, the lowest admissions ceiling on record, families separated at the border, and a new armed service for space. The film's integrative future travelled; the state enacted its armed half."
+    },
+    {
+      "slug": "transformers",
+      "recNum": 9,
+      "year": 2007,
+      "title": "Transformers",
+      "director": "Bay",
+      "runtime": "144 min",
+      "gross": "USD 710M",
+      "grossNum": 710,
+      "studio": "Paramount / DreamWorks",
+      "filed": "21.10.2026",
+      "revised": "21.10.2026",
+      "imagination": "machine alliance",
+      "status": "open",
+      "draft": true,
+      "threshold": {
+        "inCorpus": true,
+        "rank": 5,
+        "note": ""
+      },
+      "beckert": {
+        "imaginaryType": "restoration",
+        "payoffStructure": "zero-sum"
+      },
+      "construction": {
+        "camera": "The film opens on a US special-operations base in Qatar destroyed by an alien machine. The attackers are not human, so the war needs no cause. The American presence in the Gulf is <em>given</em>: the base is simply there.",
+        "scene": null,
+        "ground": "The presence was on record. Since 2003 Qatar's Al Udeid Air Base has hosted the forward headquarters of US Central Command, with flights to Afghanistan and Iraq; by 2017 about 10,000 US troops were stationed there.",
+        "sources": [
+          {
+            "text": "Al Jazeera (2017). US military: no plans to change our posture in Qatar. 6 June 2017.",
+            "url": "https://www.aljazeera.com/news/2017/6/6/us-military-no-plans-to-change-our-posture-in-qatar"
+          }
+        ],
+        "selectionNote": "The troop figure dates from 2017; a figure for 2007 would satisfy the same-period condition better."
+      },
+      "address": {
+        "camera": "Two \"we\"s carry the film: a teenage boy in an American suburb, and a squad of US soldiers who survive the desert attack and fight the machines at home.",
+        "scene": null,
+        "ground": "The soldiers stood for a force at its largest. As of 1 November 2007, during the surge, 164,424 US troops were in Iraq, nearly 20,000 of them from the National Guard and Reserves.",
+        "sources": [
+          {
+            "text": "O'Bryant, J. & Waterhouse, M. (2007). U.S. Forces in Iraq. Congressional Research Service, RS22449, updated 30 November 2007.",
+            "url": "https://www.everycrsreport.com/files/20071130_RS22449_5c12c39618162461030fe6d4d59198ee2c52d834.html"
+          }
+        ],
+        "selectionNote": "Considered: Iraqi civilian deaths in 2007. Not filed here: the attention asks who stands in for \"us\", and the film's \"us\" is the deployed soldier."
+      },
+      "exclusion": {
+        "camera": "A secret agency, <em>Sector Seven</em>, has hidden alien technology for decades, answers to no one, and turns out to be on the right side. Secrecy is played for laughs and then for victory.",
+        "scene": null,
+        "ground": "The same word carries another file. On 17 December 2005 the President acknowledged that he had authorised the National Security Agency to intercept communications after 2001 without court approval, and said he had reauthorised the programme more than 30 times.",
+        "sources": [
+          {
+            "text": "CNN (2005). Bush says he signed NSA wiretap order. 17 December 2005.",
+            "url": "https://edition.cnn.com/2005/POLITICS/12/17/bush.nsa/index.html"
+          }
+        ],
+        "selectionNote": "Exclusion may range historically. Considered: CIA secret detention, acknowledged in September 2006. Not filed: domestic surveillance is closer to Sector Seven's watching of Americans."
+      },
+      "prescription": {
+        "camera": "The remedy is an alliance of soldiers and <em>machines</em>. Good robots fight beside US troops, F-22s and an Osprey; at the end the Autobots' leader invites more machines to come to Earth.",
+        "scene": null,
+        "ground": "The same prescription was the Army's plan. In March 2007 the Government Accountability Office reviewed the Future Combat System, a network of manned and unmanned ground and air vehicles costed by the Army at about USD 160 billion and independently at up to USD 234 billion, and found most of its technologies immature.",
+        "sources": [
+          {
+            "text": "US Government Accountability Office (2007). Defense Acquisitions: Key Decisions to Be Made on Future Combat System. GAO-07-376, 15 March 2007.",
+            "url": "https://www.govinfo.gov/content/pkg/GAOREPORTS-GAO-07-376/html/GAOREPORTS-GAO-07-376.htm"
+          }
+        ],
+        "selectionNote": "Considered: F-22 procurement. Not filed: the Future Combat System matches the film's teaming of soldiers and machines."
+      },
+      "circulation": {
+        "productionSupport": "About 300 airmen and soldiers on screen; filming at Edwards and Holloman Air Force Bases and White Sands Missile Range; F-117, CV-22 Osprey and F-22 Raptor; producers reimbursed flight costs.",
+        "scriptInvolvement": "Reviewed under the Pentagon's entertainment liaison office (Phil Strub); Capt. Christian Hodge served as the Defense Department project officer.",
+        "distributionChannels": "Paramount and DreamWorks worldwide release; USD 710M.",
+        "authorityInfrastructure": "Official Air Force news stories promoted the production and its airmen.",
+        "onTheSameChannels": "US security agencies worked on over 800 films and 1,000 television titles, according to records obtained under freedom-of-information requests.",
+        "offTheSameChannels": "The surveillance programme reached the public through a newspaper leak, which the President called illegal, not through the channels that carried the film.",
+        "sources": [
+          {
+            "text": "Miles, D. (n.d.). Movie makers team with military to create realism. American Forces Press Service.",
+            "url": "https://www.af.mil/News/Features/Display/Article/143457/movie-makers-team-with-military-to-create-realism/"
+          },
+          {
+            "text": "University of Bath (2017). US government influence on films and television. 28 June 2017.",
+            "url": "https://bath.ac.uk/announcements/us-government-influence-on-films-and-television"
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — a Gulf base that needs no explanation, the deployed soldier as \"us\", a secret agency that is secretly good, machines as allies — coincides with the <em>ground record</em>: CENTCOM's forward base in Qatar, the surge's peak, warrantless surveillance, and a USD 160 billion bet on robotic war. The present order is restored, with better machines."
+    },
+    {
+      "slug": "the-battle-at-lake-changjin",
+      "recNum": 10,
+      "year": 2021,
+      "title": "The Battle at Lake Changjin",
+      "director": "Chen / Tsui / Lam",
+      "runtime": "178 min",
+      "gross": "USD 910M",
+      "grossNum": 910,
+      "studio": "Bona",
+      "filed": "21.10.2026",
+      "revised": "21.10.2026",
+      "imagination": "martyr sovereignty",
+      "status": "open",
+      "draft": true,
+      "threshold": {
+        "inCorpus": true,
+        "rank": 2,
+        "note": ""
+      },
+      "beckert": {
+        "imaginaryType": "restoration",
+        "payoffStructure": "zero-sum"
+      },
+      "construction": {
+        "camera": "In 1950 American forces advance toward the Chinese border and bomb across it. The problem is built as <em>encirclement</em>: a superpower at the gate. China's entry into the war is given as defence.",
+        "scene": null,
+        "ground": "Three months before the film opened, at the Communist Party's centenary on 1 July 2021, the General Secretary warned that any foreign force trying to bully China would meet a Great Wall of steel forged by 1.4 billion people. The same construction, a nation encircled, was stated as policy.",
+        "sources": [
+          {
+            "text": "Reuters (2021). Xi warns against foreign bullying as China marks party centenary. 1 July 2021, as published by Cyprus Mail.",
+            "url": "https://cyprus-mail.com/2021/07/01/xi-warns-against-foreign-bullying-as-china-marks-party-centenary"
+          }
+        ],
+        "selectionNote": "Considered: China's 2019 defence white paper. Not filed: the centenary speech falls in the film's period and is the occasion the film was commissioned for."
+      },
+      "address": {
+        "camera": "The \"we\" is the Seventh Company and two brothers, Wu Qianli and Wu Wanli, who stand for a nation of soldiers. The dead are named and honoured; the Americans are seen from a distance.",
+        "scene": null,
+        "ground": "On 2 September 2021, a month before release, an air force plane escorted by two fighters brought the remains of 109 Chinese People's Volunteers home from South Korea to Shenyang, the eighth such return since 2014, received in a state ceremony.",
+        "sources": [
+          {
+            "text": "The State Council of the PRC (2021). Remains of 109 Chinese soldiers killed in Korean War return. 3 September 2021.",
+            "url": "https://english.www.gov.cn/news/photos/202109/03/content_WS61318171c6d0df57f98df980.html"
+          }
+        ],
+        "selectionNote": "Considered: PLA recruitment drives in 2021. Not filed: the repatriation records who stands for the nation in the film's own terms."
+      },
+      "exclusion": {
+        "camera": "The keyword is <em>martyr</em>. The soldiers freeze and die without retreating, and the film asks the audience to honour them without question.",
+        "scene": null,
+        "ground": "The same word carries another file. In October 2021 police detained the former journalist Luo Changping after he mocked the soldiers in a post about the film; in May 2022 a court in Sanya sentenced him to seven months for impugning the reputation of heroes and martyrs.",
+        "sources": [
+          {
+            "text": "Radio Free Asia (2022). Chinese journalist sentenced in Hainan for smearing reputation of CCP heroes. 6 May 2022.",
+            "url": "https://rfa.org/english/news/china/sentenced-05062022102548.html"
+          }
+        ],
+        "selectionNote": "Exclusion may range historically; this record concerns the film itself. Considered: the 2018 Heroes and Martyrs Protection Law. Not filed alone: the Luo case shows the law applied to this film."
+      },
+      "prescription": {
+        "camera": "The remedy is <em>sacrifice now for security later</em>: the soldiers fight so that the next generation will not have to. The film closes on the enemy's withdrawal.",
+        "scene": null,
+        "ground": "On 5 March 2021 China announced a defence budget of 1.355 trillion yuan, about USD 209 billion, up 6.8 per cent on the previous year.",
+        "sources": [
+          {
+            "text": "Janes (2021). China announces 6.8% increase in 2021 defence budget. 5 March 2021.",
+            "url": "https://www.janes.com/defence-news/news-detail/china-announces-68-increase-in-2021-defence-budget-0503"
+          }
+        ],
+        "selectionNote": "Considered: the 2021 conscription regulations. Not filed: the budget is the enacted scale of the remedy."
+      },
+      "circulation": {
+        "productionSupport": "Commissioned by the Central Propaganda Department for the Party's centenary, with the National Radio and Television Administration and the Central Military Commission; budget about USD 200 million, the most expensive Chinese film made.",
+        "scriptInvolvement": "Directed by Chen Kaige, Tsui Hark and Dante Lam under the commission.",
+        "distributionChannels": "Opened in China on 30 September 2021, before National Day; the highest-grossing Chinese film until 2025.",
+        "authorityInfrastructure": "Premiered as the opening film of the Beijing International Film Festival.",
+        "onTheSameChannels": "A sequel, The Battle at Lake Changjin II, followed in 2022 and also entered the worldwide top ten.",
+        "offTheSameChannels": "Accounts that the war began with North Korea's invasion of the South do not move through the same channels; questioning the film's soldiers was prosecuted.",
+        "sources": [
+          {
+            "text": "Wikipedia (2026). The Battle at Lake Changjin, accessed 21 October 2026.",
+            "url": "https://en.wikipedia.org/wiki/The_Battle_at_Lake_Changjin"
+          },
+          {
+            "text": "Radio Free Asia (2022). 6 May 2022.",
+            "url": "https://rfa.org/english/news/china/sentenced-05062022102548.html"
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — a nation encircled, soldiers as the nation, martyrs beyond question, sacrifice as security — coincides with the <em>ground record</em>: a centenary speech of steel walls, the dead flown home under fighter escort, a critic jailed for mocking the film's soldiers, and a rising defence budget. The future is secured by the dead, and doubting them is a crime."
     }
   ]
 }

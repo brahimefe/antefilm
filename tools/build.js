@@ -142,7 +142,7 @@ const typeChip = (type) => `<span class="chip">${swatch(type)}${esc((TYPES[type]
 function recordList(depth) {
   const up = '../'.repeat(depth);
   return `<ul class="zen-records">${RECORDS.slice().sort((a, b) => b.recNum - a.recNum).map((r) => `
-    <li><a href="${up}records/${r.slug}/${IX}"><span class="zr-imag">${esc(r.imagination)}</span><span class="zr-film">${esc(r.title)}, ${r.year}${r.draft ? ' (draft)' : ''}</span></a></li>`).join('')}
+    <li><a href="${up}records/${r.slug}/${IX}"><span class="dot${r.beckert.imaginaryType === 'integrative' ? ' on' : ''}" aria-hidden="true"></span><span class="zr-imag">${esc(r.imagination)}</span><span class="zr-film">${esc(r.title)}, ${r.year}${r.beckert.imaginaryType === 'integrative' ? ', an ending open to everyone' : ''}${r.draft ? ' (draft)' : ''}</span></a></li>`).join('')}
   </ul>`;
 }
 
@@ -171,6 +171,8 @@ function buildHome() {
 <section class="zen zen-hero">
   <p class="zen-num">${integ}<span> of ${collective}</span></p>
   <h1>global hits since 2001 that put a shared future at stake imagine one open to everyone.</h1>
+  <div class="pictograph" aria-hidden="true">${corpus.filter((c) => !['personal', 'uncoded'].includes(c.imaginaryType)).map((c) => `<i class="${c.imaginaryType === 'integrative' ? 'on' : ''}" title="${esc(c.title + ', ' + c.year)}"></i>`).join('')}</div>
+  <p class="pictograph-cap">Each square is one of the ${collective} films, in order of release from 2001 to 2025.</p>
   <p class="zen-sub">The rest defend the present, escape it, or return to the past.</p>
 </section>
 
@@ -186,9 +188,9 @@ function buildHome() {
 <section class="zen" aria-labelledby="instead-h">
   <h2 id="instead-h" class="zen-h">What they offer instead</h2>
   <dl class="instead">
-    <div><dt>${restor}</dt><dd>restore the present order</dd></div>
-    <div><dt>${anomic}</dt><dd>imagine collapse, or escape for the few</dd></div>
-    <div><dt>${retro}</dt><dd>return to an idealised past</dd></div>
+    <div><dt>${restor}</dt><dd>restore the present order</dd><span class="squares" aria-hidden="true">${'<i></i>'.repeat(restor)}</span></div>
+    <div><dt>${anomic}</dt><dd>imagine collapse, or escape for the few</dd><span class="squares" aria-hidden="true">${'<i></i>'.repeat(anomic)}</span></div>
+    <div><dt>${retro}</dt><dd>return to an idealised past</dd><span class="squares" aria-hidden="true">${'<i></i>'.repeat(retro)}</span></div>
   </dl>
 </section>
 
@@ -196,7 +198,7 @@ function buildHome() {
   <h2 id="records-h" class="zen-h">The same futures, on record</h2>
   <p class="zen-sub">Each record sets a film's imagined future beside what states were doing at the same time.</p>
   <ul class="zen-records">${latest.map((r) => `
-    <li><a href="records/${r.slug}/${IX}"><span class="zr-imag">${esc(r.imagination)}</span><span class="zr-film">${esc(r.title)}, ${r.year}</span></a></li>`).join('')}
+    <li><a href="records/${r.slug}/${IX}"><span class="dot${r.beckert.imaginaryType === 'integrative' ? ' on' : ''}" aria-hidden="true"></span><span class="zr-imag">${esc(r.imagination)}</span><span class="zr-film">${esc(r.title)}, ${r.year}${r.beckert.imaginaryType === 'integrative' ? ', an ending open to everyone' : ''}</span></a></li>`).join('')}
   </ul>
   <p><a href="records/${IX}">All ${RECORDS.length} records</a></p>
 </section>
@@ -277,7 +279,7 @@ function buildRecord(r, i, sorted) {
   <p class="rec-film">${esc(r.title)}<span>${r.year}, dir. ${esc(r.director)}${corpusRow ? `, number ${corpusRow.rank} worldwide that year` : ''}</span></p>
   <h1 class="imagination">${esc(r.imagination)}</h1>
   <p class="rec-summary">${r.gloss}</p>
-  <p class="rec-meta">Record ${no}. Filed ${esc(r.filed)}${r.revised && r.revised !== r.filed ? `, revised ${esc(r.revised)}` : ''}. Ending coded ${esc(TYPES[r.beckert.imaginaryType].label.toLowerCase())}, ${esc((PAYOFF[r.beckert.payoffStructure] || '').toLowerCase())}.${status.length ? ` <span class="rec-status">${status.join('. ')}.</span>` : ''}</p>
+  <p class="rec-meta">Record ${no}. Filed ${esc(r.filed)}${r.revised && r.revised !== r.filed ? `, revised ${esc(r.revised)}` : ''}. <span class="rec-ending"><i class="${r.beckert.imaginaryType === 'integrative' ? 'on' : ''}" aria-hidden="true"></i>Ending coded ${esc(TYPES[r.beckert.imaginaryType].label.toLowerCase())}, ${esc((PAYOFF[r.beckert.payoffStructure] || '').toLowerCase())}.</span>${status.length ? ` <span class="rec-status">${status.join('. ')}.</span>` : ''}</p>
   ${r.threshold.note ? `<p class="rec-meta">${esc(r.threshold.note)}</p>` : ''}
 </header>
 

@@ -63,7 +63,7 @@ year,rank,title,distributor,grossUSD,period,imaginaryType,payoffStructure,coding
 2007,2,Harry Potter and the Order of the Phoenix,Warner Bros.,941676843,I,anomic-collapse,zero-sum,Ministry denial; war begins,,,unknown,,unknown,unknown,unknown
 2007,3,Spider-Man 3,Sony,895871626,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
 2007,4,Shrek the Third,Paramount,813367380,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
-2007,5,Transformers,Paramount / DreamWorks,709709780,I,restoration,zero-sum,Decepticons defeated with US military,,,unknown,,unknown,unknown,unknown
+2007,5,Transformers,Paramount / DreamWorks,709709780,I,restoration,zero-sum,Decepticons defeated with US military,009,https://antefilm.com/records/transformers/,unknown,,unknown,unknown,unknown
 2007,6,Ratatouille,Disney,623726085,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
 2007,7,I Am Legend,Warner Bros.,585410052,I,anomic-collapse,zero-sum,Cure reaches a walled survivor colony,,,unknown,,unknown,unknown,unknown
 2007,8,The Simpsons Movie,20th Century Fox,536414270,I,restoration,positive-sum,Town saved from the federal dome,,,unknown,,unknown,unknown,unknown
@@ -148,7 +148,7 @@ year,rank,title,distributor,grossUSD,period,imaginaryType,payoffStructure,coding
 2015,7,Inside Out,Disney,858811174,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
 2015,8,Mission: Impossible – Rogue Nation,Paramount,682714267,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
 2015,9,The Hunger Games: Mockingjay – Part 2,Lionsgate,653428261,II,integrative,positive-sum,New order after revolution,,,unknown,,unknown,unknown,unknown
-2015,10,The Martian,20th Century Fox,630161890,II,integrative,positive-sum,"International scientific cooperation, including China",,,unknown,,unknown,unknown,unknown
+2015,10,The Martian,20th Century Fox,630161890,II,integrative,positive-sum,"International scientific cooperation, including China",007,https://antefilm.com/records/the-martian/,unknown,,unknown,unknown,unknown
 2016,1,Captain America: Civil War,Disney,1153296293,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
 2016,2,Rogue One: A Star Wars Story,Disney,1056057273,II,anomic-collapse,negative-sum,All protagonists die; hope transferred,,,unknown,,unknown,unknown,unknown
 2016,3,Finding Dory,Disney,1029266989,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
@@ -183,7 +183,7 @@ year,rank,title,distributor,grossUSD,period,imaginaryType,payoffStructure,coding
 2019,2,The Lion King,Disney,1662943394,III,retrotopian,zero-sum,Rightful hierarchy restored; hyenas excluded,,,unknown,,unknown,unknown,unknown
 2019,3,Frozen 2,Disney,1453026933,III,integrative,positive-sum,Dam destroyed as reparation to the Northuldra,,,unknown,,unknown,unknown,unknown
 2019,4,Spider-Man: Far From Home,Sony,1133927996,III,restoration,positive-sum,Fabricated threats exposed,,,unknown,,unknown,unknown,unknown
-2019,5,Captain Marvel,Disney,1131274794,III,integrative,positive-sum,Heroine helps refugees find a home,,,unknown,,unknown,unknown,unknown
+2019,5,Captain Marvel,Disney,1131274794,III,integrative,positive-sum,Heroine helps refugees find a home,008,https://antefilm.com/records/captain-marvel/,unknown,,unknown,unknown,unknown
 2019,6,Joker,Warner Bros.,1079751311,III,anomic-collapse,negative-sum,,,,unknown,,unknown,unknown,unknown
 2019,7,Star Wars: The Rise of Skywalker,Disney,1077144248,III,restoration,zero-sum,,,,unknown,,unknown,unknown,unknown
 2019,8,Toy Story 4,Disney,1074841294,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
@@ -200,7 +200,7 @@ year,rank,title,distributor,grossUSD,period,imaginaryType,payoffStructure,coding
 2020,9,A Little Red Flower,HG Entertainment,238600000,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
 2020,10,Shock Wave 2,Universe Films,226400000,III,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
 2021,1,Spider-Man: No Way Home,Sony,1921426073,IV,restoration,positive-sum,Villains cured rather than killed,,,unknown,,unknown,unknown,unknown
-2021,2,The Battle at Lake Changjin,Bona,909596236,IV,restoration,zero-sum,National war film,,,unknown,,unknown,unknown,unknown
+2021,2,The Battle at Lake Changjin,Bona,909596236,IV,restoration,zero-sum,National war film,010,https://antefilm.com/records/the-battle-at-lake-changjin/,unknown,,unknown,unknown,unknown
 2021,3,"Hi, Mom",Lian Ray,841674419,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
 2021,4,No Time to Die,MGM / Universal,774253007,IV,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
 2021,5,F9,Universal,726229501,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown

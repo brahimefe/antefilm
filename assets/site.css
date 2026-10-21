@@ -395,3 +395,102 @@ details.cite summary { cursor: pointer; font-size: var(--s1); font-weight: 600; 
   .instead dd { font-size: var(--s1); }
 }
 .ledger.zen-mode .cell[data-type="uncoded"] { border: 0; border-left: 4px solid var(--rule); }
+
+/* ================= design pass 2: one accent, films as squares ================= */
+/* Layout concept: an archival ledger where colour belongs to one thing only —
+   the rare future open to everyone. Everything else is ink, paper and rule. */
+:root {
+  --board: #F1F2EE;
+  --sheet: #FAFAF8;
+  --ink: #17202A;
+  --graphite: #59626C;
+  --rule: #D5D9D2;
+  --faint: #E3E7E0;
+  --accent: #1E7A5A;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #DCEFE6;
+  --film-tint: #F4EEE6;
+  --film-label: #7A4A21;
+  --record-tint: #E8EDF2;
+  --record-label: #2D4F78;
+  --t-integrative: #1E7A5A; --t-integrative-bg: #DCEFE6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --board: #14191E; --sheet: #1B2128; --ink: #E7EAE4; --graphite: #A3ACB4; --rule: #333C45; --faint: #262E36;
+    --accent: #5FCFA2; --accent-ink: #0E1A15; --accent-soft: #1C3229;
+    --film-tint: #241F1A; --film-label: #E0B07E; --record-tint: #1B2430; --record-label: #9BBDE8;
+    --t-integrative: #5FCFA2; --t-integrative-bg: #1C3229;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --board: #14191E; --sheet: #1B2128; --ink: #E7EAE4; --graphite: #A3ACB4; --rule: #333C45; --faint: #262E36;
+  --accent: #5FCFA2; --accent-ink: #0E1A15; --accent-soft: #1C3229;
+  --film-tint: #241F1A; --film-label: #E0B07E; --record-tint: #1B2430; --record-label: #9BBDE8;
+  --t-integrative: #5FCFA2; --t-integrative-bg: #1C3229;
+  color-scheme: dark;
+}
+
+/* ink links, one accent */
+a { color: var(--ink); text-decoration-color: var(--rule); text-decoration-thickness: 1px; }
+a:hover { text-decoration-color: var(--ink); }
+:focus-visible { outline-color: var(--accent); }
+.brand { font-size: var(--s0); letter-spacing: 0.02em; }
+.brand span { color: var(--accent); }
+.mast { background: var(--board); }
+.mast .wrap { padding-top: 22px; padding-bottom: 18px; }
+.nav a[aria-current="page"] { border-bottom-color: var(--accent); }
+.foot { background: var(--board); }
+
+/* the hero: a number, a sentence, and the 150 films */
+.zen-hero { padding: 88px 0 80px; }
+.zen-num { color: var(--accent); font-size: clamp(5rem, 15vw, 10rem); margin-bottom: 8px; }
+.zen-hero h1 { font-weight: 500; max-width: 26ch; }
+.pictograph { display: grid; grid-template-columns: repeat(30, minmax(0, 1fr)); gap: 3px; max-width: 520px; margin: 28px 0 14px; }
+.pictograph i { display: block; aspect-ratio: 1; border-radius: 1px; background: var(--faint); }
+.pictograph i.on { background: var(--accent); }
+.pictograph-cap { font-size: var(--s-1); color: var(--graphite); margin: 0 0 28px; max-width: 520px; }
+
+/* atlas: integrative cells filled, everything else quiet */
+.ledger { border-top-color: var(--ink); }
+.ledger-row { border-bottom-color: var(--faint); }
+.cell { border-radius: 1px; }
+.ledger.zen-mode .cell:not(.t-integrative) { border-left-color: var(--faint); background-color: transparent; color: var(--graphite); }
+.ledger.zen-mode .cell.t-integrative { background-color: var(--accent); color: var(--accent-ink); border-left-color: var(--accent); }
+.cell.filed { background-image: linear-gradient(225deg, var(--ink) 0 7px, transparent 7px); }
+.ledger.zen-mode .cell.t-integrative.filed { background-image: linear-gradient(225deg, var(--accent-ink) 0 7px, transparent 7px); }
+.zen-legend .swatch.t-integrative { background: var(--accent); border-color: var(--accent); }
+.zen-grey { --sw: var(--faint); --swbg: var(--faint); }
+.btn { border-radius: 2px; }
+.btn[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); }
+
+/* what they offer instead: counts as rows of squares */
+.instead { gap: 34px; max-width: 900px; }
+.instead div { grid-template-columns: 4.5ch minmax(0, 1fr); row-gap: 8px; }
+.instead dt { color: var(--ink); }
+.instead dd { font-size: var(--s1); }
+.instead .squares { grid-column: 2; display: flex; flex-wrap: wrap; gap: 3px; max-width: 520px; }
+.instead .squares i { width: 11px; height: 11px; background: var(--graphite); opacity: 0.55; border-radius: 1px; }
+
+/* records as an index of named imaginations */
+.zen-records a { grid-template-columns: 14px minmax(0, 1fr); column-gap: 16px; align-items: baseline; }
+.zen-records .dot { width: 12px; height: 12px; border-radius: 1px; background: var(--faint); align-self: center; }
+.zen-records .dot.on { background: var(--accent); }
+.zen-records .zr-imag, .zen-records .zr-film { grid-column: 2; }
+
+/* record pages: two papers, not two colours */
+.rec-zen .imagination { font-weight: 500; }
+.rec-ending { display: inline-flex; gap: 8px; align-items: center; }
+.rec-ending i { width: 12px; height: 12px; border-radius: 1px; background: var(--faint); display: inline-block; }
+.rec-ending i.on { background: var(--accent); }
+.camera { background: var(--film-tint); border-left: 0; padding: 18px 20px; }
+.camera em { color: var(--film-label); }
+.camera .regtag, .key-camera { color: var(--film-label); }
+.ground { background: var(--record-tint); border-left: 0; padding: 18px 20px; }
+.ground em { color: var(--record-label); }
+.ground .regtag, .key-ground { color: var(--record-label); }
+.attention { border-top-color: var(--faint); }
+.attention .question { margin-bottom: 18px; }
+.rec-status { color: var(--stamp); }
+.att-nav { background: var(--board); }
