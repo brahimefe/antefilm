@@ -455,6 +455,17 @@ function buildContent() {
   write('submit.html', layout({ title: 'Submit a record — antefilm', description: 'Propose a record for the antefilm corpus. All submissions are reviewed before publication.', active: 'submit', body: fragment('submit.html'), scripts: ['assets/submit.js'] }));
   write('tools/new-record.html', layout({ depth: 1, title: 'Add a record (local tool) — antefilm', description: 'Local editing tool.', active: '', body: fragment('submit.html').replace(/href="method.html"/g, 'href="../method.html"'), scripts: ['assets/submit.js'], bodyAttr: ' data-local-tool' }));
 
+  /* withdrawn records: their addresses lead to the records list */
+  const WITHDRAWN = { 'argo': '002', 'american-sniper': '003' };
+  for (const [slug, num] of Object.entries(WITHDRAWN)) {
+    write(`records/${slug}/index.html`, `<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Record ${num} withdrawn — antefilm</title><meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=../">
+</head><body><p>Record ${num} was withdrawn on 21 October 2026 because the film is outside the top-ten threshold. <a href="../">See all records</a>.</p></body></html>
+`);
+  }
+
   /* old links: cases.html#slug -> records/slug/ */
   const map = JSON.stringify(Object.fromEntries(RECORDS.map((r) => [r.slug, 'records/' + r.slug + '/'])));
   write('cases.html', `<!DOCTYPE html>

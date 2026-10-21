@@ -86,160 +86,7 @@ const RECORDS = [
   },
 
   /* ===========================================================
-     REC.002 — ARGO (2012, Affleck)
-     =========================================================== */
-  {
-    slug: "argo",
-    recNum: 2,
-    year: 2012,
-    title: "Argo",
-    director: "Affleck",
-    runtime: "120 min",
-    gross: "USD 232M",
-    grossNum: 232,
-    studio: "Warner Bros.",
-    filed: "16.05.2026",
-    revised: "21.10.2026",
-    imagination: "rescue exceptionalism",
-    status: "open",
-    threshold: { inCorpus: false, rank: null, note: "Outside the qualifying threshold: not in the 2012 worldwide top ten, whose tenth film grossed USD 654M. Editorial decision pending." },
-    beckert: { imaginaryType: "restoration", payoffStructure: "zero-sum" },
-
-    construction: {
-      camera: "A revolution in Iran is staged in the opening as <em>onset</em>: storyboards trace the Shah, the embassy seizure, the hostages. The cause is glossed in a minute of voiceover; what remains is the standing problem of Americans trapped abroad. The CIA, in the figure of Tony Mendez, supplies the agency the situation lacks.",
-      scene: null,
-      ground: "The film's prologue compresses 1953 to 1979 — the CIA-MI6 coup against Mosaddegh, the Shah's installation, SAVAK — into context. The standing problem ceases to be a US action and becomes an Iranian state. The ground record of US covert action in Iran, which the CIA formally acknowledged in documents released in 2013, does not return to the frame.",
-      sources: [
-        { text: "National Security Archive (2013). CIA Confirms Role in 1953 Iran Coup. Electronic Briefing Book No. 435, 19 August 2013.", url: "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB435/" },
-        { text: "US Department of State (2017). Foreign Relations of the United States, 1952–1954, Iran, 1951–1954. Washington, DC: Office of the Historian.", url: "https://history.state.gov/historicaldocuments/frus1951-54Iran/preface" }
-      ],
-      selectionNote: "Considered: US arms sales to the Shah, 1970s. Not filed: the 1953 coup is the construction the prologue itself compresses."
-    },
-    address: {
-      camera: "Six American diplomats hidden in the Canadian ambassador's residence. The film addresses an audience for whom <em>their</em> safety is the stake, <em>their</em> faces the ones the camera holds. The fifty-two hostages at the embassy itself remain peripheral; the Iranians who appear are mostly the crowd, mostly hostile, mostly without name.",
-      scene: null,
-      ground: "The students who took the embassy had their own demands — the Shah's return to stand trial among them — and later published their own account of the seizure. The film records none of it. The exception (\"rescue\") requires an unspecified mass (\"hostility\") to function.",
-      sources: [
-        { text: "Ebtekar, M. (2000). Takeover in Tehran: The Inside Story of the 1979 U.S. Embassy Capture (as told to Fred A. Reed). Vancouver: Talonbooks.", url: "" }
-      ],
-      selectionNote: "Considered: Iranian casualty figures of the revolution. Not filed: the attention concerns who is given a voice, and the hostage-takers' own account is the direct counter-record."
-    },
-    exclusion: {
-      camera: "The word <em>rescue</em> structures the film. The CIA rescues six. The audience is invited to feel the rescue as the resolution of the crisis. The closing intertitles record the diplomats' safe return as ending.",
-      scene: null,
-      ground: "The same word carries another file. <em>Rescue</em> in US foreign policy 1953–2012 includes the deposition of elected governments framed as rescue from communism; the 1980 Operation Eagle Claw, which left eight US servicemen dead and is absent from the film; and the rescues that did not happen — embassy workers, civilians under sanctions, populations under US-backed regimes.",
-      sources: [
-        { text: "US Department of State (2017). Foreign Relations of the United States, 1952–1954, Iran, 1951–1954.", url: "https://history.state.gov/historicaldocuments/frus1951-54Iran/preface" },
-        { text: "Special Operations Review Group (1980). Rescue Mission Report [the Holloway Report]. Washington, DC: Joint Chiefs of Staff.", url: "" }
-      ],
-      selectionNote: "Exclusion may range historically. Eagle Claw is filed because it is the same crisis's failed rescue, omitted by the film."
-    },
-    prescription: {
-      camera: "The remedy is <em>exception</em>. Where ordinary diplomacy fails, the cinematic ruse — a fake film crew — succeeds. The film proposes covert improvisation as the morally available form of action, with the CIA officer as its hero.",
-      scene: null,
-      ground: "The same prescription operates at policy level: the doctrine of exceptional action — covert operation, special forces, targeted improvisation — as the legitimate modality of US foreign engagement, recurring from 1953 through 2012's drone-strike escalations.",
-      sources: [
-        { text: "Mazzetti, M. (2013). The Way of the Knife: The CIA, a Secret Army, and a War at the Ends of the Earth. New York: Penguin Press.", url: "" }
-      ],
-      selectionNote: "Interpretive pairing; a primary document on drone-strike policy in 2012 would strengthen it."
-    },
-    circulation: {
-      productionSupport: "CIA Office of Public Affairs support, documented in a CIA Inspector General audit (31 December 2012) released under FOIA; the audit could not establish its extent.",
-      scriptInvolvement: "Chris Terrio's screenplay adapts Mendez's memoir The Master of Disguise (1999) and Joshuah Bearman's Wired article (2007).",
-      distributionChannels: "Warner Bros. global distribution; co-production with Smokehouse Pictures, GK Films.",
-      authorityInfrastructure: "Academy Award (Best Picture 2013); Michelle Obama's Oscars presentation transferred state authority to the screen.",
-      onTheSameChannels: "The CIA Office of Public Affairs has cooperated with productions including <em>Zero Dark Thirty</em>, <em>The Recruit</em>, <em>The Agency</em>.",
-      offTheSameChannels: "No counter-distribution exists for Iranian accounts of the 1953 coup or for the broader civilian record of US covert action in the region.",
-      sources: [
-        { text: "Leopold, J. (n.d.). The CIA helped produce Top Chef and Covert Affairs [on the CIA Inspector General audit of 31 December 2012]. VICE News.", url: "https://news.vice.com/article/cia-helped-produce-top-chef-covert-affairs" },
-        { text: "Mendez, A. J. (1999). The Master of Disguise: My Secret Life in the CIA. New York: William Morrow.", url: "" },
-        { text: "Bearman, J. (2007). How the CIA used a fake sci-fi flick to rescue Americans from Tehran. Wired.", url: "" },
-        { text: "Jenkins, T. (2012). The CIA in Hollywood: How the Agency Shapes Film and Television. Austin: University of Texas Press.", url: "" },
-        { text: "Alford, M. & Secker, T. (2017). National Security Cinema. Drum Roll Books.", url: "" }
-      ]
-    },
-
-    gloss: "The political imagination in which the <em>camera record</em> — covert rescue as moral resolution, the exceptional act as legitimate intervention, the CIA officer as ethical agent — coincides with the <em>ground record</em>: a doctrine of exception that organises US foreign action across the period, from coup to covert operation to targeted strike. The rescue addresses some bodies as worth saving; the same imagination, on the ground, structures whom it is permissible to leave outside the rescue."
-  },
-
-  /* ===========================================================
-     REC.003 — AMERICAN SNIPER (2014, Eastwood)
-     =========================================================== */
-  {
-    slug: "american-sniper",
-    recNum: 3,
-    year: 2014,
-    title: "American Sniper",
-    director: "Eastwood",
-    runtime: "133 min",
-    gross: "USD 547M",
-    grossNum: 547,
-    studio: "Warner Bros.",
-    filed: "16.05.2026",
-    revised: "21.10.2026",
-    imagination: "saviour soldier",
-    status: "open",
-    threshold: { inCorpus: false, rank: null, note: "Outside the qualifying threshold: not in the 2014 or 2015 worldwide top ten, whose tenth films grossed USD 678M and USD 630M. Editorial decision pending." },
-    beckert: { imaginaryType: "restoration", payoffStructure: "zero-sum" },
-
-    construction: {
-      camera: "A threat is present in the Iraqi city street. A figure approaches — a woman, a child. The soldier must judge in seconds. The film constructs the problem as <em>moral discrimination under pressure</em>: who is a combatant, who is not, all decided through the rifle scope. Iraq itself is given as a hostile environment, etiology unspecified.",
-      scene: null,
-      ground: "The 2003 invasion of Iraq, framed by the camera as setting, is the unnamed cause of the threat the soldier discriminates within. Iraq Body Count documents 150,772 civilian deaths from violence between 2003 and the end of 2014. The film's <em>given</em> is the ground record's <em>consequence</em>.",
-      sources: [
-        { text: "Iraq Body Count (2015). Iraq 2014: Civilian deaths almost doubling year on year. 1 January 2015.", url: "https://www.iraqbodycount.org/analysis/numbers/2014/" }
-      ],
-      selectionNote: "Considered: the Lancet mortality surveys (2004, 2006). Not filed: IBC's documented count is the more conservative and better-sourced figure."
-    },
-    address: {
-      camera: "Chris Kyle, his family, his unit, his town. The camera holds American faces: the wife on the phone, the brother in country, the child at home. The Iraqi bodies in the frame are framed through the scope — at distance, at the moment of judgement, mostly without name.",
-      scene: null,
-      ground: "In 2014 alone, the year the film was released, IOM identified 2.1 million Iraqis internally displaced. They never address the camera as \"we.\" The film's \"we\" is national; the ground record's \"we\" is unavailable to it.",
-      sources: [
-        { text: "IOM Displacement Tracking Matrix (2014). Iraq IDP crisis, Round XI report, 25 December 2014.", url: "https://displacement.iom.int/sites/g/files/tmzbdl1461/files/reports/Round11_Report_English_2014_December_25_IOM_DTM.pdf" }
-      ],
-      selectionNote: "Considered: UNHCR's figure for Iraqi refugees abroad. Not filed: internal displacement in the release year is closer to the film's Iraqi setting."
-    },
-    exclusion: {
-      camera: "The word <em>protection</em> structures the film. Kyle protects his unit, his family, the children he will not let be killed by their parents. <em>Protection</em> is the moral framework of his vocation, the answer to why he returns.",
-      scene: null,
-      ground: "The same word carries another file. <em>Protection</em> in the doctrinal vocabulary of the period — the responsibility to protect, force protection, civilian protection — recurs as the language under which interventions were authorised; ground records of those interventions show protection as a condition the protected often did not consent to or survive.",
-      sources: [
-        { text: "United Nations General Assembly (2005). 2005 World Summit Outcome. A/RES/60/1, paragraphs 138–139.", url: "" },
-        { text: "Costs of War Project (n.d.). Watson Institute for International and Public Affairs, Brown University.", url: "https://watson.brown.edu/costsofwar/" }
-      ],
-      selectionNote: "Exclusion may range historically; the 2005 doctrine is filed because it fixes the term's institutional meaning in the period."
-    },
-    prescription: {
-      camera: "The remedy is <em>the soldier</em>. Not policy reform, not withdrawal, not the renegotiation of the war. Kyle returns to country four times; the closing dedicates the film to him. The soldier's vocation is positioned as the moral form available to the audience.",
-      scene: null,
-      ground: "The same prescription operates at policy level: the framing of military service as the locus of national moral life, the soldier as moral subject of foreign action, the absorption of policy questions into questions of individual valor and sacrifice.",
-      sources: [
-        { text: "Bacevich, A. J. (2013). Breach of Trust: How Americans Failed Their Soldiers and Their Country. New York: Metropolitan Books.", url: "" },
-        { text: "Lutz, C. (Ed.) (2009). The Bases of Empire: The Global Struggle against U.S. Military Posts. New York: NYU Press. [Author to confirm this is the intended Lutz 2009.]", url: "" }
-      ],
-      selectionNote: "Interpretive pairing, resting on scholarship rather than a policy document."
-    },
-    circulation: {
-      productionSupport: "No formal Department of Defense production assistance found in the sources checked. Former Navy SEAL Kevin Lacz served as technical adviser.",
-      scriptInvolvement: "Based on Chris Kyle's memoir (2012, with Scott McEwen and Jim DeFelice), which the Department of Defense vetted and partly redacted before publication.",
-      distributionChannels: "Warner Bros. global release; Village Roadshow co-production; largest January opening on record at the time (USD 89.2M, January 2015).",
-      authorityInfrastructure: "Veteran community endorsement; Academy nominations; box-office performance positioned the film as cultural settlement on the Iraq war.",
-      onTheSameChannels: "US security agencies worked on over 800 films and 1,000 television titles, according to entertainment-liaison records obtained under freedom-of-information requests.",
-      offTheSameChannels: "Iraqi cinema's record of the same war does not move through the same studio and distribution architecture; the Iraqi camera has no equivalent pre-clearance.",
-      sources: [
-        { text: "Wikipedia (2026). American Sniper (production and release sections), accessed 21 October 2026.", url: "https://en.wikipedia.org/wiki/American_Sniper" },
-        { text: "Kyle, C., McEwen, S. & DeFelice, J. (2012). American Sniper: The Autobiography of the Most Lethal Sniper in U.S. Military History. New York: William Morrow.", url: "" },
-        { text: "University of Bath (2017). US government influence on films and television. 28 June 2017.", url: "https://bath.ac.uk/announcements/us-government-influence-on-films-and-television" },
-        { text: "Robb, D. L. (2004). Operation Hollywood: How the Pentagon Shapes and Censors the Movies. Amherst, NY: Prometheus Books.", url: "" }
-      ]
-    },
-
-    gloss: "The political imagination in which the <em>camera record</em> — the soldier as moral subject, protection as vocation, the rifle scope as instrument of ethical judgement — coincides with the <em>ground record</em>: the policy framework in which military service absorbs the political question of war and individual valor stands in for collective accountability. Film and policy travel as two registers of one imagination; the camera grants the soldier the moral authority that the ground record withholds from the policy."
-  },
-
-  /* ===========================================================
-     REC.004 — TOP GUN: MAVERICK (2022, Kosinski)  · DRAFT
+     REC.004 — TOP GUN: MAVERICK (2022, Kosinski)
      =========================================================== */
   {
     slug: "top-gun-maverick",
@@ -255,7 +102,6 @@ const RECORDS = [
     revised: "21.10.2026",
     imagination: "preemptive nostalgia",
     status: "open",
-    draft: true,
     threshold: { inCorpus: true, rank: 2, note: "" },
     beckert: { imaginaryType: "retrotopian", payoffStructure: "zero-sum" },
 
@@ -312,7 +158,7 @@ const RECORDS = [
   },
 
   /* ===========================================================
-     REC.005 — IRON MAN (2008, Favreau)  · DRAFT
+     REC.005 — IRON MAN (2008, Favreau)
      =========================================================== */
   {
     slug: "iron-man",
@@ -328,7 +174,6 @@ const RECORDS = [
     revised: "21.10.2026",
     imagination: "privatised salvation",
     status: "open",
-    draft: true,
     threshold: { inCorpus: true, rank: 8, note: "" },
     beckert: { imaginaryType: "anomic-escape", payoffStructure: "zero-sum" },
 
@@ -385,7 +230,7 @@ const RECORDS = [
   },
 
   /* ===========================================================
-     REC.006 — WOLF WARRIOR 2 (2017, Wu)  · DRAFT
+     REC.006 — WOLF WARRIOR 2 (2017, Wu)
      =========================================================== */
   {
     slug: "wolf-warrior-2",
@@ -401,7 +246,6 @@ const RECORDS = [
     revised: "21.10.2026",
     imagination: "protective reach",
     status: "open",
-    draft: true,
     threshold: { inCorpus: true, rank: 7, note: "" },
     beckert: { imaginaryType: "restoration", payoffStructure: "zero-sum" },
 
@@ -453,10 +297,10 @@ const RECORDS = [
       ]
     },
 
-    gloss: "The political imagination in which the <em>camera record</em> — a Chinese presence that only protects, a citizen the state will reach anywhere, a passport as the last word — coincides with the <em>ground record</em>: mass evacuations of citizens, an overseas base opened in the week of release, and a labour record the protection does not cover. Rescue exceptionalism, filed from the other side of the world."
+    gloss: "The political imagination in which the <em>camera record</em> — a Chinese presence that only protects, a citizen the state will reach anywhere, a passport as the last word — coincides with the <em>ground record</em>: mass evacuations of citizens, an overseas base opened in the week of release, and a labour record the protection does not cover. Rescue as national reach, filed from outside Hollywood."
   },
   /* ===========================================================
-     REC.007 — THE MARTIAN (2015, Scott)  · DRAFT
+     REC.007 — THE MARTIAN (2015, Scott)
      =========================================================== */
   {
     slug: "the-martian",
@@ -472,7 +316,6 @@ const RECORDS = [
     revised: "21.10.2026",
     imagination: "competent internationalism",
     status: "open",
-    draft: true,
     threshold: { inCorpus: true, rank: 10, note: "" },
     beckert: { imaginaryType: "integrative", payoffStructure: "positive-sum" },
 
@@ -531,7 +374,7 @@ const RECORDS = [
   },
 
   /* ===========================================================
-     REC.008 — CAPTAIN MARVEL (2019, Boden / Fleck)  · DRAFT
+     REC.008 — CAPTAIN MARVEL (2019, Boden / Fleck)
      =========================================================== */
   {
     slug: "captain-marvel",
@@ -547,7 +390,6 @@ const RECORDS = [
     revised: "21.10.2026",
     imagination: "armed refuge",
     status: "open",
-    draft: true,
     threshold: { inCorpus: true, rank: 5, note: "" },
     beckert: { imaginaryType: "integrative", payoffStructure: "positive-sum" },
 
@@ -604,7 +446,7 @@ const RECORDS = [
   },
 
   /* ===========================================================
-     REC.009 — TRANSFORMERS (2007, Bay)  · DRAFT
+     REC.009 — TRANSFORMERS (2007, Bay)
      =========================================================== */
   {
     slug: "transformers",
@@ -620,7 +462,6 @@ const RECORDS = [
     revised: "21.10.2026",
     imagination: "machine alliance",
     status: "open",
-    draft: true,
     threshold: { inCorpus: true, rank: 5, note: "" },
     beckert: { imaginaryType: "restoration", payoffStructure: "zero-sum" },
 
@@ -677,7 +518,7 @@ const RECORDS = [
   },
 
   /* ===========================================================
-     REC.010 — THE BATTLE AT LAKE CHANGJIN (2021, Chen / Tsui / Lam)  · DRAFT
+     REC.010 — THE BATTLE AT LAKE CHANGJIN (2021, Chen / Tsui / Lam)
      =========================================================== */
   {
     slug: "the-battle-at-lake-changjin",
@@ -693,7 +534,6 @@ const RECORDS = [
     revised: "21.10.2026",
     imagination: "martyr sovereignty",
     status: "open",
-    draft: true,
     threshold: { inCorpus: true, rank: 2, note: "" },
     beckert: { imaginaryType: "restoration", payoffStructure: "zero-sum" },
 
