@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>new case — antefilm</title>
+<link rel="stylesheet" href="antefilm.css">
+<style>
+  /* sayfa-özel stiller */
+  .form-body { padding: 36px 56px 56px; }
+  .form-body h1 { font-family: var(--sans); font-size: 32px; font-weight: 700; margin: 4px 0 8px; letter-spacing: -0.015em; }
+  .form-body .lead { font-size: 15px; color: var(--mute-2); margin-bottom: 28px; max-width: 60ch; }
+
+  .fblock {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .fblock:last-of-type { border-bottom: none; }
+  .fblock .lbl {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--signal);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .fblock .hint {
+    font-family: var(--sans);
+    font-size: 13.5px;
+    color: var(--mute-2);
+    margin-bottom: 14px;
+  }
+  .fblock input[type="text"], .fblock textarea {
+    width: 100%;
+    background: var(--faint);
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 11px 14px;
+    font-family: var(--sans);
+    font-size: 14.5px;
+    color: var(--ink);
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 0;
+  }
+  .fblock input[type="text"]:focus, .fblock textarea:focus { border-color: var(--signal); }
+  .fblock textarea { resize: vertical; min-height: 70px; line-height: 1.5; font-family: var(--sans); }
+
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .row4 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .col-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--signal);
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .actions {
+    display: flex;
+    gap: 12px;
+    margin: 24px 0 16px;
+    flex-wrap: wrap;
+  }
+  .actions button {
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    padding: 14px 26px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .actions button:hover { background: var(--signal); }
+  .actions button.secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+  .actions button.secondary:hover { background: var(--ink); color: var(--bg); }
+
+  .output-box {
+    margin-top: 24px;
+    padding: 24px;
+    background: var(--hero-bg);
+    color: var(--hero-text);
+    border-left: 4px solid var(--signal);
+    display: none;
+  }
+  .output-box.visible { display: block; }
+  .output-box .hdr {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--signal);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .output-box pre {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.55;
+    margin: 0;
+    color: var(--hero-text);
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 14px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(245,234,208,0.15);
+  }
+  .output-box .instructions {
+    font-family: var(--sans);
+    font-size: 13.5px;
+    color: var(--hero-mute);
+    margin: 14px 0 0;
+    line-height: 1.6;
+  }
+  .output-box .instructions b { color: var(--signal); font-weight: 600; }
+
+  .copy-btn {
+    background: var(--signal);
+    color: var(--ink);
+    border: none;
+    padding: 10px 18px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 14px;
+  }
+  .copy-btn:hover { background: var(--hero-text); }
+
+  .status-pick {
+    display: flex;
+    gap: 18px;
+    margin-top: 8px;
+    font-family: var(--sans);
+    font-size: 14px;
+  }
+  .status-pick label { cursor: pointer; }
+  .status-pick input { margin-right: 6px; }
+
+  @media (max-width: 880px) {
+    .form-body { padding: 24px 22px 40px; }
+    .row2, .row3, .row4 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="bar">
+    <span class="brand"><a href="index.html">ANTEFILM</a></span>
+    <nav class="nav">
+      <a href="index.html">home</a>
+      <a href="cases.html">cases</a>
+      <a href="method.html">method</a>
+      <a href="about.html">about</a>
+      <a href="submit.html">submit</a>
+    </nav>
+  </header>
+
+  <main class="form-body">
+    <div class="kicker" style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em; color: var(--signal); margin-bottom: 12px; text-transform: uppercase; font-weight: 600;">— new case · local tool</div>
+    <h1>Add a new case.</h1>
+    <p class="lead">Fill the form. Click <b>generate code</b>. Copy the result. Paste it into <code>cases.js</code>. Upload <code>cases.js</code> to Hostinger. The site picks it up automatically.</p>
+
+    <!-- ============ HEADER ============ -->
+    <div class="fblock">
+      <div class="lbl">— record header</div>
+      <div class="hint">Basic information. Slug is the URL fragment (no spaces, lowercase, hyphens only).</div>
+      <input type="text" id="f-title" placeholder="film title (e.g. Top Gun: Maverick)">
+      <input type="text" id="f-slug" placeholder="slug (e.g. top-gun-maverick)">
+      <div class="row3">
+        <input type="text" id="f-director" placeholder="director (e.g. Kosinski)">
+        <input type="text" id="f-year" placeholder="year (e.g. 2022)">
+        <input type="text" id="f-runtime" placeholder="runtime (e.g. 131 min)">
+      </div>
+      <div class="row3">
+        <input type="text" id="f-gross" placeholder="gross (e.g. USD 1.49B)">
+        <input type="text" id="f-grossnum" placeholder="gross in millions (e.g. 1488)">
+        <input type="text" id="f-studio" placeholder="studio (e.g. Paramount)">
+      </div>
+      <div class="row2">
+        <input type="text" id="f-filed" placeholder="filed date (e.g. 20.05.2026)">
+        <input type="text" id="f-recnum" placeholder="recNum (next number, e.g. 4)">
+      </div>
+      <input type="text" id="f-imagination" placeholder="named imagination (e.g. preemptive sovereignty)">
+
+      <div class="status-pick">
+        <label><input type="radio" name="status" value="open" checked> open (all fields filled)</label>
+        <label><input type="radio" name="status" value="pending"> pending (header only)</label>
+      </div>
+    </div>
+
+    <!-- ============ I · CONSTRUCTION ============ -->
+    <div class="fblock">
+      <div class="lbl">— I · construction</div>
+      <div class="hint">What is built as problem; what is left as given. Use &lt;em&gt;word&lt;/em&gt; to highlight a keyword.</div>
+      <div class="row2">
+        <div>
+          <div class="col-tag">camera record</div>
+          <textarea id="f-c1-camera" placeholder="what the film constructs as problem, cause, given"></textarea>
+        </div>
+        <div>
+          <div class="col-tag">ground record</div>
+          <textarea id="f-c1-ground" placeholder="the same construction at operational level"></textarea>
+        </div>
+      </div>
+      <input type="text" id="f-c1-scene" placeholder="optional — scene marker for camera column (e.g. 01:12 — opening sequence)">
+      <input type="text" id="f-c1-sources" placeholder="sources (e.g. UNHCR Global Trends 2014 · FAO Food Security 2014)">
+    </div>
+
+    <!-- ============ II · ADDRESS ============ -->
+    <div class="fblock">
+      <div class="lbl">— II · address</div>
+      <div class="hint">Who stands in for the species.</div>
+      <div class="row2">
+        <div>
+          <div class="col-tag">camera record</div>
+          <textarea id="f-c2-camera" placeholder="the bodies the film shows when it says 'we' / 'humanity' / 'us'"></textarea>
+        </div>
+        <div>
+          <div class="col-tag">ground record</div>
+          <textarea id="f-c2-ground" placeholder="the bodies that were not available to stand in"></textarea>
+        </div>
+      </div>
+      <input type="text" id="f-c2-scene" placeholder="optional — scene marker">
+      <input type="text" id="f-c2-sources" placeholder="sources">
+    </div>
+
+    <!-- ============ III · EXCLUSION ============ -->
+    <div class="fblock">
+      <div class="lbl">— III · exclusion</div>
+      <div class="hint">Which carriers of the same keyword stay off-record.</div>
+      <div class="row2">
+        <div>
+          <div class="col-tag">camera record</div>
+          <textarea id="f-c3-camera" placeholder="the keyword the film carries and its meaning within the film"></textarea>
+        </div>
+        <div>
+          <div class="col-tag">ground record</div>
+          <textarea id="f-c3-ground" placeholder="the same keyword's other file — what it names elsewhere on record"></textarea>
+        </div>
+      </div>
+      <input type="text" id="f-c3-scene" placeholder="optional — scene marker">
+      <input type="text" id="f-c3-sources" placeholder="sources">
+    </div>
+
+    <!-- ============ IV · PRESCRIPTION ============ -->
+    <div class="fblock">
+      <div class="lbl">— IV · prescription</div>
+      <div class="hint">What the framing proposes as future-reality.</div>
+      <div class="row2">
+        <div>
+          <div class="col-tag">camera record</div>
+          <textarea id="f-c4-camera" placeholder="the remedy the film proposes"></textarea>
+        </div>
+        <div>
+          <div class="col-tag">ground record</div>
+          <textarea id="f-c4-ground" placeholder="the same prescription enacted at policy level"></textarea>
+        </div>
+      </div>
+      <input type="text" id="f-c4-scene" placeholder="optional — scene marker">
+      <input type="text" id="f-c4-sources" placeholder="sources">
+    </div>
+
+    <!-- ============ V · CIRCULATION ============ -->
+    <div class="fblock">
+      <div class="lbl">— V · circulation</div>
+      <div class="hint">The infrastructure that pre-clears the framing. Four camera items, two ground items.</div>
+      <div class="row4">
+        <div>
+          <div class="col-tag">production support</div>
+          <textarea id="f-c5-production" placeholder="state, military, scientific, institutional cooperation in production"></textarea>
+        </div>
+        <div>
+          <div class="col-tag">script involvement</div>
+          <textarea id="f-c5-script" placeholder="advisors, review, requested changes"></textarea>
+        </div>
+        <div>
+          <div class="col-tag">distribution channels</div>
+          <textarea id="f-c5-distribution" placeholder="distributor, co-production, market reach"></textarea>
+        </div>
+        <div>
+          <div class="col-tag">authority infrastructure</div>
+          <textarea id="f-c5-authority" placeholder="institutional brokers, authority signals"></textarea>
+        </div>
+      </div>
+      <div class="row2" style="margin-top: 14px;">
+        <div>
+          <div class="col-tag">— on the same channels</div>
+          <textarea id="f-c5-onsame" placeholder="what the same infrastructure also distributes"></textarea>
+        </div>
+        <div>
+          <div class="col-tag">— off the same channels</div>
+          <textarea id="f-c5-offsame" placeholder="what the same infrastructure does not distribute"></textarea>
+        </div>
+      </div>
+      <input type="text" id="f-c5-sources" placeholder="sources">
+    </div>
+
+    <!-- ============ GLOSS ============ -->
+    <div class="fblock">
+      <div class="lbl">— the imagination, named</div>
+      <div class="hint">2–4 sentences. The political imagination camera and ground records jointly carry. Use &lt;em&gt;camera record&lt;/em&gt; and &lt;em&gt;ground record&lt;/em&gt; to highlight.</div>
+      <textarea id="f-gloss" placeholder="The political imagination in which the camera record... coincides with the ground record... Film and policy travel as two registers of one imagination."></textarea>
+    </div>
+
+    <!-- ============ ACTIONS ============ -->
+    <div class="actions">
+      <button onclick="generate()">▸ generate code</button>
+      <button class="secondary" onclick="clearForm()">clear form</button>
+    </div>
+
+    <!-- ============ OUTPUT ============ -->
+    <div class="output-box" id="output">
+      <div class="hdr">— generated code · ready to paste into cases.js</div>
+      <button class="copy-btn" onclick="copyCode()">▸ copy to clipboard</button>
+      <pre id="output-code"></pre>
+      <p class="instructions">
+        <b>1.</b> Click <b>copy to clipboard</b> above.<br>
+        <b>2.</b> Open <code>cases.js</code> in a text editor.<br>
+        <b>3.</b> Find the <code>const CASES = [</code> line. Inside the array, after the last open case, paste this block.<br>
+        <b>4.</b> Make sure there's a comma <code>,</code> after the previous case's closing <code>}</code>.<br>
+        <b>5.</b> Save <code>cases.js</code> and upload it to Hostinger.<br>
+        The site picks up the new case automatically — homepage card, archive listing, filters, all update.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="foot">
+    <span>local tool · not uploaded to the site</span>
+    <a href="cases.html">to the cases ▸</a>
+  </footer>
+
+</div>
+
+<script>
+function esc(s) {
+  // JS string olarak güvenli — sadece ters tırnak ve ${} kaçışı gerekir
+  // çünkü template literal kullanıyoruz; ama biz normal "..." string yazıyoruz
+  // sadece çift tırnak ve backslash escape edilmeli
+  return s.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n');
+}
+
+function val(id) {
+  const el = document.getElementById(id);
+  return (el && el.value || '').trim();
+}
+
+function generate() {
+  const status = document.querySelector('input[name="status"]:checked').value;
+  const title = val('f-title');
+  const slug = val('f-slug');
+
+  if (!title || !slug) {
+    alert('At minimum, fill in title and slug.');
+    return;
+  }
+
+  let code = '';
+
+  if (status === 'pending') {
+    // kısa pending form
+    code = `  {
+    slug: "${esc(slug)}",
+    year: ${val('f-year') || 0},
+    title: "${esc(title)}",
+    director: "${esc(val('f-director'))}",
+    gross: "${esc(val('f-gross'))}",
+    grossNum: ${val('f-grossnum') || 0},
+    status: "pending"
+  },`;
+  } else {
+    // tam form
+    const sceneOrNull = (v) => v ? `"${esc(v)}"` : 'null';
+
+    code = `  {
+    slug: "${esc(slug)}",
+    recNum: ${val('f-recnum') || 0},
+    year: ${val('f-year') || 0},
+    title: "${esc(title)}",
+    director: "${esc(val('f-director'))}",
+    runtime: "${esc(val('f-runtime'))}",
+    gross: "${esc(val('f-gross'))}",
+    grossNum: ${val('f-grossnum') || 0},
+    studio: "${esc(val('f-studio'))}",
+    filed: "${esc(val('f-filed'))}",
+    imagination: "${esc(val('f-imagination'))}",
+    status: "open",
+
+    construction: {
+      camera: "${esc(val('f-c1-camera'))}",
+      scene: ${sceneOrNull(val('f-c1-scene'))},
+      ground: "${esc(val('f-c1-ground'))}",
+      sources: "${esc(val('f-c1-sources'))}"
+    },
+    address: {
+      camera: "${esc(val('f-c2-camera'))}",
+      scene: ${sceneOrNull(val('f-c2-scene'))},
+      ground: "${esc(val('f-c2-ground'))}",
+      sources: "${esc(val('f-c2-sources'))}"
+    },
+    exclusion: {
+      camera: "${esc(val('f-c3-camera'))}",
+      scene: ${sceneOrNull(val('f-c3-scene'))},
+      ground: "${esc(val('f-c3-ground'))}",
+      sources: "${esc(val('f-c3-sources'))}"
+    },
+    prescription: {
+      camera: "${esc(val('f-c4-camera'))}",
+      scene: ${sceneOrNull(val('f-c4-scene'))},
+      ground: "${esc(val('f-c4-ground'))}",
+      sources: "${esc(val('f-c4-sources'))}"
+    },
+
+    circulation: {
+      productionSupport: "${esc(val('f-c5-production'))}",
+      scriptInvolvement: "${esc(val('f-c5-script'))}",
+      distributionChannels: "${esc(val('f-c5-distribution'))}",
+      authorityInfrastructure: "${esc(val('f-c5-authority'))}",
+      onTheSameChannels: "${esc(val('f-c5-onsame'))}",
+      offTheSameChannels: "${esc(val('f-c5-offsame'))}",
+      sources: "${esc(val('f-c5-sources'))}"
+    },
+
+    gloss: "${esc(val('f-gloss'))}"
+  },`;
+  }
+
+  document.getElementById('output-code').textContent = code;
+  document.getElementById('output').classList.add('visible');
+  document.getElementById('output').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function copyCode() {
+  const code = document.getElementById('output-code').textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    const original = btn.textContent;
+    btn.textContent = '✓ copied';
+    setTimeout(() => { btn.textContent = original; }, 1500);
+  }).catch(() => {
+    // fallback for browsers without clipboard API
+    const ta = document.createElement('textarea');
+    ta.value = code;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('Copied to clipboard.');
+  });
+}
+
+function clearForm() {
+  if (!confirm('Clear all fields?')) return;
+  document.querySelectorAll('input[type="text"], textarea').forEach(el => el.value = '');
+  document.querySelector('input[name="status"][value="open"]').checked = true;
+  document.getElementById('output').classList.remove('visible');
+}
+</script>
+</body>
+</html>

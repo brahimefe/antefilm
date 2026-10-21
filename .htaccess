@@ -1,0 +1,7 @@
+# Yerel araçlar ve belgeler depoda durur ama sitede açılmaz.
+<FilesMatch "^(README\.md|_new-case\.html|\.gitignore)$">
+  Require all denied
+</FilesMatch>
+
+# Gizli dosya ve klasörlere (.git vb.) erişimi engelle
+RedirectMatch 404 /\.git

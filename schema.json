@@ -1,0 +1,204 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://antefilm.com/schema.json",
+  "title": "Antefilm Case Schema",
+  "description": "Formal data model for an antefilm case record. Each case applies a five-attention protocol (construction, address, exclusion, prescription, circulation) to a film of global scale, recording both what the film puts forward (camera record) and what is enacted, on record, beside it (ground record). The protocol treats mass form as constitutive rather than reflective (Comyn 2018).",
+  "version": "1.0.0",
+  "author": "İbrahim Efe",
+  "license": "CC BY 4.0",
+
+  "type": "object",
+  "required": ["slug", "year", "title", "director", "status"],
+
+  "properties": {
+
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Unique URL-safe identifier. Lowercase, hyphenated, no spaces or punctuation.",
+      "examples": ["interstellar", "top-gun-maverick", "spider-man-no-way-home"]
+    },
+
+    "recNum": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Sequential record number, assigned in order of filing. Only required for open records."
+    },
+
+    "year": {
+      "type": "integer",
+      "minimum": 2001,
+      "description": "Year of theatrical release. Project scope is 2001 onwards."
+    },
+
+    "title": {
+      "type": "string",
+      "description": "Official release title in English. Localised titles are not used."
+    },
+
+    "director": {
+      "type": "string",
+      "description": "Director surname only, for filing purposes. Co-directors recorded as combined surname (e.g. 'Russo' for the Russo brothers)."
+    },
+
+    "runtime": {
+      "type": "string",
+      "pattern": "^[0-9]+ min$",
+      "description": "Runtime in minutes, formatted as 'NNN min'.",
+      "examples": ["169 min", "120 min"]
+    },
+
+    "gross": {
+      "type": "string",
+      "pattern": "^USD [0-9.]+(M|B)$",
+      "description": "Global box-office gross, formatted with M (millions) or B (billions).",
+      "examples": ["USD 701M", "USD 1.49B"]
+    },
+
+    "grossNum": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Gross in millions of USD as integer, used for sorting and analysis. 1.49B = 1488."
+    },
+
+    "studio": {
+      "type": "string",
+      "description": "Primary distributing studio(s). Co-distributions joined with '/' or '+'.",
+      "examples": ["Warner Bros.", "Paramount / Warner Bros."]
+    },
+
+    "filed": {
+      "type": "string",
+      "pattern": "^[0-9]{2}\\.[0-9]{2}\\.[0-9]{4}$",
+      "description": "Date the record was filed, in DD.MM.YYYY format."
+    },
+
+    "imagination": {
+      "type": "string",
+      "description": "Named imagination — a short formulation of the political imagination the camera and ground records jointly carry. Working file label, not interpretation. Lowercase, 2–3 words.",
+      "examples": ["exit imperialism", "rescue exceptionalism", "saviour soldier"]
+    },
+
+    "status": {
+      "type": "string",
+      "enum": ["open", "pending"],
+      "description": "An 'open' record has all attentions filled, sources verified, and a named imagination. A 'pending' record holds only header information and awaits completion."
+    },
+
+    "construction": {
+      "$ref": "#/definitions/attention",
+      "description": "What is built as problem, what is left as given. The first attention of the protocol."
+    },
+
+    "address": {
+      "$ref": "#/definitions/attention",
+      "description": "Who stands in for the species. Whom the film hails when it speaks of 'we', 'humanity', 'us'."
+    },
+
+    "exclusion": {
+      "$ref": "#/definitions/attention",
+      "description": "Which carriers of the same keyword stay off-record. The other file of the film's central terms."
+    },
+
+    "prescription": {
+      "$ref": "#/definitions/attention",
+      "description": "What the framing proposes as future-reality. The remedy the film makes follow as natural."
+    },
+
+    "circulation": {
+      "$ref": "#/definitions/circulation",
+      "description": "The infrastructure that pre-clears the framing as future-reality. Following Robb (2004) and Alford & Secker (2017), four camera-side rubrics and two ground-side rubrics."
+    },
+
+    "gloss": {
+      "type": "string",
+      "description": "2–4 sentences summarising the political imagination the camera and ground records jointly carry. Anchors the named imagination with explicit articulation of what travels across both registers."
+    }
+
+  },
+
+  "definitions": {
+
+    "attention": {
+      "type": "object",
+      "description": "One of the four narrative attentions (construction, address, exclusion, prescription). Each holds a camera record (what the film puts forward), an optional scene marker, a ground record (what is enacted, on record, beside it), and sources for the ground record.",
+      "required": ["camera", "ground", "sources"],
+      "properties": {
+        "camera": {
+          "type": "string",
+          "description": "Camera record — what the film puts forward in this attention. Keywords may be marked with <em>...</em> for highlight."
+        },
+        "scene": {
+          "type": ["string", "null"],
+          "description": "Optional scene marker for the camera record (e.g. '01:12 — opening sequence'). Used only when a specific moment is cited."
+        },
+        "ground": {
+          "type": "string",
+          "description": "Ground record — what is enacted, on record, beside the camera record. The same political imagination already in operation."
+        },
+        "sources": {
+          "type": "string",
+          "description": "Citation string for the ground record. Sources separated by ' · '."
+        }
+      }
+    },
+
+    "circulation": {
+      "type": "object",
+      "description": "The fifth attention. Records the infrastructure that pre-clears a film's framing as future-reality. Four camera-side rubrics derived from Robb (2004), two ground-side rubrics tracking what the same infrastructure does and does not also carry.",
+      "required": [
+        "productionSupport",
+        "scriptInvolvement",
+        "distributionChannels",
+        "authorityInfrastructure",
+        "onTheSameChannels",
+        "offTheSameChannels",
+        "sources"
+      ],
+      "properties": {
+        "productionSupport": {
+          "type": "string",
+          "description": "State, military, scientific, or institutional cooperation in production. Location access, equipment, technical advisory."
+        },
+        "scriptInvolvement": {
+          "type": "string",
+          "description": "Advisors, script-stage involvement, requested changes. Per Robb (2004) and FOIA-based archives, the records of who reviewed and what was asked."
+        },
+        "distributionChannels": {
+          "type": "string",
+          "description": "Distributing studio(s), co-production arrangements, market reach."
+        },
+        "authorityInfrastructure": {
+          "type": "string",
+          "description": "Institutional brokers, scientific or governmental authority signals, awards or endorsements that transfer external authority to the film."
+        },
+        "onTheSameChannels": {
+          "type": "string",
+          "description": "Ground record — what the same infrastructure also distributes. Other productions, other films, other content moving through the same circulation."
+        },
+        "offTheSameChannels": {
+          "type": "string",
+          "description": "Ground record — what the same infrastructure does not distribute. The counter-record that the same channels do not carry."
+        },
+        "sources": {
+          "type": "string",
+          "description": "Citation string for circulation evidence. Robb (2004), Alford & Secker (2017), FOIA records, etc."
+        }
+      }
+    }
+
+  },
+
+  "references": {
+    "constitutive_reading": "Comyn, S. (2018). Political Economy and the Novel. London: Routledge.",
+    "operational_evidence": "Robb, D. (2004). Operation Hollywood. New York: Prometheus Books.",
+    "entertainment_liaison_extension": "Alford, M. & Secker, T. (2017). National Security Cinema.",
+    "imperial_practice_framework": "Harvey, D. (2003). The New Imperialism. Oxford: OUP."
+  },
+
+  "scope": {
+    "temporal": "2001 — present",
+    "threshold": "Annual global top 10 by box-office gross",
+    "rationale": "Mass form at global scale; films that travelled at this threshold shaped the political imagination they are asked to bear."
+  }
+}
