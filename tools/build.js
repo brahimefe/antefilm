@@ -90,11 +90,8 @@ if (unmatched.length) console.warn('Warning: records marked inCorpus but not mat
 const NAV = [
   ['atlas', 'Atlas', 'index.html'],
   ['records', 'Records', 'records/index.html'],
-  ['compare', 'Compare', 'compare.html'],
   ['method', 'Method', 'method.html'],
-  ['data', 'Data', 'data.html'],
-  ['about', 'About', 'about.html'],
-  ['submit', 'Submit', 'submit.html']
+  ['about', 'About', 'about.html']
 ];
 function layout({ depth = 0, title, description, active, body, scripts = [], bodyAttr = '', bare = false }) {
   const up = '../'.repeat(depth);
@@ -120,7 +117,7 @@ ${body}
 </div></main>
 <footer class="foot"><div class="wrap">
   <span>Antefilm: a record of global cinema's political imagination. Edited by İbrahim Efe. Updated ${UPDATED}.</span>
-  <span><a href="${up}data.html">Data and licence</a></span>
+  <span class="foot-links"><a href="${up}compare.html">Compare records</a><a href="${up}data.html">Data and licence</a><a href="${up}submit.html">Propose a record</a></span>
 </div></footer>
 ${scripts.map((s) => `<script src="${up}${s}"></script>`).join('\n')}
 </body>
@@ -144,24 +141,17 @@ const typeChip = (type) => `<span class="chip">${swatch(type)}${esc((TYPES[type]
 
 function recordList(depth) {
   const up = '../'.repeat(depth);
-  const items = RECORDS.slice().sort((a, b) => b.recNum - a.recNum).map((r) => `
-  <li><a href="${up}records/${r.slug}/${IX}">
-    <span class="rl-num">Record ${recNo(r.recNum)}</span>
-    <span class="rl-title">${esc(r.title)}<small>${r.year}, dir. ${esc(r.director)}${r.draft ? ', draft' : ''}${r.threshold.inCorpus ? '' : ', outside threshold'}</small></span>
-    <span class="rl-imag">${esc(r.imagination)}</span>
-    <span class="rl-type">${typeChip(r.beckert.imaginaryType)}</span>
-  </a></li>`).join('');
-  return `<ul class="record-list">${items}</ul>`;
+  return `<ul class="zen-records">${RECORDS.slice().sort((a, b) => b.recNum - a.recNum).map((r) => `
+    <li><a href="${up}records/${r.slug}/${IX}"><span class="zr-imag">${esc(r.imagination)}</span><span class="zr-film">${esc(r.title)}, ${r.year}${r.draft ? ' (draft)' : ''}</span></a></li>`).join('')}
+  </ul>`;
 }
 
 /* ---------- home / atlas ---------- */
 function buildHome() {
-  const coded = corpus.filter((c) => c.imaginaryType !== 'uncoded');
-  const counts = {};
-  TYPE_ORDER.forEach((t) => { counts[t] = corpus.filter((c) => c.imaginaryType === t).length; });
-
-  const filters = ['<button class="btn" data-filter="all" aria-pressed="true">All films</button>']
-    .concat(TYPE_ORDER.map((t) => `<button class="btn chip" data-filter="${t}" aria-pressed="false">${swatch(t)}${esc(TYPES[t].label)} <span style="color:var(--graphite)">${counts[t]}</span></button>`)).join('');
+  const n = (t) => corpus.filter((c) => c.imaginaryType === t).length;
+  const collective = corpus.filter((c) => !['personal', 'uncoded'].includes(c.imaginaryType)).length;
+  const integ = n('integrative'), restor = n('restoration'), retro = n('retrotopian');
+  const anomic = n('anomic-collapse') + n('anomic-escape');
 
   const years = [...new Set(corpus.map((c) => c.year))].sort();
   const head = `<div class="ledger-row head"><span></span>${[...Array(10)].map((_, i) => `<span>${i + 1}</span>`).join('')}</div>`;
@@ -171,82 +161,44 @@ function buildHome() {
     return `<div class="ledger-row"><span class="ledger-year">${y}</span>${cells}</div>`;
   }).join('');
 
-  const tableRows = corpus.map((f) => `<tr data-type="${f.imaginaryType}">
-    <td class="num">${f.year}</td><td class="num">${f.rank}</td>
-    <td>${f.record ? `<a href="${f.record.href}">${esc(f.title)}</a>` : esc(f.title)}</td>
-    <td class="num" data-sort="${f.grossM}">${f.grossM.toLocaleString('en-US')}</td>
-    <td data-sort="${f.imaginaryType}">${typeChip(f.imaginaryType)}</td>
-    <td>${esc(PAYOFF[f.payoffStructure] || '—')}</td>
-    <td>${f.record ? 'Record ' + f.record.num : ''}</td></tr>`).join('');
-
-  /* anomic share by period, among films with a collective future at stake */
-  const periodRows = PERIODS.map((p) => {
-    const inP = corpus.filter((c) => c.year >= p.from && c.year <= Math.min(p.to, 2025));
-    const collective = inP.filter((c) => !['personal', 'uncoded'].includes(c.imaginaryType));
-    const anomic = collective.filter((c) => c.imaginaryType.startsWith('anomic')).length;
-    const integ = collective.filter((c) => c.imaginaryType === 'integrative').length;
-    return { p, n: collective.length, anomic, integ };
-  });
-  const bars = periodRows.map((r) => {
-    const a = r.n ? Math.round(100 * r.anomic / r.n) : 0;
-    const i = r.n ? Math.round(100 * r.integ / r.n) : 0;
-    return `<div class="bar t-anomic-collapse"><span>Period ${r.p.label}, ${r.p.from}–${Math.min(r.p.to, 2025)}: anomic</span><span class="track"><span class="fill" style="width:${a}%;display:block"></span></span><span class="n">${a}%</span></div>
-    <div class="bar t-integrative"><span>Period ${r.p.label}: integrative</span><span class="track"><span class="fill" style="width:${i}%;display:block"></span></span><span class="n">${i}%</span></div>`;
-  }).join('');
-
+  const latest = RECORDS.slice().sort((a, b) => b.recNum - a.recNum).slice(0, 3);
   const atlasData = corpus.map((c) => ({
     id: c.id, year: c.year, rank: c.rank, title: c.title, distributor: c.distributor, grossM: c.grossM,
     imaginaryType: c.imaginaryType, payoffStructure: c.payoffStructure, note: c.note, record: c.record
   }));
 
   const body = `
-<section class="atlas-head">
-  <div>
-    <h1>What futures does the world's most-watched cinema still offer?</h1>
-    <p>Every film in the annual worldwide top ten since 2001, coded by the future its ending makes available. Selected films are read in full beside the institutional record of their time.</p>
-  </div>
-  <p class="tally"><b>${corpus.length}</b> films in the corpus, ${coded.length} coded<br><b>${RECORDS.length}</b> full records filed</p>
+<section class="zen zen-hero">
+  <p class="zen-num">${integ}<span> of ${collective}</span></p>
+  <h1>global hits since 2001 that put a shared future at stake imagine one open to everyone.</h1>
+  <p class="zen-sub">The rest defend the present, escape it, or return to the past.</p>
 </section>
 
-<div class="controls" role="group" aria-label="Filter by imaginary type">${filters}</div>
-<div class="controls">
-  <span class="label">View</span>
-  <button class="btn" data-view="ledger" aria-pressed="true">Ledger</button>
-  <button class="btn" data-view="table" aria-pressed="false">Table</button>
-  <span class="spacer"></span>
-  <a href="data/corpus.csv" download>Download CSV</a>
-  <a href="data.html">Codebook</a>
-</div>
-
-<div class="atlas-layout">
-  <div>
-    <div class="ledger" id="atlas-ledger" role="group" aria-label="Annual worldwide top ten, 2001 to 2025, by rank">${head}${rows}</div>
-    <div class="table-wrap" id="atlas-table" hidden>
-      <table class="data">
-        <thead><tr>
-          <th><button data-numeric="true">Year</button></th><th><button data-numeric="true">Rank</button></th>
-          <th><button>Title</button></th><th><button data-numeric="true">Gross, USD M</button></th>
-          <th><button>Imaginary type</button></th><th><button>Payoff</button></th><th><button>Record</button></th>
-        </tr></thead>
-        <tbody>${tableRows}</tbody>
-      </table>
-    </div>
-    <p style="font-size:var(--s-1);color:var(--graphite);margin-top:12px">Films with a full record carry a dark corner and bold title. Coding is provisional: it was drafted with the assistance of an AI model and is under the editor's review. Grosses as listed in Wikipedia's annual tables, retrieved ${UPDATED}.</p>
-  </div>
-  <aside class="panel" id="atlas-panel" aria-live="polite">
-    <p class="empty">Select a film in the ledger to see how it is coded and whether it has a full record.</p>
-  </aside>
-</div>
-
-<section class="shares">
-  <h2>Anomic and integrative futures by period</h2>
-  <p style="font-size:var(--s-1);color:var(--graphite);margin:0 0 12px;max-width:66ch">Share of films whose ending puts a collective future at stake. Films coded personal or not yet coded are left out of each base.</p>
-  <div class="bars">${bars}</div>
+<section class="zen" aria-labelledby="atlas-h">
+  <h2 id="atlas-h" class="zen-h">Every worldwide top-ten film, 2001–2025</h2>
+  <p class="zen-legend"><span class="chip">${swatch('integrative')}A future open to everyone</span><span class="chip"><span class="swatch zen-grey" aria-hidden="true"></span>Every other ending</span>
+    <button class="btn" id="colour-toggle" aria-pressed="false">Show all six types</button></p>
+  <div class="ledger zen-mode" id="atlas-ledger" role="group" aria-label="Annual worldwide top ten, 2001 to 2025, by rank">${head}${rows}</div>
+  <div class="panel" id="atlas-panel" aria-live="polite" hidden></div>
+  <p class="zen-note">Select a film to see how its ending is coded. The coding is provisional and under review. <a href="method.html#coding">How films are coded</a></p>
 </section>
 
-<section style="margin-top:56px">
-  <h2 style="font-size:var(--s2);font-weight:600;margin:0 0 16px">Filed records</h2>
-  ${recordList(0)}
+<section class="zen" aria-labelledby="instead-h">
+  <h2 id="instead-h" class="zen-h">What they offer instead</h2>
+  <dl class="instead">
+    <div><dt>${restor}</dt><dd>restore the present order</dd></div>
+    <div><dt>${anomic}</dt><dd>imagine collapse, or escape for the few</dd></div>
+    <div><dt>${retro}</dt><dd>return to an idealised past</dd></div>
+  </dl>
+</section>
+
+<section class="zen" aria-labelledby="records-h">
+  <h2 id="records-h" class="zen-h">The same futures, on record</h2>
+  <p class="zen-sub">Each record sets a film's imagined future beside what states were doing at the same time.</p>
+  <ul class="zen-records">${latest.map((r) => `
+    <li><a href="records/${r.slug}/${IX}"><span class="zr-imag">${esc(r.imagination)}</span><span class="zr-film">${esc(r.title)}, ${r.year}</span></a></li>`).join('')}
+  </ul>
+  <p><a href="records/${IX}">All ${RECORDS.length} records</a></p>
 </section>
 
 <script>window.ATLAS = ${JSON.stringify(atlasData)};
@@ -255,57 +207,58 @@ window.ATLAS_PAYOFF = ${JSON.stringify(PAYOFF)};</script>`;
 
   write('index.html', layout({
     title: PREVIEW ? 'Antefilm review build' : "antefilm — global cinema's political imagination, on record", bare: PREVIEW,
-    description: 'An atlas of the futures offered by the annual worldwide top ten films since 2001, with close readings beside the institutional record.',
+    description: 'Of the global hits since 2001 that put a shared future at stake, few imagine one open to everyone. An atlas of the annual worldwide top ten, with records beside the institutional record.',
     active: 'atlas', body, scripts: ['assets/atlas.js']
   }));
 }
 
 /* ---------- records ---------- */
-function sourcesList(sources) {
-  if (!sources || !sources.length) return '';
-  return `<h3>Sources</h3><ol>${sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.text)}</a>` : esc(s.text)}</li>`).join('')}</ol>`;
+function apparatus(sources, note) {
+  const list = sources && sources.length ? `<ol>${sources.map((s) => `<li>${s.url ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.text)}</a>` : esc(s.text)}</li>`).join('')}</ol>` : '';
+  if (!list && !note) return '';
+  return `<details class="apparatus"><summary>Sources${note ? ' and selection note' : ''}</summary>${list}${note ? `<p><strong>Selection note.</strong> ${esc(note)}</p>` : ''}</details>`;
 }
 
 function buildRecord(r, i, sorted) {
   const no = recNo(r.recNum);
   const corpusRow = corpus.find((c) => c.record && c.record.slug === r.slug);
-  const stamps = [];
-  if (r.draft) stamps.push('<span class="stamp">Draft, under review</span>');
-  if (!r.threshold.inCorpus) stamps.push('<span class="stamp">Outside threshold</span>');
+  const status = [];
+  if (r.draft) status.push('Draft, under review');
+  if (!r.threshold.inCorpus) status.push('Outside the top-ten threshold');
 
   const attentions = ATTENTIONS.map((a) => {
     const d = r[a.key];
     const flag = VERIFY_SCENES.has(r.slug + ':' + a.key);
     return `
 <section class="attention" id="${a.key}" aria-labelledby="h-${a.key}">
-  <h2 id="h-${a.key}"><span class="ord">${a.ord}</span>${a.name}</h2>
+  <h2 id="h-${a.key}">${a.name}</h2>
   <p class="question">${a.q}</p>
   <div class="rows">
-    <div class="camera"><span class="regtag">Camera record</span>${d.camera}${d.scene ? `<span class="scene${flag ? ' flag' : ''}">${esc(d.scene)}</span>` : ''}</div>
-    <div class="ground"><span class="regtag">Ground record</span>${d.ground}</div>
-    <div class="margin">${sourcesList(d.sources)}${d.selectionNote ? `<h3>Selection note</h3><p>${esc(d.selectionNote)}</p>` : ''}</div>
+    <div class="camera"><span class="regtag">The film</span>${d.camera}${d.scene ? `<span class="scene${flag ? ' flag' : ''}">${esc(d.scene)}</span>` : ''}</div>
+    <div class="ground"><span class="regtag">The record</span>${d.ground}</div>
   </div>
+  ${apparatus(d.sources, d.selectionNote)}
 </section>`;
   }).join('');
 
   const c = r.circulation;
   const circulation = `
 <section class="attention" id="circulation" aria-labelledby="h-circulation">
-  <h2 id="h-circulation"><span class="ord">V</span>Circulation</h2>
-  <p class="question">The infrastructure that pre-clears the framing</p>
+  <h2 id="h-circulation">Circulation</h2>
+  <p class="question">The infrastructure that carried the film</p>
   <div class="rows">
-    <div class="camera"><span class="regtag">Camera record</span><div class="circ">
+    <div class="camera"><span class="regtag">The film</span><div class="circ">
       <div><b>Production support</b>${c.productionSupport}</div>
       <div><b>Script involvement</b>${c.scriptInvolvement}</div>
-      <div><b>Distribution channels</b>${c.distributionChannels}</div>
-      <div><b>Authority infrastructure</b>${c.authorityInfrastructure}</div>
+      <div><b>Distribution</b>${c.distributionChannels}</div>
+      <div><b>Authority</b>${c.authorityInfrastructure}</div>
     </div></div>
-    <div class="ground"><span class="regtag">Ground record</span><div class="circ">
+    <div class="ground"><span class="regtag">The record</span><div class="circ">
       <div><b>On the same channels</b>${c.onTheSameChannels}</div>
       <div><b>Off the same channels</b>${c.offTheSameChannels}</div>
     </div></div>
-    <div class="margin">${sourcesList(c.sources)}</div>
   </div>
+  ${apparatus(c.sources, '')}
 </section>`;
 
   const url = `${SITE_URL}/records/${r.slug}/`;
@@ -320,59 +273,31 @@ function buildRecord(r, i, sorted) {
   const prev = sorted[i - 1], next = sorted[i + 1];
 
   const body = `
-<header class="rec-head">
-  <div>
-    <p class="rec-num">Record ${no}</p>
-    <h1>${esc(r.title)}</h1>
-    <p class="rec-facts">
-      <span>${r.year}</span><span>dir. ${esc(r.director)}</span><span>${esc(r.runtime)}</span>
-      <span>${esc(r.studio)}</span><span>${esc(r.gross)} worldwide</span>
-      ${corpusRow ? `<span>rank ${corpusRow.rank} in ${r.year}</span>` : ''}
-      <span>filed ${esc(r.filed)}</span>${r.revised && r.revised !== r.filed ? `<span>revised ${esc(r.revised)}</span>` : ''}
-    </p>
-    ${stamps.length ? `<div class="rec-stamps">${stamps.join('')}</div>` : ''}
-    ${r.threshold.note ? `<p class="threshold-note">${esc(r.threshold.note)}</p>` : ''}
-  </div>
-  <div>
-    <p class="imagination-label">Named imagination</p>
-    <p class="imagination">${esc(r.imagination)}</p>
-  </div>
+<header class="zen rec-zen">
+  <p class="rec-film">${esc(r.title)}<span>${r.year}, dir. ${esc(r.director)}${corpusRow ? `, number ${corpusRow.rank} worldwide that year` : ''}</span></p>
+  <h1 class="imagination">${esc(r.imagination)}</h1>
+  <p class="rec-summary">${r.gloss}</p>
+  <p class="rec-meta">Record ${no}. Filed ${esc(r.filed)}${r.revised && r.revised !== r.filed ? `, revised ${esc(r.revised)}` : ''}. Ending coded ${esc(TYPES[r.beckert.imaginaryType].label.toLowerCase())}, ${esc((PAYOFF[r.beckert.payoffStructure] || '').toLowerCase())}.${status.length ? ` <span class="rec-status">${status.join('. ')}.</span>` : ''}</p>
+  ${r.threshold.note ? `<p class="rec-meta">${esc(r.threshold.note)}</p>` : ''}
 </header>
 
-<nav class="att-nav" aria-label="Attentions"><ol>
-  ${ATTENTIONS.map((a) => `<li><a href="#${a.key}">${a.name}</a></li>`).join('')}
-  <li><a href="#circulation">Circulation</a></li><li><a href="#gloss">The imagination, named</a></li><li><a href="#cite">Cite</a></li>
-</ol></nav>
-
-<div class="edition-heads" aria-hidden="true">
-  <div class="camera-h"><b>Camera record</b>What the film puts forward</div>
-  <div class="ground-h"><b>Ground record</b>The same imagination, already in operation</div>
-  <div class="margin-h"><b>Apparatus</b>Sources and selection notes</div>
-</div>
+<p class="reading-key"><span class="key-camera">The film</span> shows what the film puts forward. <span class="key-ground">The record</span> shows what was enacted, on record, at the same time.</p>
 
 ${attentions}
 ${circulation}
 
-<section class="gloss" id="gloss">
-  <h2>${esc(r.imagination)}</h2>
-  <p>${r.gloss}</p>
-  <div class="coding">
-    <span>Imaginary type: ${typeChip(r.beckert.imaginaryType)}</span>
-    <span>Payoff structure: ${esc(PAYOFF[r.beckert.payoffStructure] || '—')}</span>
-    <a href="../../method.html">How films are coded</a>
+<details class="cite" id="cite">
+  <summary>Cite this record</summary>
+  <div class="cite-body">
+    <div><pre id="cite-apa">${esc(apa)}</pre><button class="btn" data-copy="cite-apa">Copy reference</button></div>
+    <div><pre id="cite-bib">${esc(bib)}</pre><button class="btn" data-copy="cite-bib">Copy BibTeX</button></div>
   </div>
-</section>
-
-<section class="cite" id="cite">
-  <h2>Cite this record</h2>
-  <div><pre id="cite-apa">${esc(apa)}</pre><button class="btn" data-copy="cite-apa">Copy reference</button></div>
-  <div><pre id="cite-bib">${esc(bib)}</pre><button class="btn" data-copy="cite-bib">Copy BibTeX</button></div>
-</section>
+</details>
 
 <nav class="pager" aria-label="Other records">
-  <span>${prev ? `<a href="../${prev.slug}/${IX}">Record ${recNo(prev.recNum)}: ${esc(prev.title)}</a>` : ''}</span>
+  <span>${prev ? `<a href="../${prev.slug}/${IX}">${esc(prev.title)}</a>` : ''}</span>
   <span><a href="../${IX}">All records</a></span>
-  <span>${next ? `<a href="../${next.slug}/${IX}">Record ${recNo(next.recNum)}: ${esc(next.title)}</a>` : ''}</span>
+  <span>${next ? `<a href="../${next.slug}/${IX}">${esc(next.title)}</a>` : ''}</span>
 </nav>`;
 
   write(`records/${r.slug}/index.html`, layout({
@@ -387,7 +312,7 @@ function buildRecordsIndex() {
   const body = `
 <div class="page-head">
   <h1>Records</h1>
-  <p>Close readings under the five-attention protocol. Each sets what the film puts forward beside what was enacted, on record, at the same time.</p>
+  <p>Each record sets a film's imagined future beside what was enacted, on record, at the same time.</p>
 </div>
 ${recordList(1)}`;
   write('records/index.html', layout({
@@ -430,6 +355,22 @@ ${panels}`;
 }
 
 /* ---------- data page and downloads ---------- */
+function periodBars() {
+  return '<div class="bars" style="max-width:760px">' + PERIODS.map((p) => {
+    const inP = corpus.filter((c) => c.year >= p.from && c.year <= Math.min(p.to, 2025));
+    const col = inP.filter((c) => !['personal', 'uncoded'].includes(c.imaginaryType));
+    const a = col.length ? Math.round(100 * col.filter((c) => c.imaginaryType.startsWith('anomic')).length / col.length) : 0;
+    const i = col.length ? Math.round(100 * col.filter((c) => c.imaginaryType === 'integrative').length / col.length) : 0;
+    return `<div class="bar t-anomic-collapse"><span>${p.from}–${Math.min(p.to, 2025)}: anomic</span><span class="track"><span class="fill" style="width:${a}%;display:block"></span></span><span class="n">${a}%</span></div>
+    <div class="bar t-integrative"><span>${p.from}–${Math.min(p.to, 2025)}: integrative</span><span class="track"><span class="fill" style="width:${i}%;display:block"></span></span><span class="n">${i}%</span></div>`;
+  }).join('') + '</div>';
+}
+function corpusTable() {
+  return `<div class="table-wrap" style="max-width:900px"><table class="data"><thead><tr><th>Year</th><th>Rank</th><th>Title</th><th>Gross, USD M</th><th>Ending</th><th>Payoff</th></tr></thead><tbody>${corpus.map((f) => `<tr>
+    <td class="num">${f.year}</td><td class="num">${f.rank}</td>
+    <td>${f.record ? `<a href="${f.record.href}">${esc(f.title)}</a>` : esc(f.title)}</td>
+    <td class="num">${f.grossM.toLocaleString('en-US')}</td><td>${typeChip(f.imaginaryType)}</td><td>${esc(PAYOFF[f.payoffStructure] || '—')}</td></tr>`).join('')}</tbody></table></div>`;
+}
 function buildData() {
   const cols = ['year', 'rank', 'title', 'distributor', 'grossUSD', 'period', 'imaginaryType', 'payoffStructure', 'codingNote', 'recordNumber', 'recordURL', 'stateCooperation', 'cooperationEvidence', 'scriptInvolvement', 'releaseChina', 'releaseTurkey'];
   const csv = [cols.join(',')].concat(corpus.map((c) => [
@@ -488,6 +429,10 @@ function buildData() {
   <h2>Imaginary types</h2>
 </div>
 <div class="table-wrap" style="max-width:900px"><table class="data"><thead><tr><th>Type</th><th>Definition</th><th>Films</th></tr></thead><tbody>${typeRows}</tbody></table></div>
+<div class="prose"><h2>Anomic and integrative endings by period</h2><p>Share of films whose ending puts a collective future at stake; films coded personal or not yet coded are left out of each base.</p></div>
+${periodBars()}
+<div class="prose"><h2>All films</h2></div>
+${corpusTable()}
 <div class="prose"><h2>Codebook</h2></div>
 <div class="table-wrap" style="max-width:900px"><table class="data"><thead><tr><th>Variable</th><th>Values</th><th>Coding rule</th></tr></thead>
 <tbody>${codebook.map((r) => `<tr><td><code>${esc(r[0])}</code></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</tbody></table></div>

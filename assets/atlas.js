@@ -43,6 +43,7 @@
       html += '<p class="empty" style="margin-top:16px">No full record yet. <a href="submit.html">Propose one</a>.</p>';
     }
     panel.innerHTML = html;
+    panel.hidden = false;
   }
 
   cells.forEach(function (c) {
@@ -59,6 +60,18 @@
       document.getElementById('atlas-table').hidden = view !== 'table';
     });
   });
+
+  /* signal mode: only integrative endings in colour, or all six types */
+  var toggle = document.getElementById('colour-toggle');
+  var ledger = document.getElementById('atlas-ledger');
+  if (toggle && ledger) {
+    toggle.addEventListener('click', function () {
+      var all = toggle.getAttribute('aria-pressed') !== 'true';
+      toggle.setAttribute('aria-pressed', String(all));
+      ledger.classList.toggle('zen-mode', !all);
+      toggle.textContent = all ? 'Show integrative only' : 'Show all six types';
+    });
+  }
 
   /* sortable table */
   var table = document.getElementById('atlas-table');

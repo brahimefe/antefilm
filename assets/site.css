@@ -326,3 +326,72 @@ table.data td.num { font-family: var(--type); text-align: right; white-space: no
   .mast, .att-nav, .foot, .pager, .btn { display: none; }
   body { background: #fff; }
 }
+
+/* ================= simplified layout (one idea per screen) ================= */
+.zen { padding: 72px 0; border-top: 1px solid var(--rule); }
+.zen:first-child { border-top: 0; }
+.zen-hero { padding: 96px 0 88px; max-width: 860px; }
+.zen-num { font-family: var(--type); font-size: clamp(4.5rem, 14vw, 9rem); line-height: 0.9; font-weight: 700; margin: 0 0 28px; color: var(--t-integrative); letter-spacing: -0.04em; }
+.zen-num span { font-size: 0.32em; color: var(--graphite); font-weight: 400; letter-spacing: 0; }
+.zen-hero h1 { font-size: clamp(1.75rem, 4vw, 2.6rem); line-height: 1.18; font-weight: 600; margin: 0 0 20px; text-wrap: balance; max-width: 30ch; }
+.zen-sub { font-size: var(--s1); line-height: 1.5; color: var(--graphite); margin: 0 0 32px; max-width: 46ch; }
+.zen-h { font-size: var(--s2); font-weight: 600; line-height: 1.2; margin: 0 0 20px; text-wrap: balance; }
+.zen-legend { display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; font-size: var(--s-1); margin: 0 0 16px; }
+.zen-legend .btn { margin-left: auto; }
+.zen-grey { --sw: var(--t-personal); --swbg: var(--rule); }
+.zen-note { font-size: var(--s-1); color: var(--graphite); margin: 14px 0 0; }
+.zen .panel { position: static; margin-top: 16px; max-width: 560px; }
+
+/* ledger in signal mode: only integrative endings carry colour */
+.ledger.zen-mode .cell:not(.t-integrative) { --cfg: var(--rule); --cbg: transparent; color: var(--graphite); box-shadow: none; border-style: solid; }
+.ledger.zen-mode .cell.t-integrative { font-weight: 600; }
+
+.instead { margin: 0; display: grid; gap: 28px; max-width: 720px; }
+.instead div { display: grid; grid-template-columns: 5.5ch minmax(0, 1fr); gap: 20px; align-items: baseline; }
+.instead dt { font-family: var(--type); font-size: var(--s4); font-weight: 700; line-height: 1; text-align: right; }
+.instead dd { margin: 0; font-size: var(--s2); line-height: 1.25; }
+
+.zen-records { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 0; }
+.zen-records a { display: grid; gap: 4px; padding: 18px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--ink); }
+.zen-records li:first-child a { border-top: 1px solid var(--rule); }
+.zr-imag { font-size: var(--s3); font-style: italic; line-height: 1.15; }
+.zen-records a:hover .zr-imag { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+.zr-film { font-size: var(--s-1); color: var(--graphite); }
+
+.foot-links { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+
+/* record page, point first */
+.rec-zen { padding: 64px 0 48px; max-width: 820px; border-top: 0; }
+.rec-film { font-size: var(--s1); margin: 0 0 18px; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+.rec-film span { font-size: var(--s-1); color: var(--graphite); }
+.rec-zen .imagination { font-size: clamp(2.4rem, 7vw, 4.2rem); line-height: 1.02; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 28px; }
+.rec-summary { font-size: var(--s1); line-height: 1.6; margin: 0 0 24px; max-width: 60ch; }
+.rec-summary em { font-style: normal; font-weight: 600; }
+.rec-meta { font-size: var(--s-1); color: var(--graphite); margin: 0 0 6px; max-width: 70ch; }
+.rec-status { color: var(--stamp); }
+.reading-key { font-size: var(--s-1); color: var(--graphite); border-top: 1px solid var(--rule); padding: 16px 0 0; margin: 0; }
+.key-camera { color: var(--camera); font-weight: 600; }
+.key-ground { color: var(--ground); font-weight: 600; font-family: var(--type); }
+.attention .rows { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .attention .rows { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.attention .regtag { display: block; }
+.attention h2 { font-size: var(--s2); }
+.apparatus { font-size: 0.88rem; color: var(--graphite); margin-top: 4px; }
+.apparatus summary { cursor: pointer; color: var(--graphite); }
+.apparatus summary:hover { color: var(--ink); }
+.apparatus ol { margin: 10px 0; padding-left: 1.4em; max-width: 80ch; }
+.apparatus li { margin-bottom: 6px; }
+.apparatus p { max-width: 80ch; }
+details.cite { border-top: 1px solid var(--ink); padding-top: 18px; margin-top: 16px; display: block; }
+details.cite summary { cursor: pointer; font-size: var(--s1); font-weight: 600; }
+.cite-body { display: grid; gap: 16px; margin-top: 14px; }
+@media (min-width: 900px) { .cite-body { grid-template-columns: 1fr 1fr; } }
+.cite-body pre { font-family: var(--type); font-size: 0.85rem; white-space: pre-wrap; background: var(--sheet); border: 1px solid var(--rule); padding: 14px; margin: 0 0 8px; }
+@media (max-width: 759px) {
+  .zen { padding: 48px 0; }
+  .zen-hero { padding: 56px 0; }
+  .instead div { grid-template-columns: 4ch minmax(0, 1fr); gap: 14px; }
+  .instead dt { font-size: var(--s3); }
+  .instead dd { font-size: var(--s1); }
+}
+.ledger.zen-mode .cell[data-type="uncoded"] { border: 0; border-left: 4px solid var(--rule); }
