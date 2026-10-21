@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /tools/
+Sitemap: https://antefilm.com/sitemap.xml

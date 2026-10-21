@@ -1,0 +1,604 @@
+{
+  "version": "0.2.0",
+  "updated": "2026-10-21",
+  "licence": "CC BY 4.0",
+  "records": [
+    {
+      "slug": "interstellar",
+      "recNum": 1,
+      "year": 2014,
+      "title": "Interstellar",
+      "director": "Nolan",
+      "runtime": "169 min",
+      "gross": "USD 678M",
+      "grossNum": 678,
+      "studio": "Paramount / Warner Bros.",
+      "filed": "16.05.2026",
+      "revised": "21.10.2026",
+      "imagination": "exit imperialism",
+      "status": "open",
+      "threshold": {
+        "inCorpus": true,
+        "rank": 10,
+        "note": ""
+      },
+      "beckert": {
+        "imaginaryType": "anomic-escape",
+        "payoffStructure": "positive-sum"
+      },
+      "construction": {
+        "camera": "Earth is dying. Crops fail, dust takes the sky, an Iowa cornfield chokes. The cause is unnamed; the collapse arrives as <em>condition</em>, not consequence. The film inherits the dying world as premise and asks the audience to accept it without etiology.",
+        "scene": null,
+        "ground": "An unnamed cause requires only <em>exit</em>. A named cause would require remedy by responsibility — extraction, war, climate policy. Months after the film opens, a Saudi-led air campaign begins in Yemen (March 2015), refuelled and supported with intelligence by the United States. By January 2016 the FAO counts 14.4 million Yemenis food insecure, and names the cause: conflict and import restrictions.",
+        "sources": [
+          {
+            "text": "FAO (2016). FAO warns of rapidly deteriorating food security in Yemen. Press release, 28 January 2016.",
+            "url": "https://www.fao.org/newsroom/detail/FAO-warns-of-rapidly-deteriorating-food-security-in-Yemen/en"
+          },
+          {
+            "text": "Military Times (2015). U.S. launches aerial refueling mission in Yemen. 8 April 2015.",
+            "url": "https://www.militarytimes.com/2015/04/08/u-s-launches-aerial-refueling-mission-in-yemen/"
+          }
+        ],
+        "selectionNote": "Considered: drought-linked displacement in Syria, 2006–2010. Not filed: no US agent, and outside the film's period band."
+      },
+      "address": {
+        "camera": "The NASA compound assembles humanity's delegation: Cooper, Brand, Doyle, Romilly, Mann, Murph. The word <em>humanity</em> is spoken often. The bodies on screen are mostly white, mostly American, all addressed as universal.",
+        "scene": null,
+        "ground": "At the end of 2014, 59.5 million people were forcibly displaced worldwide, 13.9 million of them newly displaced that year; Syria, Afghanistan and Somalia were the largest sources of refugees. None of these bodies were available to stand in for <em>humanity</em>. The film's universal subject is a regional one; the global record names the rest.",
+        "sources": [
+          {
+            "text": "UNHCR (2015). Global Trends 2014: World at War. Geneva: UNHCR. Release of 18 June 2015.",
+            "url": "https://www.unhcr.org/node/17994"
+          }
+        ],
+        "selectionNote": "Considered: US domestic poverty data, 2014. Not filed: it would keep the address national; the film's claim is to the species."
+      },
+      "exclusion": {
+        "camera": "Tsiolkovsky cited as gospel: \"Earth is the cradle of humanity, but one cannot live in a cradle forever.\" <em>Departure</em> as evolutionary vocation; the ground left behind never returns to the frame.",
+        "scene": "01:12 — Brand quoting Tsiolkovsky in the launch sequence",
+        "ground": "The word <em>departure</em> carries another file: Saigon 1975, Mogadishu 1993, Kabul 2021 — departures producing ruin where they leave. At Kabul airport's Abbey Gate on 26 August 2021, during the evacuation, a suicide bombing killed at least 170 Afghans and 13 US service members. The framing requires these to remain structurally outside the same word.",
+        "sources": [
+          {
+            "text": "US Central Command investigation into the Abbey Gate attack, released 4 February 2022, as reported by Euronews (5 February 2022).",
+            "url": "https://euronews.com/2022/02/05/kabul-airport-blast-killing-hundreds-not-preventable-military-investigation-finds"
+          }
+        ],
+        "selectionNote": "Exclusion may range historically. Considered: the 1979 Tehran embassy evacuation. Not filed: Kabul 2021 is better documented and closes the film's period of US withdrawals."
+      },
+      "prescription": {
+        "camera": "The remedy is <em>exit</em>. Not repair, not redistribution, not return. The film closes with Cooper preparing for the next launch — departure is permanent vocation, not last resort.",
+        "scene": null,
+        "ground": "The same prescription at policy level: withdrawal-as-strategy, evacuation-as-doctrine, departure-as-legitimating-modality of US imperial practice 2001–2021. Film and policy share one grammar of exit.",
+        "sources": [
+          {
+            "text": "Harvey, D. (2003). The New Imperialism. Oxford: Oxford University Press.",
+            "url": ""
+          }
+        ],
+        "selectionNote": "Interpretive pairing; a documentary source for withdrawal doctrine (e.g. a strategy document of the period) would strengthen it."
+      },
+      "circulation": {
+        "productionSupport": "NASA cleared archival footage and rights; it did not advise on the science.",
+        "scriptInvolvement": "Kip Thorne as scientific adviser and executive producer on physics, relativity and the depiction of black holes, from script through post-production.",
+        "distributionChannels": "Paramount + Warner Bros. co-distribution; worldwide release.",
+        "authorityInfrastructure": "Thorne's Caltech standing transferred to the film; its black-hole rendering was published as a peer-reviewed physics paper (James et al. 2015) and accompanied by Thorne's companion book.",
+        "onTheSameChannels": "US security agencies worked on over 800 films and 1,000 television titles, according to entertainment-liaison records obtained under freedom-of-information requests.",
+        "offTheSameChannels": "No counter-distribution exists for the operational record of US departures over the same period through the same studio infrastructure.",
+        "sources": [
+          {
+            "text": "CinemaBlend (2014). Wait, NASA had almost nothing to do with Interstellar? 4 November 2014 (statement by NASA's Bert Ulrich).",
+            "url": "https://www.cinemablend.com/new/Wait-NASA-Had-Almost-Nothing-Do-With-Interstellar-68031.html"
+          },
+          {
+            "text": "Thorne, K. (2014). The Science of Interstellar. New York: W. W. Norton.",
+            "url": ""
+          },
+          {
+            "text": "James, O., von Tunzelmann, E., Franklin, P. & Thorne, K. S. (2015). Gravitational lensing by spinning black holes in astrophysics, and in the movie Interstellar. Classical and Quantum Gravity, 32(6), 065001.",
+            "url": "https://arxiv.org/abs/1502.03808"
+          },
+          {
+            "text": "University of Bath (2017). US government influence on films and television. 28 June 2017 (on Alford & Secker's documents).",
+            "url": "https://bath.ac.uk/announcements/us-government-influence-on-films-and-television"
+          },
+          {
+            "text": "Alford, M. & Secker, T. (2017). National Security Cinema: The Shocking New Evidence of Government Control in Hollywood. Drum Roll Books.",
+            "url": ""
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — departure as evolutionary vocation, technological calling, humanitarian rescue — coincides with the <em>ground record</em>: departure as imperial operation, withdrawal as strategy, evacuation as doctrine. Film and policy travel as two registers of one imagination, not as text and context but as two operations of one configuration."
+    },
+    {
+      "slug": "argo",
+      "recNum": 2,
+      "year": 2012,
+      "title": "Argo",
+      "director": "Affleck",
+      "runtime": "120 min",
+      "gross": "USD 232M",
+      "grossNum": 232,
+      "studio": "Warner Bros.",
+      "filed": "16.05.2026",
+      "revised": "21.10.2026",
+      "imagination": "rescue exceptionalism",
+      "status": "open",
+      "threshold": {
+        "inCorpus": false,
+        "rank": null,
+        "note": "Outside the qualifying threshold: not in the 2012 worldwide top ten, whose tenth film grossed USD 654M. Editorial decision pending."
+      },
+      "beckert": {
+        "imaginaryType": "restoration",
+        "payoffStructure": "zero-sum"
+      },
+      "construction": {
+        "camera": "A revolution in Iran is staged in the opening as <em>onset</em>: storyboards trace the Shah, the embassy seizure, the hostages. The cause is glossed in a minute of voiceover; what remains is the standing problem of Americans trapped abroad. The CIA, in the figure of Tony Mendez, supplies the agency the situation lacks.",
+        "scene": null,
+        "ground": "The film's prologue compresses 1953 to 1979 — the CIA-MI6 coup against Mosaddegh, the Shah's installation, SAVAK — into context. The standing problem ceases to be a US action and becomes an Iranian state. The ground record of US covert action in Iran, which the CIA formally acknowledged in documents released in 2013, does not return to the frame.",
+        "sources": [
+          {
+            "text": "National Security Archive (2013). CIA Confirms Role in 1953 Iran Coup. Electronic Briefing Book No. 435, 19 August 2013.",
+            "url": "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB435/"
+          },
+          {
+            "text": "US Department of State (2017). Foreign Relations of the United States, 1952–1954, Iran, 1951–1954. Washington, DC: Office of the Historian.",
+            "url": "https://history.state.gov/historicaldocuments/frus1951-54Iran/preface"
+          }
+        ],
+        "selectionNote": "Considered: US arms sales to the Shah, 1970s. Not filed: the 1953 coup is the construction the prologue itself compresses."
+      },
+      "address": {
+        "camera": "Six American diplomats hidden in the Canadian ambassador's residence. The film addresses an audience for whom <em>their</em> safety is the stake, <em>their</em> faces the ones the camera holds. The fifty-two hostages at the embassy itself remain peripheral; the Iranians who appear are mostly the crowd, mostly hostile, mostly without name.",
+        "scene": null,
+        "ground": "The students who took the embassy had their own demands — the Shah's return to stand trial among them — and later published their own account of the seizure. The film records none of it. The exception (\"rescue\") requires an unspecified mass (\"hostility\") to function.",
+        "sources": [
+          {
+            "text": "Ebtekar, M. (2000). Takeover in Tehran: The Inside Story of the 1979 U.S. Embassy Capture (as told to Fred A. Reed). Vancouver: Talonbooks.",
+            "url": ""
+          }
+        ],
+        "selectionNote": "Considered: Iranian casualty figures of the revolution. Not filed: the attention concerns who is given a voice, and the hostage-takers' own account is the direct counter-record."
+      },
+      "exclusion": {
+        "camera": "The word <em>rescue</em> structures the film. The CIA rescues six. The audience is invited to feel the rescue as the resolution of the crisis. The closing intertitles record the diplomats' safe return as ending.",
+        "scene": null,
+        "ground": "The same word carries another file. <em>Rescue</em> in US foreign policy 1953–2012 includes the deposition of elected governments framed as rescue from communism; the 1980 Operation Eagle Claw, which left eight US servicemen dead and is absent from the film; and the rescues that did not happen — embassy workers, civilians under sanctions, populations under US-backed regimes.",
+        "sources": [
+          {
+            "text": "US Department of State (2017). Foreign Relations of the United States, 1952–1954, Iran, 1951–1954.",
+            "url": "https://history.state.gov/historicaldocuments/frus1951-54Iran/preface"
+          },
+          {
+            "text": "Special Operations Review Group (1980). Rescue Mission Report [the Holloway Report]. Washington, DC: Joint Chiefs of Staff.",
+            "url": ""
+          }
+        ],
+        "selectionNote": "Exclusion may range historically. Eagle Claw is filed because it is the same crisis's failed rescue, omitted by the film."
+      },
+      "prescription": {
+        "camera": "The remedy is <em>exception</em>. Where ordinary diplomacy fails, the cinematic ruse — a fake film crew — succeeds. The film proposes covert improvisation as the morally available form of action, with the CIA officer as its hero.",
+        "scene": null,
+        "ground": "The same prescription operates at policy level: the doctrine of exceptional action — covert operation, special forces, targeted improvisation — as the legitimate modality of US foreign engagement, recurring from 1953 through 2012's drone-strike escalations.",
+        "sources": [
+          {
+            "text": "Mazzetti, M. (2013). The Way of the Knife: The CIA, a Secret Army, and a War at the Ends of the Earth. New York: Penguin Press.",
+            "url": ""
+          }
+        ],
+        "selectionNote": "Interpretive pairing; a primary document on drone-strike policy in 2012 would strengthen it."
+      },
+      "circulation": {
+        "productionSupport": "CIA Office of Public Affairs support, documented in a CIA Inspector General audit (31 December 2012) released under FOIA; the audit could not establish its extent.",
+        "scriptInvolvement": "Chris Terrio's screenplay adapts Mendez's memoir The Master of Disguise (1999) and Joshuah Bearman's Wired article (2007).",
+        "distributionChannels": "Warner Bros. global distribution; co-production with Smokehouse Pictures, GK Films.",
+        "authorityInfrastructure": "Academy Award (Best Picture 2013); Michelle Obama's Oscars presentation transferred state authority to the screen.",
+        "onTheSameChannels": "The CIA Office of Public Affairs has cooperated with productions including <em>Zero Dark Thirty</em>, <em>The Recruit</em>, <em>The Agency</em>.",
+        "offTheSameChannels": "No counter-distribution exists for Iranian accounts of the 1953 coup or for the broader civilian record of US covert action in the region.",
+        "sources": [
+          {
+            "text": "Leopold, J. (n.d.). The CIA helped produce Top Chef and Covert Affairs [on the CIA Inspector General audit of 31 December 2012]. VICE News.",
+            "url": "https://news.vice.com/article/cia-helped-produce-top-chef-covert-affairs"
+          },
+          {
+            "text": "Mendez, A. J. (1999). The Master of Disguise: My Secret Life in the CIA. New York: William Morrow.",
+            "url": ""
+          },
+          {
+            "text": "Bearman, J. (2007). How the CIA used a fake sci-fi flick to rescue Americans from Tehran. Wired.",
+            "url": ""
+          },
+          {
+            "text": "Jenkins, T. (2012). The CIA in Hollywood: How the Agency Shapes Film and Television. Austin: University of Texas Press.",
+            "url": ""
+          },
+          {
+            "text": "Alford, M. & Secker, T. (2017). National Security Cinema. Drum Roll Books.",
+            "url": ""
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — covert rescue as moral resolution, the exceptional act as legitimate intervention, the CIA officer as ethical agent — coincides with the <em>ground record</em>: a doctrine of exception that organises US foreign action across the period, from coup to covert operation to targeted strike. The rescue addresses some bodies as worth saving; the same imagination, on the ground, structures whom it is permissible to leave outside the rescue."
+    },
+    {
+      "slug": "american-sniper",
+      "recNum": 3,
+      "year": 2014,
+      "title": "American Sniper",
+      "director": "Eastwood",
+      "runtime": "133 min",
+      "gross": "USD 547M",
+      "grossNum": 547,
+      "studio": "Warner Bros.",
+      "filed": "16.05.2026",
+      "revised": "21.10.2026",
+      "imagination": "saviour soldier",
+      "status": "open",
+      "threshold": {
+        "inCorpus": false,
+        "rank": null,
+        "note": "Outside the qualifying threshold: not in the 2014 or 2015 worldwide top ten, whose tenth films grossed USD 678M and USD 630M. Editorial decision pending."
+      },
+      "beckert": {
+        "imaginaryType": "restoration",
+        "payoffStructure": "zero-sum"
+      },
+      "construction": {
+        "camera": "A threat is present in the Iraqi city street. A figure approaches — a woman, a child. The soldier must judge in seconds. The film constructs the problem as <em>moral discrimination under pressure</em>: who is a combatant, who is not, all decided through the rifle scope. Iraq itself is given as a hostile environment, etiology unspecified.",
+        "scene": null,
+        "ground": "The 2003 invasion of Iraq, framed by the camera as setting, is the unnamed cause of the threat the soldier discriminates within. Iraq Body Count documents 150,772 civilian deaths from violence between 2003 and the end of 2014. The film's <em>given</em> is the ground record's <em>consequence</em>.",
+        "sources": [
+          {
+            "text": "Iraq Body Count (2015). Iraq 2014: Civilian deaths almost doubling year on year. 1 January 2015.",
+            "url": "https://www.iraqbodycount.org/analysis/numbers/2014/"
+          }
+        ],
+        "selectionNote": "Considered: the Lancet mortality surveys (2004, 2006). Not filed: IBC's documented count is the more conservative and better-sourced figure."
+      },
+      "address": {
+        "camera": "Chris Kyle, his family, his unit, his town. The camera holds American faces: the wife on the phone, the brother in country, the child at home. The Iraqi bodies in the frame are framed through the scope — at distance, at the moment of judgement, mostly without name.",
+        "scene": null,
+        "ground": "In 2014 alone, the year the film was released, IOM identified 2.1 million Iraqis internally displaced. They never address the camera as \"we.\" The film's \"we\" is national; the ground record's \"we\" is unavailable to it.",
+        "sources": [
+          {
+            "text": "IOM Displacement Tracking Matrix (2014). Iraq IDP crisis, Round XI report, 25 December 2014.",
+            "url": "https://displacement.iom.int/sites/g/files/tmzbdl1461/files/reports/Round11_Report_English_2014_December_25_IOM_DTM.pdf"
+          }
+        ],
+        "selectionNote": "Considered: UNHCR's figure for Iraqi refugees abroad. Not filed: internal displacement in the release year is closer to the film's Iraqi setting."
+      },
+      "exclusion": {
+        "camera": "The word <em>protection</em> structures the film. Kyle protects his unit, his family, the children he will not let be killed by their parents. <em>Protection</em> is the moral framework of his vocation, the answer to why he returns.",
+        "scene": null,
+        "ground": "The same word carries another file. <em>Protection</em> in the doctrinal vocabulary of the period — the responsibility to protect, force protection, civilian protection — recurs as the language under which interventions were authorised; ground records of those interventions show protection as a condition the protected often did not consent to or survive.",
+        "sources": [
+          {
+            "text": "United Nations General Assembly (2005). 2005 World Summit Outcome. A/RES/60/1, paragraphs 138–139.",
+            "url": ""
+          },
+          {
+            "text": "Costs of War Project (n.d.). Watson Institute for International and Public Affairs, Brown University.",
+            "url": "https://watson.brown.edu/costsofwar/"
+          }
+        ],
+        "selectionNote": "Exclusion may range historically; the 2005 doctrine is filed because it fixes the term's institutional meaning in the period."
+      },
+      "prescription": {
+        "camera": "The remedy is <em>the soldier</em>. Not policy reform, not withdrawal, not the renegotiation of the war. Kyle returns to country four times; the closing dedicates the film to him. The soldier's vocation is positioned as the moral form available to the audience.",
+        "scene": null,
+        "ground": "The same prescription operates at policy level: the framing of military service as the locus of national moral life, the soldier as moral subject of foreign action, the absorption of policy questions into questions of individual valor and sacrifice.",
+        "sources": [
+          {
+            "text": "Bacevich, A. J. (2013). Breach of Trust: How Americans Failed Their Soldiers and Their Country. New York: Metropolitan Books.",
+            "url": ""
+          },
+          {
+            "text": "Lutz, C. (Ed.) (2009). The Bases of Empire: The Global Struggle against U.S. Military Posts. New York: NYU Press. [Author to confirm this is the intended Lutz 2009.]",
+            "url": ""
+          }
+        ],
+        "selectionNote": "Interpretive pairing, resting on scholarship rather than a policy document."
+      },
+      "circulation": {
+        "productionSupport": "No formal Department of Defense production assistance found in the sources checked. Former Navy SEAL Kevin Lacz served as technical adviser.",
+        "scriptInvolvement": "Based on Chris Kyle's memoir (2012, with Scott McEwen and Jim DeFelice), which the Department of Defense vetted and partly redacted before publication.",
+        "distributionChannels": "Warner Bros. global release; Village Roadshow co-production; largest January opening on record at the time (USD 89.2M, January 2015).",
+        "authorityInfrastructure": "Veteran community endorsement; Academy nominations; box-office performance positioned the film as cultural settlement on the Iraq war.",
+        "onTheSameChannels": "US security agencies worked on over 800 films and 1,000 television titles, according to entertainment-liaison records obtained under freedom-of-information requests.",
+        "offTheSameChannels": "Iraqi cinema's record of the same war does not move through the same studio and distribution architecture; the Iraqi camera has no equivalent pre-clearance.",
+        "sources": [
+          {
+            "text": "Wikipedia (2026). American Sniper (production and release sections), accessed 21 October 2026.",
+            "url": "https://en.wikipedia.org/wiki/American_Sniper"
+          },
+          {
+            "text": "Kyle, C., McEwen, S. & DeFelice, J. (2012). American Sniper: The Autobiography of the Most Lethal Sniper in U.S. Military History. New York: William Morrow.",
+            "url": ""
+          },
+          {
+            "text": "University of Bath (2017). US government influence on films and television. 28 June 2017.",
+            "url": "https://bath.ac.uk/announcements/us-government-influence-on-films-and-television"
+          },
+          {
+            "text": "Robb, D. L. (2004). Operation Hollywood: How the Pentagon Shapes and Censors the Movies. Amherst, NY: Prometheus Books.",
+            "url": ""
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — the soldier as moral subject, protection as vocation, the rifle scope as instrument of ethical judgement — coincides with the <em>ground record</em>: the policy framework in which military service absorbs the political question of war and individual valor stands in for collective accountability. Film and policy travel as two registers of one imagination; the camera grants the soldier the moral authority that the ground record withholds from the policy."
+    },
+    {
+      "slug": "top-gun-maverick",
+      "recNum": 4,
+      "year": 2022,
+      "title": "Top Gun: Maverick",
+      "director": "Kosinski",
+      "runtime": "130 min",
+      "gross": "USD 1.50B",
+      "grossNum": 1496,
+      "studio": "Paramount",
+      "filed": "21.10.2026",
+      "revised": "21.10.2026",
+      "imagination": "preemptive nostalgia",
+      "status": "open",
+      "draft": true,
+      "threshold": {
+        "inCorpus": true,
+        "rank": 2,
+        "note": ""
+      },
+      "beckert": {
+        "imaginaryType": "retrotopian",
+        "payoffStructure": "zero-sum"
+      },
+      "construction": {
+        "camera": "An unnamed state is about to bring a uranium enrichment plant online, buried in a mountain bowl and ringed by surface-to-air missiles. The enemy has no name, no flag, no face. The problem is built as a <em>deadline</em>; the strike that answers it is given, never argued.",
+        "scene": null,
+        "ground": "On 25 March 2025 the US Director of National Intelligence told the Senate that the intelligence community \"continues to assess that Iran is not building a nuclear weapon.\" Three months later the President said Iran was \"very close\" and that the intelligence community was wrong. The deadline was built at the level of policy, against the government's own assessment.",
+        "sources": [
+          {
+            "text": "FactCheck.org (2025). Trump, Gabbard comments on Iran nuclear capability. 18 June 2025, updated 23 June 2025.",
+            "url": "https://www.factcheck.org/2025/06/trump-gabbard-comments-on-iran-nuclear-capability/"
+          }
+        ],
+        "selectionNote": "Considered: the US withdrawal from the nuclear agreement with Iran (May 2018). Not filed: it falls in period III, not the film's period band."
+      },
+      "address": {
+        "camera": "The Dagger squad — Rooster, Hangman, Phoenix, Bob, Payback, Fanboy, Coyote — is young, mixed in gender and background, and trained by a man of the previous generation. The \"we\" is the cockpit, the squadron, the carrier. The enemy pilots never lift their visors.",
+        "scene": null,
+        "ground": "The audience the film hails was hailed directly. At screenings in May 2022, viewers reported Navy recruiting booths near the concession stands and the Air Force ran a recruiting advertisement before the film, while the Navy sought 40,000 enlisted sailors and 3,800 officers for fiscal year 2022.",
+        "sources": [
+          {
+            "text": "Slayton, N. (2022). The Navy is trying to recruit at Top Gun: Maverick. Task & Purpose, 29 May 2022.",
+            "url": "https://taskandpurpose.com/news/navy-is-trying-to-recruit-at-top-gun-maverick/"
+          }
+        ],
+        "selectionNote": "Considered: US military demographic data for 2022. Not filed: the recruitment drive records whom the film's \"we\" was meant to enlist, which is the address question."
+      },
+      "exclusion": {
+        "camera": "Admiral Cain tells Maverick that drones will replace him: \"The future is coming, and you're not in it.\" The film answers through the pilot. The keyword is <em>judgement</em> — a human in the cockpit who sees, decides and is accountable.",
+        "scene": null,
+        "ground": "The same word carries another file. On 29 August 2021 a US drone strike in Kabul, aimed at a suspected bomber, killed 10 civilians, seven of them children. The head of US Central Command called it a mistake. Remote judgement, unaccountable at the point of decision, is the war the film leaves out.",
+        "sources": [
+          {
+            "text": "Military.com (2021). Kabul drone strike was a 'tragic mistake' that killed civilians, children, Pentagon says. 17 September 2021.",
+            "url": "https://365.military.com/daily-news/2021/09/17/kabul-drone-strike-was-tragic-mistake-killed-civilians-children-pentagon-says.html"
+          }
+        ],
+        "selectionNote": "Exclusion may range historically. Considered: Pakistan drone strikes, 2004–2018. Not filed: Kabul 2021 falls in the film's own period and the US admitted the error."
+      },
+      "prescription": {
+        "camera": "The remedy is the crewed aircraft and the veteran. The strike succeeds by hand-flown skill, and Maverick escapes in a museum-era F-14 taken from the enemy's own hangar. The future is won by returning to the past's machines.",
+        "scene": null,
+        "ground": "On 21 June 2025, seven US B-2 bombers dropped fourteen GBU-57 penetrators on the Fordow and Natanz enrichment sites, the first operational use of the weapon, while a submarine fired Tomahawks at Isfahan. The film's strike on a mountain enrichment plant was carried out, by crewed aircraft, three years after release.",
+        "sources": [
+          {
+            "text": "Rodgers, J. (2025). What Operation Midnight Hammer means for the future of Iran's nuclear ambitions. CSIS, 23 June 2025.",
+            "url": "https://www.csis.org/analysis/what-operation-midnight-hammer-means-future-irans-nuclear-ambitions"
+          }
+        ],
+        "selectionNote": "Considered: Israel's strikes on Iran from 13 June 2025. Not filed: the agent condition requires the state that cooperated with the film."
+      },
+      "circulation": {
+        "productionSupport": "US Navy access to facilities, personnel, a Nimitz-class carrier and aircraft, with cameras mounted on jets and helicopters; Paramount reimbursed costs not aligned with current operations.",
+        "scriptInvolvement": "Under the production assistance agreement, senior military staff reviewed the script's themes and added talking points for the aviation community, and the DoD received a rough cut and a screening before premiere. The Navy said the script was reviewed to be consistent with its ideals.",
+        "distributionChannels": "Paramount worldwide release; Skydance co-production; USD 1.50B worldwide.",
+        "authorityInfrastructure": "Navy endorsement and on-set naval staff; recruitment activity at screenings.",
+        "onTheSameChannels": "US security agencies worked on over 800 films and 1,000 television titles, according to entertainment-liaison records obtained under freedom-of-information requests.",
+        "offTheSameChannels": "The civilian record of remote strikes, including Kabul 2021, reached the public through investigative journalism and military inquiries, not through the studio and liaison channels that carried the film.",
+        "sources": [
+          {
+            "text": "Montgomery, N. (2019). 'Top Gun: Maverick' is Navy-approved, down to the plot details. Stars and Stripes, 1 August 2019.",
+            "url": "https://www.stripes.com/theaters/us/2019-08-01/%E2%80%98top-gun:-maverick%E2%80%99-is-navy-approved,-down-to-the-plot-details-1483393.html"
+          },
+          {
+            "text": "University of Bath (2017). US government influence on films and television. 28 June 2017.",
+            "url": "https://bath.ac.uk/announcements/us-government-influence-on-films-and-television"
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — an unnamed nuclear deadline, a strike that needs no argument, the human pilot over the drone, the old machine over the new — coincides with the <em>ground record</em>: a deadline built against the state's own intelligence, a crewed strike on mountain enrichment sites, and a drone war whose errors stay off the screen. The future is secured by preempting it with the past."
+    },
+    {
+      "slug": "iron-man",
+      "recNum": 5,
+      "year": 2008,
+      "title": "Iron Man",
+      "director": "Favreau",
+      "runtime": "126 min",
+      "gross": "USD 586M",
+      "grossNum": 586,
+      "studio": "Paramount",
+      "filed": "21.10.2026",
+      "revised": "21.10.2026",
+      "imagination": "privatised salvation",
+      "status": "open",
+      "draft": true,
+      "threshold": {
+        "inCorpus": true,
+        "rank": 8,
+        "note": ""
+      },
+      "beckert": {
+        "imaginaryType": "anomic-escape",
+        "payoffStructure": "zero-sum"
+      },
+      "construction": {
+        "camera": "Tony Stark, an arms manufacturer, is ambushed in Afghanistan by insurgents carrying his own company's weapons. The problem is built as <em>leakage</em>: weapons in the wrong hands. Arms production itself is left as given; the fault lies in where the weapons end up.",
+        "scene": null,
+        "ground": "A year before the film, the US Government Accountability Office found a discrepancy of at least 190,000 weapons between what the Pentagon reported issuing to Iraqi security forces and its own property records. Leakage was on record as a feature of US arming policy, not an accident of rogue dealers.",
+        "sources": [
+          {
+            "text": "US Government Accountability Office (2007). Stabilizing Iraq: DOD Cannot Ensure That U.S.-Funded Equipment Has Reached Iraqi Security Forces. GAO-07-711, 31 July 2007.",
+            "url": "https://www.gao.gov/products/GAO-07-711"
+          }
+        ],
+        "selectionNote": "Considered: US weapons transfers to Afghan forces. Not filed: no audit of equal standing for the period was found."
+      },
+      "address": {
+        "camera": "Stark, Rhodes and Pepper Potts are the film's \"we\". Afghans appear as captors, as villagers of Gulmira to be rescued, and as Yinsen, the doctor who dies so that Stark can escape. The rescue of Afghans is performed by an American in a suit he built.",
+        "scene": null,
+        "ground": "In 2008, the year of release, the UN mission in Afghanistan counted 2,118 civilian deaths, the highest since 2001. It attributed 828 of them, 39 per cent, to pro-government and international forces. The Afghans the record names were killed on both sides of the line the film draws.",
+        "sources": [
+          {
+            "text": "UN News (2009). Number of Afghan civilian deaths in 2008 highest since Taliban ouster, says UN (on UNAMA's annual report).",
+            "url": "https://news.un.org/en/node/291342"
+          }
+        ],
+        "selectionNote": "Considered: Afghan refugee figures for 2008. Not filed: civilian deaths by attributed party bear directly on the film's division of Afghans into victims and captors."
+      },
+      "exclusion": {
+        "camera": "Stark flies to Gulmira alone and ends the insurgents' hold on the village. He ends the film by declaring \"I am Iron Man.\" The keyword is the <em>private</em> hero: force abroad, used by an individual, answerable to no one.",
+        "scene": null,
+        "ground": "The same word carries another file. On 16 September 2007, Blackwater guards escorting a US embassy convoy in Baghdad's Nisour Square killed 17 Iraqi civilians. Four were convicted in 2014 and pardoned by the President in December 2020. Private force abroad, on record, was neither heroic nor answerable for long.",
+        "sources": [
+          {
+            "text": "Wikipedia (2026). Nisour Square massacre, accessed 21 October 2026 (trial and pardon dates).",
+            "url": "https://en.wikipedia.org/wiki/Nisour_Square_massacre"
+          }
+        ],
+        "selectionNote": "Exclusion may range historically. A court record or Department of Justice release should replace the encyclopedia source before the record is finalised."
+      },
+      "prescription": {
+        "camera": "The remedy is the inventor. Stark shuts down weapons production and builds a suit that only he controls. A privately held technology, owned by one man, replaces the army and the state.",
+        "scene": null,
+        "ground": "The same prescription was policy. In 2008 the Congressional Budget Office estimated at least 190,000 contractor personnel on US-funded contracts in the Iraq theatre, about one per US service member, a ratio at least 2.5 times higher than in any other major US conflict.",
+        "sources": [
+          {
+            "text": "Congressional Budget Office (2008). Contractors' Support of U.S. Operations in Iraq. Summarised in Contractors in Iraq, 12 August 2008.",
+            "url": "https://www.cbo.gov/publication/24822"
+          }
+        ],
+        "selectionNote": "Considered: Pentagon procurement totals for 2008. Not filed: contractor numbers bear more directly on the substitution of private for public force."
+      },
+      "circulation": {
+        "productionSupport": "US Air Force: three days of filming at Edwards Air Force Base, with an F-22 Raptor and a Global Hawk; about 150 airmen and a dozen Marines as paid extras.",
+        "scriptInvolvement": "Capt. Christian Hodge served as the Defense Department project officer overseeing the Air Force's involvement.",
+        "distributionChannels": "Paramount worldwide release; Marvel Studios' first self-produced film.",
+        "authorityInfrastructure": "Official Air Force news stories promoted the production and its airmen.",
+        "onTheSameChannels": "US security agencies worked on over 800 films and 1,000 television titles, according to entertainment-liaison records obtained under freedom-of-information requests.",
+        "offTheSameChannels": "No counter-distribution exists for the Afghan civilian casualty record through the same studio and liaison channels.",
+        "sources": [
+          {
+            "text": "Miles, D. (2007). Edwards team stars in 'Iron Man' superhero movie. American Forces Press Service, 2 May 2007.",
+            "url": "https://www.af.mil/News/Article-Display/Article/127002/edwards-team-stars-in-iron-man-superhero-movie/"
+          },
+          {
+            "text": "University of Bath (2017). US government influence on films and television. 28 June 2017.",
+            "url": "https://bath.ac.uk/announcements/us-government-influence-on-films-and-television"
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — leakage as the problem, the inventor as the remedy, a private suit as the instrument of rescue abroad — coincides with the <em>ground record</em>: weapons unaccounted for by the state that supplied them, contractors in numbers equal to soldiers, and private force abroad that escaped account. The future is saved by one owner of one technology."
+    },
+    {
+      "slug": "wolf-warrior-2",
+      "recNum": 6,
+      "year": 2017,
+      "title": "Wolf Warrior 2",
+      "director": "Wu",
+      "runtime": "123 min",
+      "gross": "USD 870M",
+      "grossNum": 870,
+      "studio": "United Entertainment",
+      "filed": "21.10.2026",
+      "revised": "21.10.2026",
+      "imagination": "protective reach",
+      "status": "open",
+      "draft": true,
+      "threshold": {
+        "inCorpus": true,
+        "rank": 7,
+        "note": ""
+      },
+      "beckert": {
+        "imaginaryType": "restoration",
+        "payoffStructure": "zero-sum"
+      },
+      "construction": {
+        "camera": "Civil war breaks out in an unnamed African country. Rebels and Western mercenaries threaten Chinese factory workers and African civilians alike. The chaos arrives as a local condition; the Chinese factory is simply there, a bystander to be protected.",
+        "scene": null,
+        "ground": "The presence the film leaves as given is on record as a site of conflict. In 2011 Human Rights Watch documented poor safety, excessive hours, below-market pay and obstruction of unions at Chinese state-owned copper mines in Zambia.",
+        "sources": [
+          {
+            "text": "Human Rights Watch (2011). \"You'll Be Fired if You Refuse\": Labor Abuses in Zambia's Chinese State-owned Copper Mines. November 2011.",
+            "url": "https://www.hrw.org/report/2011/11/04/youll-be-fired-if-you-refuse/labor-abuses-zambias-chinese-state-owned-copper"
+          }
+        ],
+        "selectionNote": "Same-period condition: the report predates period III; filed provisionally, as no comparable institutional report of 2017–2020 has yet been found. Replace when one is."
+      },
+      "address": {
+        "camera": "Leng Feng, a discharged special-forces soldier, stands for the nation abroad. The \"we\" is the Chinese citizen: factory workers, a medical team, a shop owner. Africans appear as children to be saved and villagers who follow.",
+        "scene": null,
+        "ground": "The citizen the film addresses had already been rescued at scale. In February 2011 China brought 35,860 of its citizens out of Libya by charter flights, ships and military transport, and a navy frigate, the Xuzhou, escorted evacuation ships — the navy's first evacuation abroad.",
+        "sources": [
+          {
+            "text": "GlobalSecurity.org (n.d.). China: Non-combatant evacuation operations (on the Libya evacuation, 2011).",
+            "url": "https://www.globalsecurity.org/military/world/china/neo.htm"
+          }
+        ],
+        "selectionNote": "Considered: the 2015 Yemen evacuation. Not filed: the available figures do not reconcile."
+      },
+      "exclusion": {
+        "camera": "Leng Feng fights beside African workers and calls them brothers. The keyword is <em>protection</em>: the Chinese presence shields the people around it.",
+        "scene": null,
+        "ground": "The same word carries another file. On 15 October 2010, at the Collum coal mine in Sinazongwe, Zambia, two Chinese managers shot 11 workers protesting conditions. No one was prosecuted; the charges were dropped and compensation negotiated.",
+        "sources": [
+          {
+            "text": "Human Rights Watch (2011). \"You'll Be Fired if You Refuse\". November 2011 (account of the Collum shooting).",
+            "url": "https://www.hrw.org/report/2011/11/04/youll-be-fired-if-you-refuse/labor-abuses-zambias-chinese-state-owned-copper"
+          }
+        ],
+        "selectionNote": "Exclusion may range historically. Collum is privately owned, not state-owned; the agent condition is met at the level of Chinese enterprise abroad, not the state."
+      },
+      "prescription": {
+        "camera": "The remedy is the state's reach. A navy ship fires once authorisation arrives, and the film closes on a Chinese passport and a message to citizens: when you meet danger abroad, do not give up.",
+        "scene": null,
+        "ground": "On 1 August 2017, days after the film's release, China formally opened its first overseas military base, in Djibouti, officially a logistics facility for ships on peacekeeping and humanitarian missions off Yemen and Somalia.",
+        "sources": [
+          {
+            "text": "Al Jazeera (2017). China opens first overseas base in Djibouti. 1 August 2017.",
+            "url": "https://www.aljazeera.com/news/2017/8/1/china-opens-first-overseas-base-in-djibouti"
+          }
+        ],
+        "selectionNote": "Considered: the 2015 defence white paper on protecting overseas interests. Not filed yet: not opened for this record."
+      },
+      "circulation": {
+        "productionSupport": "Privately funded; the film uses close replicas of PLA weapons. No formal PLA production assistance was confirmed in the sources checked.",
+        "scriptInvolvement": "No documented state script review found in the sources checked.",
+        "distributionChannels": "Released in late July 2017, the same day as the state-sponsored The Founding of an Army; China's highest-grossing film at the time; about USD 1M in the United States.",
+        "authorityInfrastructure": "Praise in state-aligned media such as the Global Times, which also argued the film was commercial rather than state-initiated.",
+        "onTheSameChannels": "Not yet recorded.",
+        "offTheSameChannels": "Not yet recorded.",
+        "sources": [
+          {
+            "text": "China Digital Times (2017). Military nationalism hits big screen, tops box office. August 2017.",
+            "url": "https://chinadigitaltimes.net/2017/08/military-nationalism-hits-big-screen-tops-box-office/"
+          }
+        ]
+      },
+      "gloss": "The political imagination in which the <em>camera record</em> — a Chinese presence that only protects, a citizen the state will reach anywhere, a passport as the last word — coincides with the <em>ground record</em>: mass evacuations of citizens, an overseas base opened in the week of release, and a labour record the protection does not cover. Rescue exceptionalism, filed from the other side of the world."
+    }
+  ]
+}

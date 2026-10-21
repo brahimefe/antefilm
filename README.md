@@ -2,85 +2,55 @@
 
 El yazımı statik site. GitHub deposu (`brahimefe/antefilm`, dal `main`) Hostinger'da
 **antefilm.com** sitesine bağlıdır; `main`'e yapılan her push sitenin `public_html`
-klasörüne otomatik dağıtılır. Dosyaları artık File Manager ile elle yüklemeye gerek yok.
+klasörüne otomatik dağıtılır.
 
 > Dikkat: Bu depo yalnızca antefilm.com'a bağlı olmalı. webdipnot deposu
 > webdipnot.com'a bağlıdır; ikisini karıştırmayın.
 
-## Dosya yapısı
+## Nasıl çalışır
 
-**Sitede yayımlananlar:**
+Sayfalar elle yazılmaz; `tools/build.js` hepsini veri dosyalarından üretir.
+
 ```
-index.html        — ana sayfa
-cases.html        — vakaların tamamı, filtreli liste + vaka detayı
-method.html       — kriter + protokol açıklaması
-about.html        — proje, yazar, atıf bilgisi
-submit.html       — dışarıdan vaka önerisi formu (e-posta ile)
-antefilm.css      — ortak stil
-cases.js          — TÜM vaka içeriği (tek doğruluk kaynağı)
-schema.json       — vaka veri modeli (JSON Schema)
+data/records.js           — tam kayıtlar (yakın okumalar). TEK DOĞRULUK KAYNAĞI.
+data/corpus-source.tsv    — 2001–2025 yıllık dünya ilk 10 listesi (250 film)
+data/coding-beckert.tsv   — her filmin Beckert kodlaması (imaginaryType, payoffStructure)
+tools/content/*.html      — method, about ve submit sayfalarının metni
+assets/                   — stil ve betikler
 ```
 
-**Depoda duran ama sitede açılmayanlar** (`.htaccess` erişimi engeller):
+Üretilen dosyalar (elle düzenlemeyin, build yeniden yazar):
+
 ```
-_new-case.html    — yeni vaka ekleme aracı (yerel form; bilgisayarında aç)
-README.md         — bu dosya
+index.html                — atlas (ana sayfa)
+records/<slug>/index.html — her kayıt için ayrı sayfa
+records/index.html, compare.html, data.html, method.html, about.html, submit.html
+data/corpus.csv, data/corpus.json, data/records.json, sitemap.xml, robots.txt
+cases.html                — eski bağlantıları (cases.html#argo) yeni sayfalara yönlendirir
 ```
 
-## Yeni vaka eklemek — en kolay yol
+## Bir değişiklik yapmak
 
-1. Bilgisayarında `_new-case.html` dosyasını çift tıkla, tarayıcıda açılır
-2. Formu doldur (başlık, yönetmen, beş dikkat, kaynaklar, gloss)
-3. **▸ generate code** butonuna bas
-4. Çıkan kod kutusunda **▸ copy to clipboard** butonuna bas
-5. `cases.js` dosyasını text editöründe aç
-6. `const CASES = [` satırının altında, son açık vakanın `},` 'sından sonra yapıştır
-7. `cases.js`'i kaydet
-8. Değişikliği commit edip `main`'e push et — site birkaç saniye içinde güncellenir
+1. İlgili veri dosyasını düzenleyin (örneğin `data/records.js`).
+2. Depo klasöründe çalıştırın: `node tools/build.js`
+3. Commit edip `main`'e push edin — site birkaç saniye içinde güncellenir.
 
-Site otomatik tanır:
-- Ana sayfada yeni kart belirir (recNum en yüksek olduğu için en üstte)
-- cases.html'de yeni vaka listede görünür
-- Yıl filtresine yeni yıl otomatik düşer
-- Imagination filtresine yeni named imagination otomatik düşer
+## Yeni kayıt eklemek
 
-## Yayımlama
+- `tools/new-record.html` dosyasını tarayıcıda açın, formu doldurun, **Show the entry for records.js** düğmesine basın.
+- Çıkan girdiyi `data/records.js` içindeki `RECORDS` listesine yapıştırın; `recNum` verin.
+- `beckert` alanını ve `threshold.rank` değerini doldurun; inceleme bitene kadar `draft: true` kalsın.
+- `node tools/build.js` çalıştırın, commit edip push edin.
 
-Hostinger panelinde antefilm.com → Git bölümünde bu depo bağlıdır (kök dizin: `public_html`).
-`main`'e push = yayın. Bir şey ters giderse önceki commit'e dönüp yeniden push etmek
-siteyi eski hâline getirir.
+## Kayıt kontrol listesi
 
-## Pending kayıt
+- [ ] Film yılın dünya ilk 10'unda mı (`threshold.inCorpus`)
+- [ ] Dört dikkatin her birinde kamera kaydı, zemin kaydı, kaynak ve seçim notu var mı
+- [ ] Her zemin kaydı yöntem §6'daki dört koşulu karşılıyor mu (aynı terim, aynı fail, aynı dönem, kurumsal kaynak)
+- [ ] Her kaynakta yazar/kurum, yıl, başlık, yayıncı ve mümkünse bağlantı var mı
+- [ ] Named imagination kısa ve anlaşılır mı; gloss 2–4 cümle mi
+- [ ] Beckert kodlaması korpus dosyasıyla (`coding-beckert.tsv`) aynı mı
 
-Henüz tam doldurmadığın bir vakayı listeye eklemek için:
-- `_new-case.html`'de **pending** seçeneğini işaretle
-- Sadece başlık, slug, yıl, yönetmen, gişe alanlarını doldur
-- Generate → kopyala → yapıştır
+## Erişim
 
-Pending vakalar arşivde görünür ama tıklanmaz (gri görünür).
-
-## Tipografi
-
-- Anahtar sözcükleri vurgulamak için: `<em>kelime</em>` — kırmızı görünür
-- HTML escape: `&amp;` (ve işareti için)
-- Form alanlarına doğrudan yazabilirsin — kod üretirken otomatik escape edilir
-
-## Vaka eklerken kontrol listesi
-
-- [ ] Film yıllık global top 10'da mı (eşik kuralı)
-- [ ] Beş dikkat alanı dolu mu
-- [ ] Her ground record için kaynak yazıldı mı
-- [ ] Named imagination kısa ve anlaşılır mı
-- [ ] Gloss 2-4 cümle, "two registers of one imagination" formülünü taşıyor mu
-- [ ] recNum doğru mu (mevcut en yüksek + 1, şu an son recNum: 3)
-- [ ] grossNum int mi (milyon USD cinsinden)
-
-## Dönem bantları
-
-`cases.js` içinde PERIODS dizisi tanımlı:
-- I (2001-2008) — invasion grammar
-- II (2009-2016) — exit imperialism, drone grammar
-- III (2017-2020) — withdrawal grammar
-- IV (2021-) — post-withdrawal grammar
-
-Sen analizini geliştirdikçe `cases.js`'i editörde açıp PERIODS dizisini değiştirebilirsin.
+`.htaccess`, `tools/` klasörünü, bu README'yi ve kaynak TSV dosyalarını sitede kapatır.

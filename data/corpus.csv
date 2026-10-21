@@ -1,0 +1,251 @@
+year,rank,title,distributor,grossUSD,period,imaginaryType,payoffStructure,codingNote,recordNumber,recordURL,stateCooperation,cooperationEvidence,scriptInvolvement,releaseChina,releaseTurkey
+2001,1,Harry Potter and the Philosopher's Stone,Warner Bros.,974755371,I,restoration,positive-sum,School order defended against a single villain,,,unknown,,unknown,unknown,unknown
+2001,2,The Lord of the Rings: The Fellowship of the Ring,New Line,883726270,I,retrotopian,zero-sum,Trilogy resolves in return of the king; orcs as an out-group,,,unknown,,unknown,unknown,unknown
+2001,3,"Monsters, Inc.",Walt Disney Pictures,528773250,I,integrative,positive-sum,Energy transition from scream to laughter benefits monsters and children,,,unknown,,unknown,unknown,unknown
+2001,4,Shrek,DreamWorks,484944448,I,integrative,positive-sum,Exiled fairy-tale creatures regain their home,,,unknown,,unknown,unknown,unknown
+2001,5,Ocean's Eleven,Warner Bros.,450717150,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2001,6,Pearl Harbor,Touchstone,449220945,I,restoration,zero-sum,Retaliation (Doolittle raid) closes the film,,,unknown,,unknown,unknown,unknown
+2001,7,The Mummy Returns,Universal,433013274,I,restoration,zero-sum,Undead army destroyed,,,unknown,,unknown,unknown,unknown
+2001,8,Jurassic Park III,Universal,368780809,I,personal,n/a,Survival story,,,unknown,,unknown,unknown,unknown
+2001,9,Planet of the Apes,20th Century Fox,362211740,I,anomic-collapse,zero-sum,Ape rule; closing twist shows a captured Earth,,,unknown,,unknown,unknown,unknown
+2001,10,Hannibal,MGM / Universal,351692268,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2002,1,The Lord of the Rings: The Two Towers,New Line,936689735,I,retrotopian,zero-sum,,,,unknown,,unknown,unknown,unknown
+2002,2,Harry Potter and the Chamber of Secrets,Warner Bros.,878979634,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2002,3,Spider-Man,Sony,821708551,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2002,4,Star Wars: Episode II – Attack of the Clones,20th Century Fox,653741940,I,anomic-collapse,negative-sum,Republic slides toward war and empire,,,unknown,,unknown,unknown,unknown
+2002,5,Men in Black II,Sony,441818803,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2002,6,Die Another Day,MGM / 20th Century Fox,431971116,I,restoration,zero-sum,North Korean general as antagonist,,,unknown,,unknown,unknown,unknown
+2002,7,Signs,Touchstone,408247917,I,restoration,zero-sum,Alien invaders repelled; faith restored,,,unknown,,unknown,unknown,unknown
+2002,8,Ice Age,20th Century Fox,383257136,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2002,9,My Big Fat Greek Wedding,IFC,368744044,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2002,10,Minority Report,20th Century Fox / DreamWorks,358372926,I,restoration,positive-sum,Pre-crime system dismantled; due process restored,,,unknown,,unknown,unknown,unknown
+2003,1,The Lord of the Rings: The Return of the King,New Line,1118887224,I,retrotopian,zero-sum,,,,unknown,,unknown,unknown,unknown
+2003,2,Finding Nemo,Walt Disney Pictures,871014978,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2003,3,The Matrix Reloaded,Warner Bros.,739412035,I,anomic-collapse,zero-sum,,,,unknown,,unknown,unknown,unknown
+2003,4,Pirates of the Caribbean: The Curse of the Black Pearl,Walt Disney Pictures,654264015,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2003,5,Bruce Almighty,Universal / Buena Vista,484592874,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2003,6,The Last Samurai,Warner Bros.,454627263,I,retrotopian,negative-sum,Samurai past honoured as it dies,,,unknown,,unknown,unknown,unknown
+2003,7,Terminator 3: Rise of the Machines,Warner Bros. / Sony / Columbia,433371112,I,anomic-collapse,negative-sum,Judgment Day occurs,,,unknown,,unknown,unknown,unknown
+2003,8,The Matrix Revolutions,Warner Bros.,427343298,I,integrative,positive-sum,Peace between machines and humans,,,unknown,,unknown,unknown,unknown
+2003,9,X2,20th Century Fox,407711549,I,integrative,positive-sum,Closing appeal for coexistence of mutants and humans,,,unknown,,unknown,unknown,unknown
+2003,10,Bad Boys II,Sony / Columbia,273339556,I,restoration,zero-sum,Incursion into Cuba to seize a drug lord,,,unknown,,unknown,unknown,unknown
+2004,1,Shrek 2,DreamWorks,929098316,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2004,2,Harry Potter and the Prisoner of Azkaban,Warner Bros.,808481128,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2004,3,Spider-Man 2,Sony,783766341,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2004,4,The Incredibles,Walt Disney Pictures,631442092,I,restoration,positive-sum,Superheroes return to public life,,,unknown,,unknown,unknown,unknown
+2004,5,The Passion of the Christ,Icon / Newmarket,611486736,I,integrative,positive-sum,Religious salvation offered to all; fits the categories poorly,,,unknown,,unknown,unknown,unknown
+2004,6,The Day After Tomorrow,20th Century Fox / Lionsgate,552639571,I,anomic-collapse,negative-sum,Northern hemisphere frozen; Americans move south to Mexico,,,unknown,,unknown,unknown,unknown
+2004,7,Meet the Fockers,Universal / DreamWorks,522657936,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2004,8,Troy,Warner Bros.,497409852,I,anomic-collapse,negative-sum,City destroyed,,,unknown,,unknown,unknown,unknown
+2004,9,Shark Tale,DreamWorks,374583879,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2004,10,Ocean's Twelve,Warner Bros.,362744280,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2005,1,Harry Potter and the Goblet of Fire,Warner Bros.,895921036,I,anomic-collapse,negative-sum,Voldemort returns,,,unknown,,unknown,unknown,unknown
+2005,2,Star Wars: Episode III – Revenge of the Sith,20th Century Fox,849997605,I,anomic-collapse,negative-sum,Republic becomes Empire,,,unknown,,unknown,unknown,unknown
+2005,3,"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",Walt Disney Pictures,745013115,I,retrotopian,zero-sum,Rightful kings restore a golden age,,,unknown,,unknown,unknown,unknown
+2005,4,War of the Worlds,Paramount / DreamWorks,603873119,I,restoration,zero-sum,Invaders die; family reunited,,,unknown,,unknown,unknown,unknown
+2005,5,King Kong,Universal,556906378,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2005,6,Madagascar,DreamWorks,542063846,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2005,7,Mr. & Mrs. Smith,20th Century Fox,487287646,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2005,8,Charlie and the Chocolate Factory,Warner Bros.,474968763,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2005,9,Batman Begins,Warner Bros.,373443774,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2005,10,Hitch,Sony / Columbia,371594210,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2006,1,Pirates of the Caribbean: Dead Man's Chest,Walt Disney Pictures,1066179725,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2006,2,The Da Vinci Code,Sony,760006945,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2006,3,Ice Age: The Meltdown,20th Century Fox,660998756,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2006,4,Casino Royale,Sony / MGM,606099584,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2006,5,Night at the Museum,20th Century Fox,574480841,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2006,6,Cars,Walt Disney Pictures,480634249,I,retrotopian,positive-sum,Route 66 town revived; nostalgia for the pre-interstate past,,,unknown,,unknown,unknown,unknown
+2006,7,X-Men: The Last Stand,20th Century Fox,460435291,I,restoration,zero-sum,Militant mutants defeated; a cure offered,,,unknown,,unknown,unknown,unknown
+2006,8,Mission: Impossible III,Paramount,398479497,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2006,9,Superman Returns,Warner Bros.,391081192,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2006,10,Happy Feet,Warner Bros.,384335608,I,integrative,positive-sum,Humans end overfishing after contact with penguins,,,unknown,,unknown,unknown,unknown
+2007,1,Pirates of the Caribbean: At World's End,Disney,960996492,I,restoration,zero-sum,Pirates defeat the East India Company,,,unknown,,unknown,unknown,unknown
+2007,2,Harry Potter and the Order of the Phoenix,Warner Bros.,941676843,I,anomic-collapse,zero-sum,Ministry denial; war begins,,,unknown,,unknown,unknown,unknown
+2007,3,Spider-Man 3,Sony,895871626,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2007,4,Shrek the Third,Paramount,813367380,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2007,5,Transformers,Paramount / DreamWorks,709709780,I,restoration,zero-sum,Decepticons defeated with US military,,,unknown,,unknown,unknown,unknown
+2007,6,Ratatouille,Disney,623726085,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2007,7,I Am Legend,Warner Bros.,585410052,I,anomic-collapse,zero-sum,Cure reaches a walled survivor colony,,,unknown,,unknown,unknown,unknown
+2007,8,The Simpsons Movie,20th Century Fox,536414270,I,restoration,positive-sum,Town saved from the federal dome,,,unknown,,unknown,unknown,unknown
+2007,9,National Treasure: Book of Secrets,Disney,459242249,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2007,10,300,Warner Bros.,456068181,I,retrotopian,zero-sum,Martial past against a Persian empire,,,unknown,,unknown,unknown,unknown
+2008,1,The Dark Knight,Warner Bros.,997000000,I,restoration,positive-sum,Order secured through a mass-surveillance exception,,,unknown,,unknown,unknown,unknown
+2008,2,Indiana Jones and the Kingdom of the Crystal Skull,Paramount,786636033,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2008,3,Kung Fu Panda,Paramount / DreamWorks,631744560,I,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2008,4,Hancock,Sony,629443428,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2008,5,Mamma Mia!,Universal,609841637,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2008,6,Madagascar: Escape 2 Africa,Paramount,603900354,I,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2008,7,Quantum of Solace,Sony / MGM,589580482,I,restoration,positive-sum,Coup over Bolivian water foiled,,,unknown,,unknown,unknown,unknown
+2008,8,Iron Man,Paramount,585796247,I,anomic-escape,zero-sum,Privately owned technology replaces army and state (see REC.005),005,https://antefilm.com/records/iron-man/,unknown,,unknown,unknown,unknown
+2008,9,WALL-E,Disney,521311860,I,integrative,positive-sum,Humans return to rebuild Earth together,,,unknown,,unknown,unknown,unknown
+2008,10,The Chronicles of Narnia: Prince Caspian,Disney,419665568,I,retrotopian,zero-sum,,,,unknown,,unknown,unknown,unknown
+2009,1,Avatar,20th Century Fox,2743577587,II,retrotopian,zero-sum,Indigenous order restored; humans expelled to a dying Earth,,,unknown,,unknown,unknown,unknown
+2009,2,Harry Potter and the Half-Blood Prince,Warner Bros.,933959197,II,anomic-collapse,negative-sum,,,,unknown,,unknown,unknown,unknown
+2009,3,Ice Age: Dawn of the Dinosaurs,20th Century Fox,886686817,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2009,4,Transformers: Revenge of the Fallen,Paramount,836303693,II,restoration,zero-sum,,,,unknown,,unknown,unknown,unknown
+2009,5,2012,Sony,769679473,II,anomic-escape,zero-sum,Arks built for those who can pay; ending admits more people,,,unknown,,unknown,unknown,unknown
+2009,6,Up,Disney,735099082,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2009,7,The Twilight Saga: New Moon,Summit,709827462,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2009,8,Sherlock Holmes,Warner Bros.,524028679,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2009,9,Angels & Demons,Sony,485930816,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2009,10,The Hangover,Warner Bros.,469328079,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2010,1,Toy Story 3,Disney,1066969703,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2010,2,Alice in Wonderland,Disney,1025467110,II,restoration,positive-sum,Ends with Alice joining the China trade,,,unknown,,unknown,unknown,unknown
+2010,3,Harry Potter and the Deathly Hallows – Part 1,Warner Bros.,960897696,II,anomic-collapse,negative-sum,,,,unknown,,unknown,unknown,unknown
+2010,4,Inception,Warner Bros.,828258695,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2010,5,Shrek Forever After,Paramount,752600867,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2010,6,The Twilight Saga: Eclipse,Summit,698491347,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2010,7,Iron Man 2,Paramount,623933331,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2010,8,Tangled,Disney,592461732,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2010,9,Despicable Me,Universal,543113985,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2010,10,How to Train Your Dragon,Paramount,494878759,II,integrative,positive-sum,Vikings and dragons coexist,,,unknown,,unknown,unknown,unknown
+2011,1,Harry Potter and the Deathly Hallows – Part 2,Warner Bros.,1341511219,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2011,2,Transformers: Dark of the Moon,Paramount,1123794079,II,restoration,zero-sum,,,,unknown,,unknown,unknown,unknown
+2011,3,Pirates of the Caribbean: On Stranger Tides,Disney,1045713802,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2011,4,The Twilight Saga: Breaking Dawn – Part 1,Summit,712205856,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2011,5,Mission: Impossible – Ghost Protocol,Paramount,694713380,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2011,6,Kung Fu Panda 2,Paramount,665692281,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2011,7,Fast Five,Universal,626137675,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2011,8,The Hangover Part II,Warner Bros.,586764305,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2011,9,The Smurfs,Sony,563749323,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2011,10,Cars 2,Disney,559852396,II,restoration,positive-sum,Alternative fuel protected from an oil conspiracy,,,unknown,,unknown,unknown,unknown
+2012,1,The Avengers,Disney,1518812988,II,restoration,zero-sum,Alien invasion repelled,,,unknown,,unknown,unknown,unknown
+2012,2,Skyfall,Sony / MGM,1108561013,II,restoration,positive-sum,Intelligence service reaffirmed,,,unknown,,unknown,unknown,unknown
+2012,3,The Dark Knight Rises,Warner Bros.,1081041287,II,restoration,zero-sum,Populist uprising crushed,,,unknown,,unknown,unknown,unknown
+2012,4,The Hobbit: An Unexpected Journey,Warner Bros. / MGM,1017003568,II,retrotopian,zero-sum,Reclaiming a lost homeland,,,unknown,,unknown,unknown,unknown
+2012,5,Ice Age: Continental Drift,20th Century Fox,877244782,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2012,6,The Twilight Saga: Breaking Dawn – Part 2,Lionsgate,829746820,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2012,7,The Amazing Spider-Man,Sony,757930663,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2012,8,Madagascar 3: Europe's Most Wanted,Paramount,746921274,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2012,9,The Hunger Games,Lionsgate,694394724,II,anomic-collapse,zero-sum,Dystopia endured,,,unknown,,unknown,unknown,unknown
+2012,10,Men in Black 3,Sony,654213485,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2013,1,Frozen,Disney,1280802282,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2013,2,Iron Man 3,Disney,1214811252,II,restoration,positive-sum,Fabricated terrorist exposed,,,unknown,,unknown,unknown,unknown
+2013,3,Despicable Me 2,Universal,971000005,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2013,4,The Hobbit: The Desolation of Smaug,Warner Bros.,958366855,II,retrotopian,zero-sum,,,,unknown,,unknown,unknown,unknown
+2013,5,The Hunger Games: Catching Fire,Lionsgate,865011746,II,anomic-collapse,zero-sum,Revolt begins,,,unknown,,unknown,unknown,unknown
+2013,6,Fast & Furious 6,Universal,788679850,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2013,7,Monsters University,Disney,743559607,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2013,8,Gravity,Warner Bros.,723192705,II,personal,n/a,Survival and return to Earth,,,unknown,,unknown,unknown,unknown
+2013,9,Man of Steel,Warner Bros.,670145518,II,restoration,zero-sum,Kryptonian colonisers defeated,,,unknown,,unknown,unknown,unknown
+2013,10,Thor: The Dark World,Disney,644783140,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2014,1,Transformers: Age of Extinction,Paramount,1104054072,II,restoration,zero-sum,,,,unknown,,unknown,unknown,unknown
+2014,2,The Hobbit: The Battle of the Five Armies,Warner Bros.,962201338,II,retrotopian,zero-sum,,,,unknown,,unknown,unknown,unknown
+2014,3,Guardians of the Galaxy,Disney,772776600,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2014,4,Maleficent,Disney,758410378,II,integrative,positive-sum,Two kingdoms united,,,unknown,,unknown,unknown,unknown
+2014,5,The Hunger Games: Mockingjay – Part 1,Lionsgate,755356711,II,anomic-collapse,zero-sum,,,,unknown,,unknown,unknown,unknown
+2014,6,X-Men: Days of Future Past,20th Century Fox,746045700,II,restoration,positive-sum,Dystopian future averted by altering the past,,,unknown,,unknown,unknown,unknown
+2014,7,Captain America: The Winter Soldier,Disney,714421503,II,restoration,positive-sum,Surveillance programme dismantled,,,unknown,,unknown,unknown,unknown
+2014,8,Dawn of the Planet of the Apes,20th Century Fox,710644566,II,anomic-collapse,zero-sum,,,,unknown,,unknown,unknown,unknown
+2014,9,The Amazing Spider-Man 2,Sony,708982323,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2014,10,Interstellar,Paramount / Warner Bros.,677896797,II,anomic-escape,positive-sum,"Humanity saved, but by exit",001,https://antefilm.com/records/interstellar/,unknown,,unknown,unknown,unknown
+2015,1,Star Wars: The Force Awakens,Disney,2068223624,II,restoration,zero-sum,,,,unknown,,unknown,unknown,unknown
+2015,2,Jurassic World,Universal,1671537444,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2015,3,Furious 7,Universal,1515341399,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2015,4,Avengers: Age of Ultron,Disney,1402809540,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2015,5,Minions,Universal,1159398397,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2015,6,Spectre,Sony,880674609,II,restoration,positive-sum,Merged surveillance network stopped,,,unknown,,unknown,unknown,unknown
+2015,7,Inside Out,Disney,858811174,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2015,8,Mission: Impossible – Rogue Nation,Paramount,682714267,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2015,9,The Hunger Games: Mockingjay – Part 2,Lionsgate,653428261,II,integrative,positive-sum,New order after revolution,,,unknown,,unknown,unknown,unknown
+2015,10,The Martian,20th Century Fox,630161890,II,integrative,positive-sum,"International scientific cooperation, including China",,,unknown,,unknown,unknown,unknown
+2016,1,Captain America: Civil War,Disney,1153296293,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2016,2,Rogue One: A Star Wars Story,Disney,1056057273,II,anomic-collapse,negative-sum,All protagonists die; hope transferred,,,unknown,,unknown,unknown,unknown
+2016,3,Finding Dory,Disney,1029266989,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2016,4,Zootopia,Disney,1023784195,II,integrative,positive-sum,,,,unknown,,unknown,unknown,unknown
+2016,5,The Jungle Book,Disney,966550600,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2016,6,The Secret Life of Pets,Universal,875457937,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2016,7,Batman v Superman: Dawn of Justice,Warner Bros.,874360194,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2016,8,Fantastic Beasts and Where to Find Them,Warner Bros.,814037575,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2016,9,Deadpool,20th Century Fox,782612155,II,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2016,10,Suicide Squad,Warner Bros.,746846894,II,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2017,1,Star Wars: The Last Jedi,Disney,1332539889,III,anomic-collapse,zero-sum,Resistance nearly destroyed,,,unknown,,unknown,unknown,unknown
+2017,2,Beauty and the Beast,Disney,1263521126,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2017,3,The Fate of the Furious,Universal,1236005118,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2017,4,Despicable Me 3,Universal,1034799409,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2017,5,Jumanji: Welcome to the Jungle,Sony,962077546,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2017,6,Spider-Man: Homecoming,Sony,880166924,III,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2017,7,Wolf Warrior 2,United Entertainment,870325439,III,restoration,zero-sum,National rescue of citizens abroad; comparable to rescue exceptionalism,006,https://antefilm.com/records/wolf-warrior-2/,unknown,,unknown,unknown,unknown
+2017,8,Guardians of the Galaxy Vol. 2,Disney,869087963,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2017,9,Thor: Ragnarok,Disney,853983911,III,anomic-escape,positive-sum,Homeworld destroyed; a whole people leaves as refugees,,,unknown,,unknown,unknown,unknown
+2017,10,Wonder Woman,Warner Bros.,822303505,III,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2018,1,Avengers: Infinity War,Disney,2048359754,III,anomic-collapse,negative-sum,Half of all life erased on a Malthusian rationale,,,unknown,,unknown,unknown,unknown
+2018,2,Black Panther,Disney,1347597973,III,integrative,positive-sum,Wakanda opens outreach to the world,,,unknown,,unknown,unknown,unknown
+2018,3,Jurassic World: Fallen Kingdom,Universal,1308467944,III,anomic-collapse,negative-sum,Dinosaurs released into the world,,,unknown,,unknown,unknown,unknown
+2018,4,Incredibles 2,Disney,1242805359,III,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2018,5,Aquaman,Warner Bros.,1148528393,III,restoration,positive-sum,War between land and sea averted,,,unknown,,unknown,unknown,unknown
+2018,6,Bohemian Rhapsody,20th Century Fox,911027169,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2018,7,Venom,Sony,856085151,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2018,8,Mission: Impossible – Fallout,Paramount,791115104,III,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2018,9,Deadpool 2,20th Century Fox,785896609,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2018,10,Fantastic Beasts: The Crimes of Grindelwald,Warner Bros.,654855901,III,anomic-collapse,zero-sum,,,,unknown,,unknown,unknown,unknown
+2019,1,Avengers: Endgame,Disney,2799439100,III,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2019,2,The Lion King,Disney,1662943394,III,retrotopian,zero-sum,Rightful hierarchy restored; hyenas excluded,,,unknown,,unknown,unknown,unknown
+2019,3,Frozen 2,Disney,1453026933,III,integrative,positive-sum,Dam destroyed as reparation to the Northuldra,,,unknown,,unknown,unknown,unknown
+2019,4,Spider-Man: Far From Home,Sony,1133927996,III,restoration,positive-sum,Fabricated threats exposed,,,unknown,,unknown,unknown,unknown
+2019,5,Captain Marvel,Disney,1131274794,III,integrative,positive-sum,Heroine helps refugees find a home,,,unknown,,unknown,unknown,unknown
+2019,6,Joker,Warner Bros.,1079751311,III,anomic-collapse,negative-sum,,,,unknown,,unknown,unknown,unknown
+2019,7,Star Wars: The Rise of Skywalker,Disney,1077144248,III,restoration,zero-sum,,,,unknown,,unknown,unknown,unknown
+2019,8,Toy Story 4,Disney,1074841294,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2019,9,Aladdin,Disney,1051693953,III,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2019,10,Jumanji: The Next Level,Sony,801693929,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2020,1,Demon Slayer: Kimetsu no Yaiba – The Movie: Mugen Train,Toho / Aniplex,512727293,III,restoration,zero-sum,Demons as out-group,,,unknown,,unknown,unknown,unknown
+2020,2,The Eight Hundred,CMC Pictures,461421559,III,restoration,zero-sum,"National defence, 1937",,,unknown,,unknown,unknown,unknown
+2020,3,"My People, My Homeland",China Lion,433241288,III,integrative,positive-sum,National development reaches rural areas,,,unknown,,unknown,unknown,unknown
+2020,4,Bad Boys for Life,Sony,426505244,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2020,5,Tenet,Warner Bros.,365309519,III,restoration,zero-sum,Future attacks the present,,,unknown,,unknown,unknown,unknown
+2020,6,Sonic the Hedgehog,Paramount,320715683,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2020,7,Dolittle,Universal,251410631,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2020,8,Jiang Ziya,Beijing Enlight,243883429,III,uncoded,,Not known well enough to code,,,unknown,,unknown,unknown,unknown
+2020,9,A Little Red Flower,HG Entertainment,238600000,III,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2020,10,Shock Wave 2,Universe Films,226400000,III,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2021,1,Spider-Man: No Way Home,Sony,1921426073,IV,restoration,positive-sum,Villains cured rather than killed,,,unknown,,unknown,unknown,unknown
+2021,2,The Battle at Lake Changjin,Bona,909596236,IV,restoration,zero-sum,National war film,,,unknown,,unknown,unknown,unknown
+2021,3,"Hi, Mom",Lian Ray,841674419,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2021,4,No Time to Die,MGM / Universal,774253007,IV,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2021,5,F9,Universal,726229501,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2021,6,Detective Chinatown 3,Warner Bros. / Wanda,686257563,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2021,7,Venom: Let There Be Carnage,Sony,506863592,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2021,8,Godzilla vs. Kong,Warner Bros. / Toho,470116094,IV,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2021,9,Shang-Chi and the Legend of the Ten Rings,Disney,432243292,IV,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2021,10,Sing 2,Universal,408668500,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2022,1,Avatar: The Way of Water,20th Century,2320250281,IV,retrotopian,zero-sum,,,,unknown,,unknown,unknown,unknown
+2022,2,Top Gun: Maverick,Paramount,1495696292,IV,retrotopian,zero-sum,Unnamed enemy state; won with a museum-era aircraft (see REC.004),004,https://antefilm.com/records/top-gun-maverick/,unknown,,unknown,unknown,unknown
+2022,3,Jurassic World Dominion,Universal,1001978080,IV,integrative,positive-sum,Coexistence with dinosaurs,,,unknown,,unknown,unknown,unknown
+2022,4,Doctor Strange in the Multiverse of Madness,Disney,960775804,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2022,5,Minions: The Rise of Gru,Universal,940628210,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2022,6,Black Panther: Wakanda Forever,Disney,859208836,IV,restoration,positive-sum,Truce between two hidden nations,,,unknown,,unknown,unknown,unknown
+2022,7,The Batman,Warner Bros.,772245583,IV,restoration,positive-sum,Populist terror defeated,,,unknown,,unknown,unknown,unknown
+2022,8,Thor: Love and Thunder,Disney,760928081,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2022,9,The Battle at Lake Changjin II,Bona,626571697,IV,restoration,zero-sum,National war film,,,unknown,,unknown,unknown,unknown
+2022,10,Puss in Boots: The Last Wish,Universal,485261639,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2023,1,Barbie,Warner Bros.,1448232531,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2023,2,The Super Mario Bros. Movie,Universal,1360847665,IV,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2023,3,Oppenheimer,Universal,975811333,IV,anomic-collapse,negative-sum,Chain reaction set in motion,,,unknown,,unknown,unknown,unknown
+2023,4,Guardians of the Galaxy Vol. 3,Disney,845555777,IV,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2023,5,Fast X,Universal,714875015,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2023,6,Spider-Man: Across the Spider-Verse,Sony,690824738,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2023,7,Full River Red,China Film Group,670491959,IV,retrotopian,zero-sum,Loyalty to a past dynasty,,,unknown,,unknown,unknown,unknown
+2023,8,Wonka,Warner Bros.,634681815,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2023,9,The Wandering Earth 2,China Film Group,615023132,IV,anomic-escape,positive-sum,"Technological salvation organised as a collective, state-led project",,,unknown,,unknown,unknown,unknown
+2023,10,Mission: Impossible – Dead Reckoning Part One,Paramount,571125435,IV,restoration,positive-sum,Rogue AI as antagonist,,,unknown,,unknown,unknown,unknown
+2024,1,Inside Out 2,Disney,1698863816,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2024,2,Deadpool & Wolverine,Disney,1338073645,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2024,3,Moana 2,Disney,1059242164,IV,integrative,positive-sum,Island peoples reconnected,,,unknown,,unknown,unknown,unknown
+2024,4,Despicable Me 4,Universal,972015095,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2024,5,Wicked,Universal,758729195,IV,anomic-collapse,zero-sum,Animals silenced by the regime; unresolved,,,unknown,,unknown,unknown,unknown
+2024,6,Mufasa: The Lion King,Disney,723060982,IV,retrotopian,zero-sum,,,,unknown,,unknown,unknown,unknown
+2024,7,Dune: Part Two,Warner Bros.,715409065,IV,anomic-collapse,negative-sum,Holy war begins,,,unknown,,unknown,unknown,unknown
+2024,8,Godzilla x Kong: The New Empire,Warner Bros.,572505338,IV,restoration,positive-sum,,,,unknown,,unknown,unknown,unknown
+2024,9,Kung Fu Panda 4,Universal,547689492,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2024,10,Sonic the Hedgehog 3,Paramount,492162604,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2025,1,Ne Zha 2,Beijing Enlight,2215690000,IV,uncoded,,Not known well enough to code,,,unknown,,unknown,unknown,unknown
+2025,2,Zootopia 2,Disney,1870309291,IV,uncoded,,Released after the coder's knowledge cutoff,,,unknown,,unknown,unknown,unknown
+2025,3,Avatar: Fire and Ash,20th Century,1490386712,IV,uncoded,,Released after the coder's knowledge cutoff,,,unknown,,unknown,unknown,unknown
+2025,4,Lilo & Stitch,Disney,1038027526,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2025,5,A Minecraft Movie,Warner Bros.,961287780,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2025,6,Jurassic World Rebirth,Universal,872428220,IV,uncoded,,Not known well enough to code,,,unknown,,unknown,unknown,unknown
+2025,7,Demon Slayer: Kimetsu no Yaiba – The Movie: Infinity Castle,Aniplex / Toho / Crunchyroll,793491854,IV,restoration,zero-sum,Demons as out-group,,,unknown,,unknown,unknown,unknown
+2025,8,How to Train Your Dragon,Universal,639866451,IV,integrative,positive-sum,Vikings and dragons coexist,,,unknown,,unknown,unknown,unknown
+2025,9,F1,Warner Bros. / Apple,634142436,IV,personal,n/a,,,,unknown,,unknown,unknown,unknown
+2025,10,Superman,Warner Bros.,618723803,IV,uncoded,,Not known well enough to code,,,unknown,,unknown,unknown,unknown

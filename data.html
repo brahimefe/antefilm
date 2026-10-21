@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data — antefilm</title>
+<meta name="description" content="Download the antefilm corpus and records; codebook and notes.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast"><div class="wrap">
+  <a class="brand" href="index.html">ante<span>film</span></a>
+  <nav class="nav" aria-label="Main"><a href="index.html">Atlas</a><a href="records/index.html">Records</a><a href="compare.html">Compare</a><a href="method.html">Method</a><a href="data.html" aria-current="page">Data</a><a href="about.html">About</a><a href="submit.html">Submit</a></nav>
+</div></header>
+<main id="main"><div class="wrap">
+
+<div class="page-head">
+  <h1>Data</h1>
+  <p>Everything on the site is available to download and reuse under CC BY 4.0, with credit to antefilm.</p>
+</div>
+<div class="prose">
+  <h2>Downloads</h2>
+  <ul>
+    <li><a href="data/corpus.csv" download>corpus.csv</a>: the 250 films, one row each.</li>
+    <li><a href="data/corpus.json" download>corpus.json</a>: the same, with notes.</li>
+    <li><a href="data/records.json" download>records.json</a>: every full record, all fields.</li>
+    <li><a href="schema.json">schema.json</a>: the record data model.</li>
+  </ul>
+
+  <h2>What to know before using it</h2>
+  <ul>
+    <li><strong>Version 0.1, 21 October 2026.</strong> Ranks and grosses come from Wikipedia's annual tables, which draw on Box Office Mojo. They include later re-releases where the table does, and are still to be checked against Box Office Mojo.</li>
+    <li><strong>The coding is provisional.</strong> Imaginary type and payoff were drafted with the assistance of an AI model and are under the editor's review. 6 films are marked not yet coded rather than guessed.</li>
+    <li><strong>Circulation is not yet coded.</strong> State cooperation, script involvement and release columns are present but marked unknown; they will be filled only from sources.</li>
+    <li><strong>"None found" is not "none".</strong> It records the state of the evidence, not a fact about the film.</li>
+  </ul>
+
+  <h2>Imaginary types</h2>
+</div>
+<div class="table-wrap" style="max-width:900px"><table class="data"><thead><tr><th>Type</th><th>Definition</th><th>Films</th></tr></thead><tbody><tr><td><span class="chip"><span class="swatch t-integrative" aria-hidden="true"></span>Integrative</span></td><td>The future as collective progress open to all</td><td class="num">19</td></tr><tr><td><span class="chip"><span class="swatch t-anomic-collapse" aria-hidden="true"></span>Anomic: collapse</span></td><td>Breakdown to be endured, or destruction as the path to a purified order</td><td class="num">25</td></tr><tr><td><span class="chip"><span class="swatch t-anomic-escape" aria-hidden="true"></span>Anomic: escape</span></td><td>Transformation delegated to technology; escape or survival for a select group</td><td class="num">5</td></tr><tr><td><span class="chip"><span class="swatch t-retrotopian" aria-hidden="true"></span>Retrotopian</span></td><td>Return to an idealised past order</td><td class="num">17</td></tr><tr><td><span class="chip"><span class="swatch t-restoration" aria-hidden="true"></span>Restoration</span></td><td>No new future: the present order is defended or restored</td><td class="num">84</td></tr><tr><td><span class="chip"><span class="swatch t-personal" aria-hidden="true"></span>Personal</span></td><td>No collective future is at stake</td><td class="num">94</td></tr><tr><td><span class="chip"><span class="swatch t-uncoded" aria-hidden="true"></span>Not yet coded</span></td><td>Not known well enough to code with confidence</td><td class="num">6</td></tr></tbody></table></div>
+<div class="prose"><h2>Codebook</h2></div>
+<div class="table-wrap" style="max-width:900px"><table class="data"><thead><tr><th>Variable</th><th>Values</th><th>Coding rule</th></tr></thead>
+<tbody><tr><td><code>year</code></td><td>2001–2025</td><td>Year of worldwide release</td></tr><tr><td><code>rank</code></td><td>1–10</td><td>Position in that year's worldwide gross table</td></tr><tr><td><code>title, distributor</code></td><td>text</td><td>As listed in the source table</td></tr><tr><td><code>grossUSD</code></td><td>integer</td><td>Worldwide gross in US dollars, as listed</td></tr><tr><td><code>period</code></td><td>I–IV</td><td>Period band: I 2001–2008, II 2009–2016, III 2017–2020, IV 2021–</td></tr><tr><td><code>imaginaryType</code></td><td>integrative, anomic-collapse, anomic-escape, retrotopian, restoration, personal, uncoded</td><td>The future the film's resolution offers; see the method, §8</td></tr><tr><td><code>payoffStructure</code></td><td>positive-sum, zero-sum, negative-sum, n/a</td><td>Who gains in that future; n/a where the type is personal</td></tr><tr><td><code>codingNote</code></td><td>text</td><td>The coder's reason, where the coding is not obvious</td></tr><tr><td><code>recordNumber, recordURL</code></td><td>text</td><td>The full record, where one is filed</td></tr><tr><td><code>stateCooperation</code></td><td>none found, DoD, CIA, NASA, other US agency, foreign state, unknown</td><td>Any state body that provided access, equipment, advice or script review; not yet coded</td></tr><tr><td><code>cooperationEvidence</code></td><td>documented, reported, none found</td><td>Documented: FOIA, official statement or credits; reported: credible secondary source</td></tr><tr><td><code>scriptInvolvement</code></td><td>documented changes, advisory only, none found, unknown</td><td>Changes requested or made at script stage by a cooperating body</td></tr><tr><td><code>releaseChina, releaseTurkey</code></td><td>yes, no, unknown</td><td>Theatrical release in mainland China and in Turkey</td></tr></tbody></table></div>
+<div class="prose">
+  <h2>Cite the data</h2>
+  <div class="note"><code>Efe, İ. (2026). Antefilm corpus: annual worldwide top ten, 2001–2025 (Version 0.1) [Data set]. https://antefilm.com/data.html</code></div>
+</div>
+</div></main>
+<footer class="foot"><div class="wrap">
+  <span>Antefilm: a record of global cinema's political imagination. Edited by İbrahim Efe. Updated 21 October 2026.</span>
+  <span><a href="data.html">Data and licence</a></span>
+</div></footer>
+
+</body>
+</html>

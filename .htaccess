@@ -1,7 +1,13 @@
-# Yerel araçlar ve belgeler depoda durur ama sitede açılmaz.
-<FilesMatch "^(README\.md|_new-case\.html|\.gitignore)$">
+# Editing files stay in the repository but are not served.
+<FilesMatch "^(README\.md|\.gitignore|corpus-source\.tsv|coding-beckert\.tsv)$">
   Require all denied
 </FilesMatch>
 
-# Gizli dosya ve klasörlere (.git vb.) erişimi engelle
+# The local editing tools and build script are not served.
+RedirectMatch 404 ^/tools(/|$)
+
+# Hidden files and folders (.git etc.)
 RedirectMatch 404 /\.git
+
+# Clean record URLs
+DirectoryIndex index.html
