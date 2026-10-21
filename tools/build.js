@@ -104,7 +104,7 @@ function layout({ depth = 0, title, description, active, body, scripts = [], bod
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-<link rel="stylesheet" href="${up}assets/site.css">
+<link rel="stylesheet" href="${up}assets/site.css?v=${ver('assets/site.css')}">
 </head>
 <body${bodyAttr}>
 <a class="skip" href="#main">Skip to content</a>
@@ -119,7 +119,7 @@ ${body}
   <span>Antefilm: a record of global cinema's political imagination. Edited by İbrahim Efe. Updated ${UPDATED}.</span>
   <span class="foot-links"><a href="${up}compare.html">Compare records</a><a href="${up}data.html">Data and licence</a><a href="${up}submit.html">Propose a record</a></span>
 </div></footer>
-${scripts.map((s) => `<script src="${up}${s}"></script>`).join('\n')}
+${scripts.map((s) => `<script src="${up}${s}?v=${ver(s)}"></script>`).join('\n')}
 </body>
 </html>
 `;
@@ -134,6 +134,9 @@ ${scripts.map((s) => `<script src="${up}${s}"></script>`).join('\n')}
 
 /* rewrite relative links inside content fragments for pages at depth > 0 (not needed now: fragments live at root) */
 const fragment = (name) => read('tools/content/' + name);
+/* cache-busting: each asset is requested with a short hash of its contents */
+const crypto = require('crypto');
+const ver = (f) => crypto.createHash('sha1').update(read(f)).digest('hex').slice(0, 8);
 
 /* ---------- shared bits ---------- */
 const swatch = (type) => `<span class="swatch t-${type}" aria-hidden="true"></span>`;
