@@ -494,3 +494,51 @@ a:hover { text-decoration-color: var(--ink); }
 .attention .question { margin-bottom: 18px; }
 .rec-status { color: var(--stamp); }
 .att-nav { background: var(--board); }
+
+/* ================= film card: opens on the clicked cell ================= */
+.film-pop {
+  position: absolute; z-index: 40; width: min(340px, calc(100vw - 24px));
+  background: var(--sheet); color: var(--ink);
+  border: 1px solid var(--ink); border-radius: 3px;
+  box-shadow: 0 10px 30px -12px rgba(23, 32, 42, 0.45);
+  padding: 18px 20px 18px;
+  font-size: 0.95rem; line-height: 1.5;
+}
+.film-pop::before {                      /* pointer to the cell */
+  content: ""; position: absolute; left: calc(var(--arrow-x, 50%) - 7px); top: -8px;
+  width: 14px; height: 14px; background: var(--sheet);
+  border-left: 1px solid var(--ink); border-top: 1px solid var(--ink); transform: rotate(45deg);
+}
+.film-pop.above::before { top: auto; bottom: -8px; transform: rotate(225deg); }
+.film-pop.sheet::before { display: none; }
+.film-pop.sheet {
+  position: fixed; left: 0; right: 0; bottom: 0; top: auto; width: auto;
+  border-radius: 10px 10px 0 0; border-width: 1px 0 0;
+  padding: 22px max(20px, env(safe-area-inset-right, 0px)) calc(22px + env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px));
+  max-height: 75vh; overflow-y: auto;
+}
+.pop-close {
+  position: absolute; top: 6px; right: 8px; width: 36px; height: 36px;
+  background: none; border: 0; border-radius: 2px; font: inherit; font-size: 1.5rem; line-height: 1;
+  color: var(--graphite); cursor: pointer;
+}
+.pop-close:hover { color: var(--ink); background: var(--faint); }
+.pop-rank { font-family: var(--type); font-size: var(--s-1); color: var(--graphite); margin: 0 40px 6px 0; }
+.film-pop h2 { font-size: var(--s1); line-height: 1.2; font-weight: 600; margin: 0 40px 6px 0; text-wrap: balance; }
+.pop-facts { font-size: var(--s-1); color: var(--graphite); margin: 0 0 14px; }
+.pop-ending { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 10px; align-items: start; padding: 12px 0; border-top: 1px solid var(--faint); border-bottom: 1px solid var(--faint); margin-bottom: 10px; }
+.pop-ending .swatch { width: 14px; height: 14px; margin-top: 4px; }
+.pop-ending.t-integrative .swatch { background: var(--accent); border-color: var(--accent); }
+.pop-ending b { display: block; font-weight: 600; }
+.pop-ending span { display: block; font-size: var(--s-1); color: var(--graphite); }
+.pop-line { margin: 0 0 6px; font-size: var(--s-1); }
+.pop-line b { font-weight: 600; }
+.pop-record { display: block; margin-top: 12px; padding: 10px 12px; background: var(--ink); color: var(--board); text-decoration: none; border-radius: 2px; font-size: var(--s-1); }
+.pop-record i { font-size: var(--s0); }
+.pop-record:hover { background: var(--accent); color: var(--accent-ink); }
+.pop-none { margin: 12px 0 0; font-size: var(--s-1); color: var(--graphite); }
+.cell.active { outline: 2px solid var(--ink); outline-offset: 1px; position: relative; z-index: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .film-pop:not([hidden]) { animation: pop-in 140ms ease-out; }
+  @keyframes pop-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+}

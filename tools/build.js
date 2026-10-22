@@ -184,8 +184,8 @@ function buildHome() {
   <p class="zen-legend"><span class="chip">${swatch('integrative')}A future open to everyone</span><span class="chip"><span class="swatch zen-grey" aria-hidden="true"></span>Every other ending</span>
     <button class="btn" id="colour-toggle" aria-pressed="false">Show all six types</button></p>
   <div class="ledger zen-mode" id="atlas-ledger" role="group" aria-label="Annual worldwide top ten, 2001 to 2025, by rank">${head}${rows}</div>
-  <div class="panel" id="atlas-panel" aria-live="polite" hidden></div>
-  <p class="zen-note">Select a film to see how its ending is coded. The coding is provisional and under review. <a href="method.html#coding">How films are coded</a></p>
+  <div id="atlas-panel" hidden></div>
+  <p class="zen-note">Click any film to open its card. The coding is provisional and under review. <a href="method.html#coding">How films are coded</a></p>
 </section>
 
 <section class="zen" aria-labelledby="instead-h">
