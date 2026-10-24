@@ -1,13 +1,6 @@
-# Editing files stay in the repository but are not served.
-<FilesMatch "^(README\.md|\.gitignore|corpus-source\.tsv|coding-beckert\.tsv)$">
+Options -Indexes
+DirectoryIndex index.html
+<FilesMatch "^(README\.md|\.gitignore)$">
   Require all denied
 </FilesMatch>
-
-# The local editing tools and build script are not served.
-RedirectMatch 404 ^/tools(/|$)
-
-# Hidden files and folders (.git etc.)
 RedirectMatch 404 /\.git
-
-# Clean record URLs
-DirectoryIndex index.html

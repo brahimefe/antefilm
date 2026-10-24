@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exodus (1960) — antefilm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one film file. Dark header with the verdict strip (five answers at a glance), then the key scene,
+   the five answers argued one by one, what the film means for the promise-to-memory hypothesis,
+   and the "before the film" dossier with evidence levels. */
+:root {
+  --bg: #F3F1EC; --panel: #FFFFFF; --ink: #15141A; --muted: #67646E; --line: rgba(21,20,26,.12);
+  --screen: #0E0D12; --screen-ink: #F3F1EC; --screen-muted: #9B97A3;
+  --amber: #E8A13A; --amber-ink: #8A5300; --yes: #15141A;
+  --display: 'Instrument Serif', Georgia, serif; --body: 'Inter Tight', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121117; --panel: #1A1920; --ink: #EDEBE6; --muted: #A09CA8; --line: rgba(237,235,230,.12);
+  --screen: #08070B; --amber-ink: #F0B65C; --yes: #EDEBE6; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121117; --panel: #1A1920; --ink: #EDEBE6; --muted: #A09CA8; --line: rgba(237,235,230,.12);
+  --screen: #08070B; --amber-ink: #F0B65C; --yes: #EDEBE6; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1.05rem; line-height: 1.6; }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 0 16px; }
+.narrow { max-width: 720px; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+
+.screen { background: var(--screen); color: var(--screen-ink); position: relative; overflow: hidden; }
+.screen::before { content: ""; position: absolute; inset: -20% -10% auto auto; width: 70%; height: 140%;
+  background: radial-gradient(ellipse at 85% 10%, rgba(232,161,58,.24), rgba(232,161,58,0) 60%); pointer-events: none; }
+.bar { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; }
+.logo { font-family: var(--mono); font-weight: 500; letter-spacing: .04em; text-decoration: none; }
+.logo b { color: var(--amber); font-weight: 500; }
+.back { font-size: .92rem; color: var(--screen-muted); text-decoration: none; }
+.back:hover { color: var(--screen-ink); }
+
+.head { position: relative; padding: 56px 0 48px; }
+.fileno { font-family: var(--mono); font-size: .82rem; color: var(--amber); letter-spacing: .08em; margin: 0 0 14px; }
+h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3.6rem, 11vw, 7.4rem); line-height: .9; margin: 0; }
+h1 span { color: var(--screen-muted); font-size: .45em; }
+.credits { color: var(--screen-muted); margin: 18px 0 0; max-width: 60ch; }
+
+.verdict { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; background: rgba(243,241,236,.14); border: 1px solid rgba(243,241,236,.14); border-radius: 14px; overflow: hidden; margin-top: 40px; }
+.verdict a { background: var(--screen); padding: 16px 14px 18px; text-decoration: none; min-width: 0; }
+.verdict a:hover { background: #17161D; }
+.verdict .q { font-family: var(--mono); font-size: .72rem; color: var(--screen-muted); text-transform: uppercase; letter-spacing: .06em; }
+.verdict .a { display: flex; align-items: center; gap: 8px; font-family: var(--display); font-size: 1.6rem; margin-top: 8px; }
+.verdict .dot { border-color: var(--screen-ink); }
+.verdict .dot.yes { background: var(--screen-ink); }
+.verdict .dot.part { background: linear-gradient(90deg, var(--screen-ink) 50%, transparent 50%); }
+@media (max-width: 640px) { .verdict { grid-template-columns: 1fr; } .verdict a { display: flex; justify-content: space-between; align-items: center; } .verdict .a { margin: 0; font-size: 1.3rem; } }
+.dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; flex: none; border: 1.5px solid var(--yes); }
+.dot.yes { background: var(--yes); }
+.dot.part { background: linear-gradient(90deg, var(--yes) 50%, transparent 50%); }
+.type { position: relative; display: inline-flex; gap: 10px; align-items: baseline; margin-top: 22px; font-size: .95rem; color: var(--screen-muted); }
+.type b { color: var(--screen-ink); font-weight: 600; }
+
+section.block { padding: 72px 0 0; }
+.eyebrow { font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-ink); margin: 0 0 10px; }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 4.6vw, 3rem); line-height: 1.02; margin: 0 0 16px; }
+
+.scene { display: grid; gap: 24px; }
+@media (min-width: 820px) { .scene { grid-template-columns: 1.2fr 1fr; align-items: start; } }
+.frame { aspect-ratio: 2.2 / 1; border-radius: 10px; background: repeating-linear-gradient(135deg, var(--panel) 0 14px, color-mix(in srgb, var(--ink) 5%, var(--panel)) 14px 28px); border: 1px dashed var(--muted); display: grid; place-items: center; text-align: center; color: var(--muted); font-family: var(--mono); font-size: .85rem; padding: 16px; }
+.tc { font-family: var(--mono); font-size: .85rem; color: var(--muted); margin: 0 0 8px; }
+.scene p.read { font-family: var(--display); font-size: 1.55rem; line-height: 1.25; margin: 0; }
+
+.answers { display: grid; gap: 0; }
+.ans { display: grid; gap: 6px 28px; padding: 26px 0; border-top: 1px solid var(--line); }
+@media (min-width: 760px) { .ans { grid-template-columns: 220px minmax(0, 1fr); } }
+.ans h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 1.7rem; line-height: 1.05; }
+.ans .res { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-weight: 600; font-size: .95rem; }
+.ans .qq { font-size: .9rem; color: var(--muted); margin: 6px 0 0; }
+.ans p { margin: 0 0 10px; }
+.ans p:last-child { margin-bottom: 0; }
+.ans .check { font-family: var(--mono); font-size: .8rem; color: var(--amber-ink); }
+
+.hypo { background: var(--screen); color: var(--screen-ink); border-radius: 14px; padding: 28px 26px; display: grid; gap: 20px; }
+@media (min-width: 760px) { .hypo { grid-template-columns: 1fr 1.4fr; align-items: center; } }
+.lanes { display: grid; gap: 14px; }
+.lane { display: grid; grid-template-columns: 74px 1fr; align-items: center; gap: 12px; font-family: var(--mono); font-size: .8rem; color: var(--screen-muted); }
+.lane .track { position: relative; height: 2px; background: rgba(243,241,236,.18); }
+.lane .track i { position: absolute; left: 6%; top: -7px; width: 16px; height: 16px; border-radius: 50%; background: var(--amber); }
+.lane .track span { position: absolute; left: 6%; top: 12px; transform: translateX(-20%); font-size: .7rem; }
+.hypo p { margin: 0; font-size: 1.02rem; }
+.hypo p b { color: var(--amber); font-weight: 600; }
+
+.dossier { display: grid; gap: 12px; }
+.item { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; display: grid; gap: 6px 20px; }
+@media (min-width: 760px) { .item { grid-template-columns: minmax(0, 1fr) 190px; align-items: start; } }
+.item h4 { margin: 0 0 4px; font-size: 1.04rem; }
+.item p { margin: 0; color: var(--muted); font-size: .96rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+@media (min-width: 760px) { .tags { justify-content: flex-end; } }
+.tag { font-family: var(--mono); font-size: .72rem; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--line); white-space: nowrap; }
+.tag.ok { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.tag.todo { border-style: dashed; color: var(--amber-ink); border-color: var(--amber-ink); }
+.item.held { border-style: dashed; background: transparent; }
+
+.sources { font-size: .92rem; color: var(--muted); padding-left: 18px; }
+.sources li { margin-bottom: 6px; }
+footer { margin-top: 88px; border-top: 1px solid var(--line); padding: 24px 0 56px; font-size: .85rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.mock { position: fixed; right: 12px; bottom: 12px; z-index: 5; font-family: var(--mono); font-size: .75rem; background: var(--amber); color: #15141A; padding: 6px 12px; border-radius: 999px; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="wrap">
+    <header class="bar"><a class="logo" href="/">ante<b>film</b></a><a class="back" href="/#board">← All films</a></header>
+    <section class="head">
+      <p class="fileno">FILE 001 · FILM · DRAFT</p>
+      <h1>Exodus <span>1960</span></h1>
+      <p class="credits">Directed by Otto Preminger, from Leon Uris's novel; screenplay by Dalton Trumbo. Holocaust survivors smuggled out of the British camps on Cyprus in 1947, and the founding of a state.</p>
+      <div class="verdict" aria-label="Answers to the five questions">
+        <a href="#q1"><span class="q">Promise</span><span class="a"><i class="dot yes"></i>Yes</span></a>
+        <a href="#q2"><span class="q">Whose future</span><span class="a"><i class="dot part"></i>Partly</span></a>
+        <a href="#q3"><span class="q">Belief</span><span class="a"><i class="dot yes"></i>Yes</span></a>
+        <a href="#q4"><span class="q">Cost</span><span class="a"><i class="dot part"></i>Partly</span></a>
+        <a href="#q5"><span class="q">Past</span><span class="a"><i class="dot yes"></i>Yes</span></a>
+      </div>
+      <p class="type">Future type: <b>Integrative</b> — with its borders drawn in advance</p>
+    </section>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="block">
+    <p class="eyebrow">Key scene</p>
+    <div class="scene">
+      <div class="frame">Frame to be added after viewing<br>(a still from the closing scene)</div>
+      <div>
+        <p class="tc">Timecode: to be added · Closing scene</p>
+        <p class="read">Two of the dead, a Jewish girl and an Arab friend, are laid in one grave. Over it, the hero swears that the two peoples will one day share the land in life as they now share it in death. The film can picture a common future only over a common grave.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block narrow">
+    <p class="eyebrow">The five questions</p>
+    <h2>How the film answers</h2>
+    <div class="answers">
+      <article class="ans" id="q1">
+        <div><h3>Promise</h3><div class="res"><i class="dot yes"></i>Yes</div><p class="qq">Does the film show a future in which the conflict is over?</p></div>
+        <div><p>The whole film moves towards the UN partition vote and the promise of a state. The future is certain, and it is good; the only open question is how fast it arrives.</p></div>
+      </article>
+      <article class="ans" id="q2">
+        <div><h3>Whose future</h3><div class="res"><i class="dot part"></i>Partly</div><p class="qq">Is there a place in that future for the other side?</p></div>
+        <div><p>The closing oath promises a shared land, and Taha, the Arab friend, is drawn with warmth. But Arabs enter the future only as friends who have earned a place in it. The people of Taha's village quietly vanish from the story.</p><p class="check">To check while watching: how the village's emptying is shown, and who is said to have caused it.</p></div>
+      </article>
+      <article class="ans" id="q3">
+        <div><h3>Belief</h3><div class="res"><i class="dot yes"></i>Yes</div><p class="qq">Do the characters believe the promise can be kept?</p></div>
+        <div><p>No one doubts the destination. The argument is only about means: the diplomacy of the Haganah against the bombs of the Irgun. Even that argument ends in reconciliation.</p></div>
+      </article>
+      <article class="ans" id="q4">
+        <div><h3>Cost</h3><div class="res"><i class="dot part"></i>Partly</div><p class="qq">Is the price of the promise shown, and who pays it?</p></div>
+        <div><p>The price is real: Akiva, Karen and Taha die. But it is told as the sacrifice of one's own side. The losses of the other side do not appear as losses.</p></div>
+      </article>
+      <article class="ans" id="q5">
+        <div><h3>Past</h3><div class="res"><i class="dot yes"></i>Yes</div><p class="qq">When the future grows uncertain, does the film draw its legitimacy from the Holocaust?</p></div>
+        <div><p>The refugees on the ship are survivors, and Dov's confession of what was done to him in Auschwitz is one of the film's turning points. The past is told to justify the future. Here, though, the future is not uncertain: memory and promise work side by side.</p><p class="check">To check while watching: the timecode and wording of Dov's confession.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">For the hypothesis</p>
+    <div class="hypo">
+      <div class="lanes" aria-label="Exodus on the two lanes">
+        <div class="lane"><span>Promise</span><div class="track"><i></i><span>1960 · yes</span></div></div>
+        <div class="lane"><span>Past</span><div class="track"><i></i><span>1960 · yes</span></div></div>
+      </div>
+      <p>In 1960 both lanes read yes. <b>Memory does not replace the promise here; it props it up.</b> So the question for later films is sharper: when the promise withdraws, is memory left standing on its own?</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">Before the film</p>
+    <h2>The file</h2>
+    <p style="color:var(--muted);max-width:62ch;margin:0 0 24px">Evidence level: <b style="color:var(--ink)">Portrayal only</b>, until any state involvement in the production is documented.</p>
+    <div class="dossier">
+      <div class="item"><div><h4>A bestseller first</h4><p>Leon Uris's novel (1958) was a major American bestseller before the film rights were used.</p></div><div class="tags"><span class="tag">Industry</span><span class="tag todo">To verify</span></div></div>
+      <div class="item"><div><h4>A blacklisted writer, named on screen</h4><p>Preminger credited Dalton Trumbo by name, one of the first open breaks with the Hollywood blacklist.</p></div><div class="tags"><span class="tag">Industry</span><span class="tag todo">To verify</span></div></div>
+      <div class="item"><div><h4>Shot on location</h4><p>Filmed in Israel and Cyprus. Whether Israeli state bodies helped with locations, permits or extras is not yet documented.</p></div><div class="tags"><span class="tag">Institutional?</span><span class="tag todo">Open question</span></div></div>
+      <div class="item"><div><h4>How it was sold</h4><p>Saul Bass's poster: raised arms forming a flame, one of them holding a rifle. The campaign material is where the film's marketing will be read.</p></div><div class="tags"><span class="tag">Marketing</span><span class="tag todo">To verify</span></div></div>
+      <div class="item held"><div><h4>One claim held back</h4><p>A claim about how the novel itself was commissioned is kept in research notes until it can be tied to a document or a first-hand account.</p></div><div class="tags"><span class="tag">Not published</span></div></div>
+    </div>
+  </section>
+
+  <section class="block narrow">
+    <p class="eyebrow">Sources</p>
+    <ul class="sources">
+      <li>The film itself, with timecodes (to be added after viewing).</li>
+      <li>Production and press material, 1959–1961 (to be collected).</li>
+      <li>Jens Beckert (2026), "Where Have All the Futures Gone?", <i>European Journal of Social Theory</i>.</li>
+    </ul>
+  </section>
+
+  <footer><span>antefilm · İbrahim Efe</span><span>Draft file: written before viewing, from published knowledge of the film; every answer to be confirmed with a scene</span></footer>
+</main>
+</body>
+</html>
