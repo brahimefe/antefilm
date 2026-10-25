@@ -105,16 +105,34 @@ h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 4.6vw
 .sources li { margin-bottom: 6px; }
 footer { margin-top: 88px; border-top: 1px solid var(--line); padding: 24px 0 56px; font-size: .85rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 .mock { position: fixed; right: 12px; bottom: 12px; z-index: 5; font-family: var(--mono); font-size: .75rem; background: var(--amber); color: #15141A; padding: 6px 12px; border-radius: 999px; }
+
+.vs { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.vs .r { display: grid; grid-template-columns: 1fr; background: var(--panel); }
+@media (min-width: 760px) { .vs .r { grid-template-columns: 170px 1fr 1fr; } }
+.vs .r > div { padding: 14px 18px; min-width: 0; }
+.vs .r.h > div { font-family: var(--mono); font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: 12px; padding-bottom: 12px; }
+.vs .k { font-weight: 600; }
+.vs .film { color: var(--ink); }
+.vs .rec { color: var(--muted); }
+@media (max-width: 759px) { .vs .r.h { display: none; } .vs .film::before { content: "Film: "; font-weight: 600; } .vs .rec::before { content: "Record: "; font-weight: 600; } .vs .r > div { padding: 8px 16px; } .vs .k { padding-top: 14px !important; } }
+.reading { font-family: var(--display); font-size: 1.5rem; line-height: 1.3; margin: 18px 0 0; max-width: 34ch; }
+.ctx { display: grid; gap: 16px; }
+@media (min-width: 760px) { .ctx { grid-template-columns: 1fr 1fr; } }
+.ctx > div { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; }
+.ctx h4 { margin: 0 0 8px; font-family: var(--display); font-weight: 400; font-size: 1.5rem; }
+.ctx p { margin: 0 0 10px; font-size: .97rem; }
+.ctx p:last-child { margin: 0; }
+sup a { text-decoration: none; color: var(--amber-ink); font-family: var(--mono); font-size: .72rem; }
 </style>
 </head>
 <body>
 <div class="screen">
   <div class="wrap">
-    <header class="bar"><a class="logo" href="/">ante<b>film</b></a><a class="back" href="/#board">← All films</a></header>
+    <header class="bar"><a class="logo" href="/">ante<b>film</b></a><nav class="back" aria-label="Main" style="display:flex;gap:22px"><a href="/#films" style="text-decoration:none">← All films</a><a href="/method.html" style="text-decoration:none">Method</a></nav></header>
     <section class="head">
-      <p class="fileno">FILE 001 · FILM · DRAFT</p>
+      <p class="fileno">FILE 001 · FOUNDING · DRAFT</p>
       <h1>Exodus <span>1960</span></h1>
-      <p class="credits">Directed by Otto Preminger, from Leon Uris's novel; screenplay by Dalton Trumbo. Holocaust survivors smuggled out of the British camps on Cyprus in 1947, and the founding of a state.</p>
+      <p class="credits">Directed by Otto Preminger. Screenplay by Dalton Trumbo, from Leon Uris's 1958 novel. 212 minutes. Holocaust survivors break out of the British camps on Cyprus and sail for Palestine; the film ends on the eve of the 1948 war.</p>
       <div class="verdict" aria-label="Answers to the five questions">
         <a href="#q1"><span class="q">Promise</span><span class="a"><i class="dot yes"></i>Yes</span></a>
         <a href="#q2"><span class="q">Whose future</span><span class="a"><i class="dot part"></i>Partly</span></a>
@@ -122,7 +140,7 @@ footer { margin-top: 88px; border-top: 1px solid var(--line); padding: 24px 0 56
         <a href="#q4"><span class="q">Cost</span><span class="a"><i class="dot part"></i>Partly</span></a>
         <a href="#q5"><span class="q">Past</span><span class="a"><i class="dot yes"></i>Yes</span></a>
       </div>
-      <p class="type">Future type: <b>Integrative</b> — with its borders drawn in advance</p>
+      <p class="type">Future type: <b>Integrative</b>, open only to the Arab who dies a friend</p>
     </section>
   </div>
 </div>
@@ -131,10 +149,10 @@ footer { margin-top: 88px; border-top: 1px solid var(--line); padding: 24px 0 56
   <section class="block">
     <p class="eyebrow">Key scene</p>
     <div class="scene">
-      <div class="frame">Frame to be added after viewing<br>(a still from the closing scene)</div>
+      <div class="frame">Frame to be added after viewing<br>(the shared grave)</div>
       <div>
         <p class="tc">Timecode: to be added · Closing scene</p>
-        <p class="read">Two of the dead, a Jewish girl and an Arab friend, are laid in one grave. Over it, the hero swears that the two peoples will one day share the land in life as they now share it in death. The film can picture a common future only over a common grave.</p>
+        <p class="read">Karen, a young survivor, and Taha, the Arab friend, are laid in one grave. Over it, Ari swears that Jews and Arabs will one day share the land in life as they now share it in death. Then the trucks leave for war. The film can picture a shared future only over a shared grave.</p>
       </div>
     </div>
   </section>
@@ -145,61 +163,78 @@ footer { margin-top: 88px; border-top: 1px solid var(--line); padding: 24px 0 56
     <div class="answers">
       <article class="ans" id="q1">
         <div><h3>Promise</h3><div class="res"><i class="dot yes"></i>Yes</div><p class="qq">Does the film show a future in which the conflict is over?</p></div>
-        <div><p>The whole film moves towards the UN partition vote and the promise of a state. The future is certain, and it is good; the only open question is how fast it arrives.</p></div>
+        <div><p>Everything moves towards statehood: the ship that is let through, the state that is coming, the eulogy that promises peace. The war that follows is shown as a passage, not an outcome. The future is certain; only its date is open.</p></div>
       </article>
       <article class="ans" id="q2">
-        <div><h3>Whose future</h3><div class="res"><i class="dot part"></i>Partly</div><p class="qq">Is there a place in that future for the other side?</p></div>
-        <div><p>The closing oath promises a shared land, and Taha, the Arab friend, is drawn with warmth. But Arabs enter the future only as friends who have earned a place in it. The people of Taha's village quietly vanish from the story.</p><p class="check">To check while watching: how the village's emptying is shown, and who is said to have caused it.</p></div>
+        <div><h3>Whose future</h3><div class="res"><i class="dot part"></i>Partly</div><p class="qq">Is there a place in that future for Palestinians?</p></div>
+        <div><p>One Arab has a place: Taha, the village headman and Ari's childhood friend, drawn with warmth. But he earns it by warning the Jews and pays for it with his life. The Arabs who fight are led by the Mufti and trained by a German Nazi; the people of Taha's village drop out of the story. The future has room for a friend, not for a people.</p><p class="check">To check while watching: whether the village's residents are seen again after Taha's death, and how the Nazi figure is introduced.</p></div>
       </article>
       <article class="ans" id="q3">
         <div><h3>Belief</h3><div class="res"><i class="dot yes"></i>Yes</div><p class="qq">Do the characters believe the promise can be kept?</p></div>
-        <div><p>No one doubts the destination. The argument is only about means: the diplomacy of the Haganah against the bombs of the Irgun. Even that argument ends in reconciliation.</p></div>
+        <div><p>No one doubts the destination. The quarrel between Ari's father, who trusts diplomacy, and his uncle Akiva, who leads the Irgun's bombs, is a quarrel about means. Even the American outsider, Kitty, ends up on the trucks.</p></div>
       </article>
       <article class="ans" id="q4">
         <div><h3>Cost</h3><div class="res"><i class="dot part"></i>Partly</div><p class="qq">Is the price of the promise shown, and who pays it?</p></div>
-        <div><p>The price is real: Akiva, Karen and Taha die. But it is told as the sacrifice of one's own side. The losses of the other side do not appear as losses.</p></div>
+        <div><p>The film does not hide its own side's violence: the Irgun bombs the King David Hotel, and the family argues about it. But the price that is mourned is Jewish: Akiva, Karen, Dafna before them. The dead of the hotel and the Arabs displaced by the war are not counted.</p></div>
       </article>
       <article class="ans" id="q5">
-        <div><h3>Past</h3><div class="res"><i class="dot yes"></i>Yes</div><p class="qq">When the future grows uncertain, does the film draw its legitimacy from the Holocaust?</p></div>
-        <div><p>The refugees on the ship are survivors, and Dov's confession of what was done to him in Auschwitz is one of the film's turning points. The past is told to justify the future. Here, though, the future is not uncertain: memory and promise work side by side.</p><p class="check">To check while watching: the timecode and wording of Dov's confession.</p></div>
+        <div><h3>Past</h3><div class="res"><i class="dot yes"></i>Yes</div><p class="qq">Does the film ground its future in the Holocaust?</p></div>
+        <div><p>Three ways. The refugees are survivors, and the camps on Cyprus echo the camps they left. Dov's confession of what was done to him in Auschwitz is the price of entry into the Irgun. And the enemy in Palestine is led by a Nazi, with swastikas painted on the walls where Taha is found. The film carries the moral order of the Holocaust into 1948: whoever opposes the state stands with the Nazis.</p><p class="check">To check while watching: the content of Dov's confession. Accounts disagree on whether the film keeps the novel's Sonderkommando past or replaces it.</p></div>
       </article>
     </div>
   </section>
 
   <section class="block">
-    <p class="eyebrow">For the hypothesis</p>
-    <div class="hypo">
-      <div class="lanes" aria-label="Exodus on the two lanes">
-        <div class="lane"><span>Promise</span><div class="track"><i></i><span>1960 · yes</span></div></div>
-        <div class="lane"><span>Past</span><div class="track"><i></i><span>1960 · yes</span></div></div>
-      </div>
-      <p>In 1960 both lanes read yes. <b>Memory does not replace the promise here; it props it up.</b> So the question for later films is sharper: when the promise withdraws, is memory left standing on its own?</p>
+    <p class="eyebrow">Film and record</p>
+    <h2>What the film changes</h2>
+    <div class="vs" role="table" aria-label="Film compared with the historical record">
+      <div class="r h" role="row"><div>Event</div><div>In the film</div><div>In the record</div></div>
+      <div class="r" role="row"><div class="k">The ship</div><div class="film">Sails from Cyprus with 611 detainees. A hunger strike in Famagusta forces the British to let it go.</div><div class="rec">The President Warfield sailed from Sète, France, in July 1947 with more than 4,500 people. The British boarded it, towed it to Haifa and shipped the passengers back to Europe, finally to camps in Germany.<sup><a href="#s4">4</a></sup></div></div>
+      <div class="r" role="row"><div class="k">The hunger strike</div><div class="film">Wins the voyage.</div><div class="rec">Took place in France, aboard the deportation ships at Port-de-Bouc, and did not stop the return to Germany.<sup><a href="#s4">4</a></sup></div></div>
+      <div class="r" role="row"><div class="k">The outcome</div><div class="film">A victory.</div><div class="rec">A defeat at sea that became a victory in public opinion abroad.<sup><a href="#s4">4</a></sup> The film keeps the victory and drops the defeat.</div></div>
+      <div class="r" role="row"><div class="k">The Arab side</div><div class="film">Led by the Mufti and a German Nazi.</div><div class="rec">The Mufti's wartime collaboration with Nazi Germany is documented; the film turns it into the face of all Arab resistance in 1947–48.</div></div>
+      <div class="r" role="row"><div class="k">1948</div><div class="film">Ends as the war begins.</div><div class="rec">The war displaced an estimated 700,000 Palestinians or more. Stopping at its first day keeps the displacement off screen.</div></div>
     </div>
   </section>
 
   <section class="block">
     <p class="eyebrow">Before the film</p>
     <h2>The file</h2>
-    <p style="color:var(--muted);max-width:62ch;margin:0 0 24px">Evidence level: <b style="color:var(--ink)">Portrayal only</b>, until any state involvement in the production is documented.</p>
+    <p style="color:var(--muted);max-width:62ch;margin:0 0 24px">Evidence level: <b style="color:var(--ink)">Institutional</b>, pending confirmation in primary sources. The AFI Catalog reports Israeli navy ships playing British ones.</p>
     <div class="dossier">
-      <div class="item"><div><h4>A bestseller first</h4><p>Leon Uris's novel (1958) was a major American bestseller before the film rights were used.</p></div><div class="tags"><span class="tag">Industry</span><span class="tag todo">To verify</span></div></div>
-      <div class="item"><div><h4>A blacklisted writer, named on screen</h4><p>Preminger credited Dalton Trumbo by name, one of the first open breaks with the Hollywood blacklist.</p></div><div class="tags"><span class="tag">Industry</span><span class="tag todo">To verify</span></div></div>
-      <div class="item"><div><h4>Shot on location</h4><p>Filmed in Israel and Cyprus. Whether Israeli state bodies helped with locations, permits or extras is not yet documented.</p></div><div class="tags"><span class="tag">Institutional?</span><span class="tag todo">Open question</span></div></div>
-      <div class="item"><div><h4>How it was sold</h4><p>Saul Bass's poster: raised arms forming a flame, one of them holding a rifle. The campaign material is where the film's marketing will be read.</p></div><div class="tags"><span class="tag">Marketing</span><span class="tag todo">To verify</span></div></div>
-      <div class="item held"><div><h4>One claim held back</h4><p>A claim about how the novel itself was commissioned is kept in research notes until it can be tied to a document or a first-hand account.</p></div><div class="tags"><span class="tag">Not published</span></div></div>
+      <div class="item"><div><h4>A screenplay before a novel</h4><p>MGM first commissioned an original screenplay from Uris, then dropped it in 1956; Uris turned the material into the novel. Preminger bought the rights and rejected Uris's script, by one account as too anti-British and anti-Arab.<sup><a href="#s2">2</a></sup><sup><a href="#s1">1</a></sup></p></div><div class="tags"><span class="tag">Industry</span><span class="tag ok">Sourced</span></div></div>
+      <div class="item"><div><h4>Israeli ships, American Marines</h4><p>The British Army refused to help. According to the AFI Catalog, Israeli destroyers were sent to Cyprus to stand in for British ships, and US Marines played British soldiers; the US Defense Department barred off-duty servicemen from appearing.<sup><a href="#s2">2</a></sup></p></div><div class="tags"><span class="tag">Institutional</span><span class="tag todo">Confirm in primary sources</span></div></div>
+      <div class="item"><div><h4>Filmed while Eichmann was taken</h4><p>Shooting ran from March to June 1960.<sup><a href="#s2">2</a></sup> Adolf Eichmann was captured in Buenos Aires in May 1960 and brought to Israel for trial: the Holocaust returned to the headlines while the film was being made.</p></div><div class="tags"><span class="tag">Context</span><span class="tag ok">Sourced</span></div></div>
+      <div class="item"><div><h4>A blacklisted writer, named on screen</h4><p>Preminger credited Dalton Trumbo under his own name, one of the first open breaks with the Hollywood blacklist.<sup><a href="#s2">2</a></sup><sup><a href="#s3">3</a></sup></p></div><div class="tags"><span class="tag">Industry</span><span class="tag ok">Sourced</span></div></div>
+      <div class="item"><div><h4>How it was sold</h4><p>Saul Bass's title art: raised arms in a flame, the highest one holding a rifle, used across the publicity. Tickets went on sale the day shooting began. The film cost about $4.5 million and earned about $20 million worldwide; Ernest Gold's score won the Oscar.<sup><a href="#s2">2</a></sup><sup><a href="#s1">1</a></sup></p></div><div class="tags"><span class="tag">Marketing</span><span class="tag ok">Sourced</span></div></div>
+      <div class="item held"><div><h4>A claim not adopted</h4><p>A widely repeated story says a public-relations man commissioned Uris to write the novel for Israel. Critics of the story note that it rests on the PR man's own later boast and is not supported by Uris's papers or his biographers.<sup><a href="#s7">7</a></sup> Until a document settles it, the file does not use it.</p></div><div class="tags"><span class="tag">Not published as fact</span></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">Politics around the film</p>
+    <h2>When it came out, and after</h2>
+    <div class="ctx">
+      <div><h4>1960</h4><p>Israel was twelve years old, four years after the Suez war, and the United States had not yet made it a close ally. The film was screened at Cannes in 1961 out of competition.<sup><a href="#s1">1</a></sup></p><p>Writing in <i>Film Quarterly</i>, Gideon Bachmann called it "the best promotion Israel ever had".<sup><a href="#s1">1</a></sup></p></div>
+      <div><h4>After</h4><p>Scholars credit the novel and film with shaping how Americans understood Israel's founding, as a frontier and liberation story told in American terms.<sup><a href="#s5">5</a></sup> The promise spoken over the grave, a land shared in life, has not been kept.</p></div>
     </div>
   </section>
 
   <section class="block narrow">
     <p class="eyebrow">Sources</p>
-    <ul class="sources">
-      <li>The film itself, with timecodes (to be added after viewing).</li>
-      <li>Production and press material, 1959–1961 (to be collected).</li>
-      <li>Jens Beckert (2026), "Where Have All the Futures Gone?", <i>European Journal of Social Theory</i>.</li>
-    </ul>
+    <ol class="sources">
+      <li id="s1"><a href="https://en.wikipedia.org/wiki/Exodus_(1960_film)">Exodus (1960 film)</a>, Wikipedia: plot, cast, awards, box office, reception. Starting point only; to be replaced by primary sources.</li>
+      <li id="s2"><a href="https://catalog.afi.com/Catalog/moviedetails/53140">Exodus (1960)</a>, AFI Catalog of Feature Films: production history.</li>
+      <li id="s3"><a href="https://www.tcm.com/articles/31578/exodus">Exodus</a>, Turner Classic Movies article.</li>
+      <li id="s4"><a href="https://encyclopedia.ushmm.org/content/en/article/exodus-1947">Exodus 1947</a>, United States Holocaust Memorial Museum, Holocaust Encyclopedia.</li>
+      <li id="s5">Amy Kaplan, <i>Our American Israel: The Story of an Entangled Alliance</i> (Harvard University Press, 2018); summarised in <a href="https://daily.jstor.org/how-americans-were-taught-to-understand-israel">JSTOR Daily</a>.</li>
+      <li id="s6">M. M. Silver, <i>Our Exodus: Leon Uris and the Americanization of Israel's Founding Story</i> (Wayne State University Press, 2010). To be read for the production history.</li>
+      <li id="s7"><a href="https://www.meforum.org/campus-watch/khalidi-lobs-another-canard-into-the-echo-chamber">Summary of Martin Kramer's critique</a> of the commissioning story (a partisan source; cited for the dispute, not as a verdict).</li>
+      <li id="s8">Ella Shohat, <i>Israeli Cinema: East/West and the Politics of Representation</i> (1987; 2nd ed. 2010).</li>
+    </ol>
   </section>
 
-  <footer><span>antefilm · İbrahim Efe</span><span>Draft file: written before viewing, from published knowledge of the film; every answer to be confirmed with a scene</span></footer>
+  <footer><span>antefilm · İbrahim Efe</span><span>Draft file, written from published sources before viewing; answers to be confirmed scene by scene</span></footer>
 </main>
 </body>
 </html>

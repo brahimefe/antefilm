@@ -4,132 +4,47 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>antefilm — Before the Film</title>
-<meta name="description" content="Films and series about Israel, its agencies and its memory, watched one by one and put to the same five questions.">
+<meta name="description" content="How does Zionism promise a future on screen? Influential films, watched one by one.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=9bf3c9e6">
 <style>
-/* Layout: a public watch log. Dark screening-room hero with the project question and progress;
-   the five tests as numbered cards; then the scoreboard — every film a row, every test a column,
-   filled in as the films are watched. One accent: projector amber. */
-:root {
-  --bg: #F3F1EC; --panel: #FFFFFF; --ink: #15141A; --muted: #67646E; --line: rgba(21,20,26,.12);
-  --screen: #0E0D12; --screen-ink: #F3F1EC; --screen-muted: #9B97A3;
-  --amber: #E8A13A; --amber-ink: #8A5300;
-  --yes: #15141A; --no: transparent;
-  --display: 'Instrument Serif', Georgia, serif; --body: 'Inter Tight', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace;
-}
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #121117; --panel: #1A1920; --ink: #EDEBE6; --muted: #A09CA8; --line: rgba(237,235,230,.12);
-  --screen: #08070B; --amber-ink: #F0B65C; --yes: #EDEBE6; color-scheme: dark; } }
-:root[data-theme="dark"] {
-  --bg: #121117; --panel: #1A1920; --ink: #EDEBE6; --muted: #A09CA8; --line: rgba(237,235,230,.12);
-  --screen: #08070B; --amber-ink: #F0B65C; --yes: #EDEBE6; color-scheme: dark; }
+/* Home: the question, the latest file (a frame and one sentence), one running finding, then every film by period. */
+.hero { position: relative; padding: 80px 0 72px; }
+.hero h1 { font-size: clamp(3rem, 8.4vw, 6.6rem); max-width: 12ch; }
+.hero h1 em { color: var(--amber); }
+.hero .lede { color: var(--screen-muted); font-size: 1.15rem; margin: 24px 0 0; }
+.hero .lede b { color: var(--screen-ink); font-weight: 600; }
 
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1.04rem; line-height: 1.55; }
-.wrap { max-width: 1160px; margin: 0 auto; padding: 0 16px; }
-a { color: inherit; }
-:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+.latest { display: grid; gap: 28px; align-items: center; }
+@media (min-width: 860px) { .latest { grid-template-columns: 1.3fr 1fr; } }
+.frame { aspect-ratio: 2.2 / 1; border-radius: 12px; background: repeating-linear-gradient(135deg, var(--panel) 0 14px, color-mix(in srgb, var(--ink) 5%, var(--panel)) 14px 28px); border: 1px dashed var(--muted); display: grid; place-items: center; color: var(--muted); font-family: var(--mono); font-size: .82rem; text-align: center; padding: 16px; }
+.latest h3 { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1; margin: 0 0 14px; }
+.latest h3 span { color: var(--muted); font-size: .55em; }
+.latest blockquote { margin: 0 0 22px; font-family: var(--display); font-size: 1.6rem; line-height: 1.25; }
+.go { font-weight: 600; text-decoration: none; display: inline-flex; gap: 10px; align-items: center; }
+.go span { width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: var(--bg); display: inline-grid; place-items: center; }
 
-/* ---------- screening-room hero ---------- */
-.screen { background: var(--screen); color: var(--screen-ink); position: relative; overflow: hidden; }
-.screen::before { /* projector beam */
-  content: ""; position: absolute; inset: -20% -10% auto auto; width: 70%; height: 140%;
-  background: radial-gradient(ellipse at 85% 10%, rgba(232,161,58,.28), rgba(232,161,58,0) 60%); pointer-events: none; }
-.bar { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; }
-.logo { font-family: var(--mono); font-weight: 500; font-size: 1rem; letter-spacing: .04em; text-decoration: none; }
-.logo b { color: var(--amber); font-weight: 500; }
-.bar nav { display: flex; gap: 22px; font-size: .92rem; flex-wrap: wrap; }
-.bar nav a { text-decoration: none; color: var(--screen-muted); }
-.bar nav a:hover { color: var(--screen-ink); }
+.finding { margin-top: 72px; background: var(--screen); color: var(--screen-ink); border-radius: 14px; padding: 34px 30px; display: grid; gap: 14px; }
+.finding p.big { font-family: var(--display); font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.1; margin: 0; }
+.finding p.big b { color: var(--amber); font-weight: 400; }
+.finding p.note { margin: 0; color: var(--screen-muted); font-size: .92rem; }
 
-.hero { position: relative; padding: 72px 0 64px; display: grid; gap: 40px; }
-@media (min-width: 900px) { .hero { grid-template-columns: 1.55fr 1fr; align-items: end; padding: 96px 0 80px; } }
-h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3.4rem, 10vw, 7.6rem); line-height: .9; letter-spacing: -.02em; margin: 0; }
-h1 em { color: var(--amber); }
-.hero .lede { font-size: 1.18rem; color: var(--screen-muted); margin: 26px 0 0; max-width: 40ch; }
-.hero .lede strong { color: var(--screen-ink); font-weight: 600; }
-
-.progress { border: 1px solid rgba(243,241,236,.16); border-radius: 14px; padding: 22px; }
-.progress .num { font-family: var(--display); font-size: 4.2rem; line-height: 1; }
-.progress .num span { color: var(--screen-muted); font-size: 2rem; }
-.progress p { margin: 6px 0 16px; color: var(--screen-muted); font-size: .95rem; }
-.reel { display: grid; grid-template-columns: repeat(15, 1fr); gap: 5px; }
-.reel i { aspect-ratio: 1; border-radius: 50%; border: 1.5px solid rgba(243,241,236,.28); }
-.reel i.done { background: var(--amber); border-color: var(--amber); }
-.reel i.now { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(232,161,58,.25); }
-.next { margin-top: 16px; font-family: var(--mono); font-size: .82rem; color: var(--screen-muted); }
-.next b { color: var(--screen-ink); font-weight: 500; }
-
-/* ---------- tests ---------- */
-section.block { padding: 80px 0 0; }
-.eyebrow { font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-ink); margin: 0 0 10px; }
-h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; margin: 0 0 12px; }
-.sub { color: var(--muted); max-width: 60ch; margin: 0 0 32px; }
-.tests { display: grid; gap: 14px; grid-template-columns: 1fr; }
-@media (min-width: 640px) { .tests { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .tests { grid-template-columns: repeat(3, 1fr); } }
-.test.lead { background: var(--screen); color: var(--screen-ink); border-color: var(--screen); }
-.test.lead .n { color: var(--amber); }
-
-/* ---------- promise vs memory chart ---------- */
-.chart { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 20px 14px; }
-.chart svg { width: 100%; display: block; overflow: visible; }
-.chart text { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
-.chart .lane-label { font-family: var(--body); font-size: 13px; font-weight: 600; fill: var(--ink); }
-.chart .axis { stroke: var(--line); }
-.chart .era { fill: var(--muted); font-style: italic; font-family: var(--display); font-size: 15px; }
-.chart circle.wait { fill: none; stroke: var(--muted); stroke-dasharray: 2 2; opacity: .7; }
-.hypo { display: grid; gap: 14px; margin-top: 22px; }
-@media (min-width: 760px) { .hypo { grid-template-columns: repeat(3, 1fr); } }
-.hypo div { border-left: 2px solid var(--amber); padding-left: 14px; }
-.hypo b { display: block; font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.1; margin-bottom: 4px; }
-.hypo p { margin: 0; font-size: .93rem; color: var(--muted); }
-.test { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 20px 24px; min-width: 0; }
-.test .n { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
-.test h3 { font-family: var(--display); font-weight: 400; font-size: 1.85rem; line-height: 1; margin: 14px 0 12px; }
-.test p { margin: 0; font-size: .95rem; }
-
-/* ---------- scoreboard ---------- */
-.board-head { display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 16px; }
-.key { display: flex; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: .8rem; color: var(--muted); margin-bottom: 32px; }
-.key span { display: inline-flex; align-items: center; gap: 7px; }
-.dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; flex: none; }
-.dot.yes { background: var(--yes); }
-.dot.part { background: linear-gradient(90deg, var(--yes) 50%, transparent 50%); border: 1.5px solid var(--yes); }
-.dot.no { border: 1.5px solid var(--ink); }
-.dot.wait { border: 1.5px dashed var(--muted); opacity: .6; }
-
-.board { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-.row { display: grid; grid-template-columns: 64px minmax(0, 1fr) repeat(5, 52px); align-items: center; gap: 0 4px; padding: 12px 18px; border-top: 1px solid var(--line); }
-.row:first-child { border-top: 0; }
-.row.head { font-family: var(--mono); font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; padding-top: 16px; padding-bottom: 14px; position: sticky; top: 0; background: var(--panel); }
-.row.head span.t { writing-mode: vertical-rl; transform: rotate(180deg); justify-self: center; height: 64px; }
-.row .y { font-family: var(--mono); font-size: .85rem; color: var(--muted); }
-.row .title { min-width: 0; }
-.row .title b { font-weight: 600; }
-.row .title small { display: block; font-size: .8rem; color: var(--muted); }
-.row .c { justify-self: center; }
-.row.now { background: linear-gradient(90deg, rgba(232,161,58,.16), transparent 70%); }
-.row.now .title small { color: var(--amber-ink); font-weight: 600; }
-.row:not(.head):hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
-@media (max-width: 560px) {
-  .row { grid-template-columns: minmax(0, 1fr) repeat(5, 28px); padding: 12px 10px; }
-  .row .y { display: none; }
-  .row.head span.t { height: 58px; font-size: .66rem; }
-  .dot { width: 12px; height: 12px; }
-}
-
-/* ---------- evidence ---------- */
-.levels { display: grid; gap: 14px; grid-template-columns: 1fr; }
-@media (min-width: 760px) { .levels { grid-template-columns: repeat(4, 1fr); } }
-.lv { border-top: 2px solid var(--ink); padding-top: 14px; }
-.lv h4 { margin: 0 0 6px; font-size: 1rem; }
-.lv p { margin: 0; color: var(--muted); font-size: .93rem; }
-.lv.off { border-top-style: dashed; border-color: var(--muted); }
-
-footer { margin-top: 96px; border-top: 1px solid var(--line); padding: 24px 0 56px; font-size: .85rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-.mock { position: fixed; right: 12px; bottom: 12px; z-index: 5; font-family: var(--mono); font-size: .75rem; background: var(--amber); color: #15141A; padding: 6px 12px; border-radius: 999px; }
+.period { margin-top: 44px; }
+.period-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 16px; }
+.period-head h3 { font-family: var(--display); font-weight: 400; font-size: 1.7rem; margin: 0; }
+.period-head span { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+.tiles { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.tile { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 16px 18px; min-height: 132px; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; }
+.tile .y { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+.tile b { display: block; font-family: var(--display); font-weight: 400; font-size: 1.45rem; line-height: 1.05; margin-top: 6px; }
+.tile small { font-size: .88rem; color: var(--muted); margin-top: 10px; }
+.tile.open { background: var(--screen); color: var(--screen-ink); border-color: var(--screen); }
+.tile.open small { color: var(--amber); }
+.tile.open:hover { transform: translateY(-2px); }
+.tile.open { transition: transform 150ms ease; }
+.empty { color: var(--muted); font-size: .95rem; margin: 0; }
+@media (prefers-reduced-motion: reduce) { .tile.open { transition: none; } }
 </style>
 </head>
 <body>
@@ -137,135 +52,73 @@ footer { margin-top: 96px; border-top: 1px solid var(--line); padding: 24px 0 56
   <div class="wrap">
     <header class="bar">
       <a class="logo" href="/">ante<b>film</b></a>
-      <nav aria-label="Main"><a href="#tests">The five questions</a><a href="#thesis">Promise to memory</a><a href="#board">Films</a><a href="#evidence">Evidence</a></nav>
+      <nav aria-label="Main"><a href="#films">Films</a><a href="method.html">Method</a></nav>
     </header>
     <section class="hero">
-      <div>
-        <h1>Before <em>the film.</em></h1>
-        <p class="lede">Films and series about Israel, its agencies and its memory, <strong>watched one by one and put to the same five questions.</strong> The log grows with every film.</p>
-      </div>
-      <div class="progress" aria-label="Viewing progress">
-        <div class="num">0</div>
-        <p>films watched and tested so far</p>
-        <div class="next">Now watching: <b>Exodus (1960)</b></div>
-      </div>
+      <h1>How does Zionism promise a <em>future</em> on screen?</h1>
+      <p class="lede">Influential films, watched one by one. <b>Files so far: <span id="count">1</span></b></p>
     </section>
   </div>
 </div>
 
 <main class="wrap">
-  <section class="block" id="tests">
-    <p class="eyebrow">The method</p>
-    <h2>Five questions for every film</h2>
-    <p class="sub">The questions follow Jens Beckert: a promised future is legitimate when it is desirable and can plausibly be reached. Each question has a yes, partly or no answer, so film by film the answers add up to a pattern. Each answer is backed by a scene, with its timecode. Every film is also given one of four future types: integrative, restoration, retrotopian or anomic.</p>
-    <div class="tests">
-      <article class="test lead"><div class="n">01</div><h3>Promise</h3><p>Does the film show a future in which the conflict is over?</p></article>
-      <article class="test"><div class="n">02</div><h3>Whose future</h3><p>Is there a place in that future for the other side?</p></article>
-      <article class="test"><div class="n">03</div><h3>Belief</h3><p>Do the characters believe the promise can be kept?</p></article>
-      <article class="test"><div class="n">04</div><h3>Cost</h3><p>Is the price of the promise shown, and who pays it?</p></article>
-      <article class="test"><div class="n">05</div><h3>Past</h3><p>When the future grows uncertain, does the film draw its legitimacy from the Holocaust?</p></article>
+  <section class="block">
+    <p class="eyebrow">Latest file</p>
+    <div class="latest">
+      <a class="frame" href="films/exodus.html" aria-label="Open the Exodus file">Frame to be added after viewing<br>(the shared grave)</a>
+      <div>
+        <h3>Exodus <span>1960</span></h3>
+        <blockquote>“The film can picture a shared future only over a shared grave.”</blockquote>
+        <a class="go" href="films/exodus.html">Read the file <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="finding" aria-live="polite">
+      <p class="eyebrow" style="margin:0">What the films show so far</p>
+      <p class="big" id="finding"></p>
+      <p class="note">This sentence updates as each file is added.</p>
     </div>
   </section>
 
-  <section class="block" id="thesis">
-    <p class="eyebrow">The question behind the log</p>
-    <h2>From promise to memory?</h2>
-    <p class="sub">Jens Beckert argues that a social order stays legitimate while it can promise a credible future, and that this promissory legitimacy erodes when promises fail. The hypothesis tested here: as the screen stops promising a future, it leans more on the past. If so, the two lanes below should part: promise falling away while the past stays.</p>
-    <div class="chart">
-      <svg id="pm" role="img" aria-label="Promise and past answers by year; no film tested yet"></svg>
-      <div class="key" style="margin:10px 0 0"><span><i class="dot yes"></i>Yes</span><span><i class="dot part"></i>Partly</span><span><i class="dot no"></i>No</span><span><i class="dot wait"></i>Not watched yet</span></div>
-    </div>
-    <div class="hypo">
-      <div><b>Promise</b><p>Exodus-era films offer a haven and an end-state: an integrative future.</p></div>
-      <div><b>Cost</b><p>Later films count the price of the promise: Beckert's unintended effects.</p></div>
-      <div><b>Memory</b><p>Recent work promises no end, only the next operation, and draws on the past for legitimacy.</p></div>
-    </div>
+  <section class="block" id="films">
+    <p class="eyebrow">All films</p>
+    <h2>Eight periods, one question</h2>
+    <div id="periods"></div>
   </section>
 
-  <section class="block" id="board">
-    <div class="board-head">
-      <div><p class="eyebrow">The log</p><h2>The films, in viewing order</h2></div>
-    </div>
-    <div class="key"><span><i class="dot yes"></i>Yes</span><span><i class="dot part"></i>Partly</span><span><i class="dot no"></i>No</span><span><i class="dot wait"></i>Not watched yet</span></div>
-    <div class="board" id="rows" role="table" aria-label="Test results by film"></div>
-  </section>
-
-  <section class="block" id="evidence">
-    <p class="eyebrow">Before the camera rolls</p>
-    <h2>Every film also gets a file</h2>
-    <p class="sub">Who funded, approved or shaped the production. Each file carries one level of evidence; the same rules apply to every state and company.</p>
-    <div class="levels">
-      <div class="lv"><h4>Institutional</h4><p>A state body is documented as funding, approving, supplying or banning the work.</p></div>
-      <div class="lv"><h4>Personal tie</h4><p>A creator has a documented link to an army, agency or government, by their own account or public record.</p></div>
-      <div class="lv"><h4>Portrayal only</h4><p>The work depicts a state or agency; no involvement in the production is claimed.</p></div>
-      <div class="lv off"><h4>Not published</h4><p>Claims without a document or a first-hand account stay in research notes.</p></div>
-    </div>
-  </section>
-
-  <footer><span>antefilm · İbrahim Efe</span><span>The list is open and grows with every film</span></footer>
+  <footer><span>antefilm · İbrahim Efe</span><a href="method.html">Method and sources</a></footer>
 </main>
 
 <script>
-const FILMS = [
-  [1960, 'Exodus', 'Film · Portrayal only'],
-  [1966, 'Cast a Giant Shadow', 'Film · Portrayal only'],
-  [1976, 'Victory at Entebbe', 'TV film · Portrayal only'],
-  [1977, 'Raid on Entebbe', 'TV film · Portrayal only'],
-  [1984, 'The Little Drummer Girl', 'Film · Portrayal only'],
-  [1986, 'The Delta Force', 'Film · Industry'],
-  [1986, 'Sword of Gideon', 'TV film · Portrayal only'],
-  [1993, 'Schindler’s List', 'Film · Memory'],
-  [2002, 'Jenin, Jenin', 'Documentary · Institutional'],
-  [2005, 'Munich', 'Film · Portrayal only'],
-  [2007, 'Ha-Hov', 'Film · Institutional'],
-  [2008, 'Waltz with Bashir', 'Film · Institutional'],
-  [2009, 'Lebanon', 'Film · Institutional'],
-  [2010, 'The Debt', 'Film · Portrayal only'],
-  [2011, 'Homeland', 'Series · Industry'],
-  [2013, 'World War Z', 'Film · Portrayal only'],
-  [2015, 'Fauda', 'Series · Personal tie'],
-  [2015, 'Son of Saul', 'Film · Memory'],
-  [2017, 'Foxtrot', 'Film · Institutional'],
-  [2018, 'The Angel', 'Film · Portrayal only'],
-  [2018, 'Operation Finale', 'Film · Portrayal only'],
-  [2018, '7 Days in Entebbe', 'Film · Portrayal only'],
-  [2018, 'The Little Drummer Girl', 'Series · Portrayal only'],
-  [2019, 'The Red Sea Diving Resort', 'Film · Portrayal only'],
-  [2019, 'The Spy', 'Series · Portrayal only'],
-  [2020, 'Tehran', 'Series · Institutional'],
-  [2022, 'Fauda, season 4', 'Series · Personal tie'],
-  [2023, 'Golda', 'Film · Portrayal only'],
-  [2023, 'The Zone of Interest', 'Film · Memory'],
-  [2024, 'No Other Land', 'Documentary · Institutional']
+/* Each film: [year, title, file slug or null, answers or null]. Answers: Promise, Whose future, Belief, Cost, Past (y / p / n). */
+const PERIODS = [
+  { name: 'Heroic-nationalist', years: '1950s–1970s', films: [
+    [1955, 'Hill 24 Doesn’t Answer'], [1960, 'They Were Ten'],
+    [1960, 'Exodus', 'exodus', 'ypypy', 'A homeland promised over a grave.'],
+    [1966, 'Cast a Giant Shadow'], [1976, 'Victory at Entebbe'], [1977, 'Raid on Entebbe'], [1977, 'Operation Thunderbolt'] ] },
+  { name: 'Bourekas', years: '1960s–1970s', films: [[1964, 'Sallah Shabati']] },
+  { name: 'Personal cinema', years: '1960s–1970s', films: [[1967, 'Three Days and a Child']] },
+  { name: 'The Palestinian wave', years: '1980s', films: [[1982, 'Hamsin'], [1984, 'Beyond the Walls'], [1986, 'Avanti Popolo']] },
+  { name: 'Oslo and the promise tested', years: '1990s', films: [] },
+  { name: 'Shooting and crying', years: '2000s', films: [[2000, 'Kippur'], [2004, 'Walk on Water'], [2005, 'Munich'], [2007, 'Beaufort'], [2008, 'Waltz with Bashir'], [2009, 'Lebanon']] },
+  { name: 'Security export and the platforms', years: '2010s–2023', films: [[2011, 'Homeland'], [2015, 'Fauda'], [2017, 'Foxtrot'], [2018, 'Operation Finale'], [2018, '7 Days in Entebbe'], [2019, 'The Red Sea Diving Resort'], [2019, 'The Spy'], [2020, 'Tehran'], [2023, 'Golda']] },
+  { name: 'After 7 October', years: '2023–', films: [] }
 ];
-const T = ['Promise', 'Whose future', 'Belief', 'Cost', 'Past'];
-const rows = document.getElementById('rows');
-rows.innerHTML =
-  `<div class="row head" role="row"><span class="y">Year</span><span>Film</span>${T.map(t => `<span class="t" role="columnheader">${t}</span>`).join('')}</div>` +
-  FILMS.map((f, i) => `<div class="row${i === 0 ? ' now' : ''}" role="row">
-     <span class="y">${f[0]}</span>
-     <span class="title">${i === 0 ? '<a href="films/exodus.html"><b>' + f[1] + '</b></a><small>Now watching · draft file open</small>' : '<b>' + f[1] + '</b><small>' + f[2] + ' · Future type: —</small>'}</span>
-     ${T.map(t => `<span class="c" role="cell" aria-label="${t}: not watched yet"><i class="dot wait"></i></span>`).join('')}
-   </div>`).join('');
 
+document.getElementById('periods').innerHTML = PERIODS.map(p => `
+  <div class="period">
+    <div class="period-head"><h3>${p.name}</h3><span>${p.years}</span></div>
+    ${p.films.length ? `<div class="tiles">${p.films.map(f => f[2]
+      ? `<a class="tile open" href="films/${f[2]}.html"><div><span class="y">${f[0]}</span><b>${f[1]}</b></div><small>${f[4]}</small></a>`
+      : `<div class="tile"><div><span class="y">${f[0]}</span><b>${f[1]}</b></div><small>Coming</small></div>`).join('')}</div>`
+      : `<p class="empty">Films for this period are being chosen.</p>`}
+  </div>`).join('');
 
-/* promise vs memory chart: two lanes, one dot per film at its year */
-const pm = document.getElementById('pm'), NS = 'http://www.w3.org/2000/svg';
-function drawPM() {
-  const W = pm.clientWidth, narrow = W < 560, L = narrow ? 70 : 110, R = W - 10, H = 170;
-  pm.setAttribute('viewBox', `0 0 ${W} ${H}`); pm.style.height = H + 'px'; pm.innerHTML = '';
-  const x = y => L + (y - 1955) / (2028 - 1955) * (R - L);
-  const el = (n, a, t) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (t) e.textContent = t; pm.appendChild(e); return e; };
-  const lanes = [['Promise', 45], ['Past', 105]];
-  lanes.forEach(([n, y]) => { el('line', { x1: L, x2: R, y1: y, y2: y, class: 'axis' }); el('text', { x: 0, y: y + 4, class: 'lane-label' }, n); });
-  for (let y = 1960; y <= 2020; y += narrow ? 20 : 10) el('text', { x: x(y), y: 150, 'text-anchor': 'middle' }, y);
-  const seen = {};
-  FILMS.forEach(f => {
-    const k = f[0]; seen[k] = (seen[k] || 0) + 1; const dx = (seen[k] - 1) * (narrow ? 4 : 7);
-    lanes.forEach(([n, y]) => { const c = el('circle', { cx: x(k) + dx, cy: y, r: narrow ? 4 : 6, class: 'wait' }); const t = document.createElementNS(NS, 'title'); t.textContent = `${f[1]} (${k}): ${n} test not watched yet`; c.appendChild(t); });
-  });
-}
-addEventListener('resize', drawPM); drawPM();
+/* running finding: share of files whose future rests on the Holocaust (Past = yes) */
+const done = PERIODS.flatMap(p => p.films).filter(f => f[3]);
+const past = done.filter(f => f[3][4] === 'y').length;
+document.getElementById('count').textContent = done.length;
+document.getElementById('finding').innerHTML = `In <b>${past} of ${done.length}</b> ${done.length === 1 ? 'film' : 'films'}, the future rests on the Holocaust.`;
 </script>
 </body>
 </html>

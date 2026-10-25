@@ -1,0 +1,45 @@
+/* antefilm — shared styles for the home and method pages.
+   Dark screening-room header, light reading area, one accent (projector amber). */
+:root {
+  --bg: #F3F1EC; --panel: #FFFFFF; --ink: #15141A; --muted: #67646E; --line: rgba(21,20,26,.12);
+  --screen: #0E0D12; --screen-ink: #F3F1EC; --screen-muted: #9B97A3;
+  --amber: #E8A13A; --amber-ink: #8A5300; --yes: #15141A;
+  --display: 'Instrument Serif', Georgia, serif; --body: 'Inter Tight', system-ui, sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121117; --panel: #1A1920; --ink: #EDEBE6; --muted: #A09CA8; --line: rgba(237,235,230,.12);
+  --screen: #08070B; --amber-ink: #F0B65C; --yes: #EDEBE6; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121117; --panel: #1A1920; --ink: #EDEBE6; --muted: #A09CA8; --line: rgba(237,235,230,.12);
+  --screen: #08070B; --amber-ink: #F0B65C; --yes: #EDEBE6; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1.05rem; line-height: 1.6; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+.narrow { max-width: 760px; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+
+.screen { background: var(--screen); color: var(--screen-ink); position: relative; overflow: hidden; }
+.screen::before { content: ""; position: absolute; inset: -20% -10% auto auto; width: 70%; height: 140%;
+  background: radial-gradient(ellipse at 85% 10%, rgba(232,161,58,.26), rgba(232,161,58,0) 60%); pointer-events: none; }
+.bar { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; }
+.logo { font-family: var(--mono); font-weight: 500; letter-spacing: .04em; text-decoration: none; }
+.logo b { color: var(--amber); font-weight: 500; }
+.bar nav { display: flex; gap: 22px; font-size: .92rem; }
+.bar nav a { text-decoration: none; color: var(--screen-muted); }
+.bar nav a:hover, .bar nav a[aria-current] { color: var(--screen-ink); }
+
+h1 { font-family: var(--display); font-weight: 400; line-height: .95; letter-spacing: -.015em; margin: 0; }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 4.6vw, 3rem); line-height: 1.02; margin: 0 0 16px; }
+.eyebrow { font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-ink); margin: 0 0 10px; }
+.screen .eyebrow { color: var(--amber); }
+section.block { padding: 72px 0 0; }
+
+.dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; flex: none; border: 1.5px solid var(--yes); }
+.dot.yes { background: var(--yes); }
+.dot.part { background: linear-gradient(90deg, var(--yes) 50%, transparent 50%); }
+.dot.wait { border-style: dashed; border-color: var(--muted); opacity: .6; }
+
+footer { margin-top: 96px; border-top: 1px solid var(--line); padding: 24px 0 56px; font-size: .85rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+footer a { color: inherit; }

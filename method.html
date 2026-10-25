@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method — antefilm</title>
+<meta name="description" content="The five questions, the eight periods and the evidence rules behind antefilm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=9bf3c9e6">
+<style>
+/* Method: purpose, the five questions, the periods, the evidence rules, the answer table, references. */
+.hero { position: relative; padding: 64px 0 56px; }
+.hero h1 { font-size: clamp(2.8rem, 7vw, 5rem); }
+.hero p { color: var(--screen-muted); font-size: 1.12rem; max-width: 56ch; margin: 22px 0 0; }
+p.body { max-width: 64ch; }
+.qs { display: grid; gap: 0; margin-top: 8px; }
+.q { display: grid; gap: 4px 24px; padding: 20px 0; border-top: 1px solid var(--line); }
+@media (min-width: 720px) { .q { grid-template-columns: 56px 180px 1fr; align-items: baseline; } }
+.q .n { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+.q h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 1.6rem; line-height: 1; }
+.q p { margin: 0; }
+.q p small { display: block; color: var(--muted); margin-top: 4px; font-size: .92rem; }
+.periods { counter-reset: p; display: grid; gap: 0; }
+.per { display: grid; gap: 4px 24px; padding: 18px 0; border-top: 1px solid var(--line); }
+@media (min-width: 720px) { .per { grid-template-columns: 240px 1fr; } }
+.per h3 { margin: 0; font-size: 1.05rem; }
+.per h3 span { display: block; font-family: var(--mono); font-size: .78rem; color: var(--muted); font-weight: 400; margin-top: 2px; }
+.per p { margin: 0; color: var(--muted); }
+.per .tag { font-family: var(--mono); font-size: .72rem; color: var(--amber-ink); margin-left: 6px; }
+.levels { display: grid; gap: 14px; }
+@media (min-width: 720px) { .levels { grid-template-columns: repeat(2, 1fr); } }
+.lv { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.lv h4 { margin: 0 0 6px; }
+.lv p { margin: 0; color: var(--muted); font-size: .95rem; }
+.lv.off { background: transparent; border-style: dashed; }
+.board { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) repeat(5, 64px); align-items: center; padding: 12px 18px; border-top: 1px solid var(--line); }
+.row:first-child { border-top: 0; }
+.row.head { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.row .c { justify-self: center; text-align: center; }
+.row b { font-weight: 600; }
+.row small { color: var(--muted); margin-left: 6px; }
+@media (max-width: 560px) { .row { grid-template-columns: minmax(0, 1fr) repeat(5, 30px); padding: 12px 10px; } .row.head .c { font-size: .58rem; writing-mode: vertical-rl; transform: rotate(180deg); height: 72px; } }
+.key { display: flex; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: .8rem; color: var(--muted); margin: 0 0 14px; }
+.key span { display: inline-flex; gap: 7px; align-items: center; }
+ol.refs { padding-left: 18px; color: var(--muted); font-size: .95rem; }
+ol.refs li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="wrap">
+    <header class="bar">
+      <a class="logo" href="/">ante<b>film</b></a>
+      <nav aria-label="Main"><a href="./#films">Films</a><a href="method.html" aria-current="page">Method</a></nav>
+    </header>
+    <section class="hero">
+      <p class="eyebrow">Method</p>
+      <h1>How the films are read</h1>
+      <p>Zionism, like every national movement, tells a story about the future: who it is for, what it costs and why it is deserved. This site reads that story in influential films and series, one at a time, with the same questions. It studies a political ideology on screen; it does not speak about Jews or Judaism as such.</p>
+    </section>
+  </div>
+</div>
+
+<main class="wrap narrow">
+  <section class="block">
+    <p class="eyebrow">Five questions</p>
+    <h2>Asked of every film</h2>
+    <p class="body">A promised future holds while it seems both desirable and within reach. The questions follow that idea, from the promise itself to what props it up. Each is answered yes, partly or no, and each answer is tied to a scene.</p>
+    <div class="qs">
+      <div class="q"><span class="n">01</span><h3>Promise</h3><p>Does the film show a future in which the conflict is over?</p></div>
+      <div class="q"><span class="n">02</span><h3>Whose future</h3><p>Is there a place in that future for Palestinians?</p></div>
+      <div class="q"><span class="n">03</span><h3>Belief</h3><p>Do the characters believe the promise can be kept?</p></div>
+      <div class="q"><span class="n">04</span><h3>Cost</h3><p>Is the price of the promise shown, and who pays it?</p></div>
+      <div class="q"><span class="n">05</span><h3>Past</h3><p>Does the film ground its future in the Holocaust?<small>The question is about how memory is used in the film, never about the memory itself.</small></p></div>
+    </div>
+    <p class="body" style="color:var(--muted)">Every film is also given one of four future types: integrative, restoration, retrotopian or anomic. The questions will be revised as the files accumulate.</p>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">Eight periods</p>
+    <h2>A working periodisation</h2>
+    <p class="body">The first four periods follow Ella Shohat's history of Israeli cinema; they are genres as much as eras and overlap in time. The last four extend it past the 1980s and take in Hollywood and streaming productions.</p>
+    <div class="periods">
+      <div class="per"><h3>Heroic-nationalist<span>1950s–1970s · Shohat</span></h3><p>Founding struggle, pioneer heroes, the state as the end of the story.</p></div>
+      <div class="per"><h3>Bourekas<span>1960s–1970s · Shohat</span></h3><p>Ethnic comedies of Ashkenazi and Mizrahi tension: whose future inside the nation.</p></div>
+      <div class="per"><h3>Personal cinema<span>1960s–1970s · Shohat</span></h3><p>Auteur films that step back from the national story to the individual.</p></div>
+      <div class="per"><h3>The Palestinian wave<span>1980s · Shohat</span></h3><p>Israeli films that put the Arab–Israeli encounter at the centre.</p></div>
+      <div class="per"><h3>Oslo and the promise tested<span>1990s · added</span></h3><p>The peace process as a promise: does the screen take it up?</p></div>
+      <div class="per"><h3>Shooting and crying<span>2000s · added</span></h3><p>After the second intifada: conscience, trauma and the soldier's guilt.</p></div>
+      <div class="per"><h3>Security export and the platforms<span>2010s–2023 · added</span></h3><p>Israeli formats and intelligence stories travel to global streaming.</p></div>
+      <div class="per"><h3>After 7 October<span>2023– · added</span></h3><p>An open period, followed as it happens.</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">Before the film</p>
+    <h2>Evidence rules</h2>
+    <p class="body">Each film also gets a file on who funded, helped or sold it. Every item carries one level, and the same rules apply to every state and company.</p>
+    <div class="levels">
+      <div class="lv"><h4>Institutional</h4><p>A state body is documented as funding, approving, supplying or banning the work.</p></div>
+      <div class="lv"><h4>Personal tie</h4><p>A creator has a documented link to an army, agency or government, by their own account or public record.</p></div>
+      <div class="lv"><h4>Portrayal only</h4><p>The work depicts a state or agency; no involvement in the production is claimed.</p></div>
+      <div class="lv off"><h4>Not published as fact</h4><p>Claims without a document or a first-hand account. Where a claim is widely repeated, the file records the dispute, not the claim.</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">The answers</p>
+    <h2>Every file at a glance</h2>
+    <div class="key"><span><i class="dot yes"></i>Yes</span><span><i class="dot part"></i>Partly</span><span><i class="dot"></i>No</span></div>
+    <div class="board" role="table" aria-label="Answers by film">
+      <div class="row head" role="row"><span>Film</span><span class="c">Promise</span><span class="c">Whose</span><span class="c">Belief</span><span class="c">Cost</span><span class="c">Past</span></div>
+      <div class="row" role="row"><span><a href="films/exodus.html"><b>Exodus</b></a><small>1960</small></span><span class="c"><i class="dot yes" aria-label="yes"></i></span><span class="c"><i class="dot part" aria-label="partly"></i></span><span class="c"><i class="dot yes" aria-label="yes"></i></span><span class="c"><i class="dot part" aria-label="partly"></i></span><span class="c"><i class="dot yes" aria-label="yes"></i></span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">References</p>
+    <ol class="refs">
+      <li>Ella Shohat, <i>Israeli Cinema: East/West and the Politics of Representation</i> (University of Texas Press, 1987; 2nd ed. I.B. Tauris, 2010).</li>
+      <li>Jens Beckert, "Where Have All the Futures Gone? Towards a Sociological Explanation for the Crisis of Promissory Legitimacy", <i>European Journal of Social Theory</i> (2026).</li>
+      <li>Amy Kaplan, <i>Our American Israel: The Story of an Entangled Alliance</i> (Harvard University Press, 2018).</li>
+    </ol>
+  </section>
+
+  <footer><span>antefilm · İbrahim Efe</span><a href="./">Home</a></footer>
+</main>
+</body>
+</html>
