@@ -89,34 +89,19 @@
   <footer><span>antefilm · İbrahim Efe</span><a href="method.html">Method and sources</a></footer>
 </main>
 
+<script src="assets/films.js?v=0f784383"></script>
 <script>
-/* Each film: [year, title, file slug or null, answers or null]. Answers: Promise, Whose future, Belief, Cost, Past (y / p / n). */
-const PERIODS = [
-  { name: 'Heroic-nationalist', years: '1950s–1970s', films: [
-    [1955, 'Hill 24 Doesn’t Answer'], [1960, 'They Were Ten'],
-    [1960, 'Exodus', 'exodus', 'ypypy', 'A homeland promised over a grave.'],
-    [1966, 'Cast a Giant Shadow'], [1976, 'Victory at Entebbe'], [1977, 'Raid on Entebbe'], [1977, 'Operation Thunderbolt'] ] },
-  { name: 'Bourekas', years: '1960s–1970s', films: [[1964, 'Sallah Shabati']] },
-  { name: 'Personal cinema', years: '1960s–1970s', films: [[1967, 'Three Days and a Child']] },
-  { name: 'The Palestinian wave', years: '1980s', films: [[1982, 'Hamsin'], [1984, 'Beyond the Walls'], [1986, 'Avanti Popolo']] },
-  { name: 'Oslo and the promise tested', years: '1990s', films: [] },
-  { name: 'Shooting and crying', years: '2000s', films: [[2000, 'Kippur'], [2004, 'Walk on Water'], [2005, 'Munich'], [2007, 'Beaufort'], [2008, 'Waltz with Bashir'], [2009, 'Lebanon']] },
-  { name: 'Security export and the platforms', years: '2010s–2023', films: [[2011, 'Homeland'], [2015, 'Fauda'], [2017, 'Foxtrot'], [2018, 'Operation Finale'], [2018, '7 Days in Entebbe'], [2019, 'The Red Sea Diving Resort'], [2019, 'The Spy'], [2020, 'Tehran'], [2023, 'Golda']] },
-  { name: 'After 7 October', years: '2023–', films: [] }
-];
-
 document.getElementById('periods').innerHTML = PERIODS.map(p => `
   <div class="period">
     <div class="period-head"><h3>${p.name}</h3><span>${p.years}</span></div>
-    ${p.films.length ? `<div class="tiles">${p.films.map(f => f[2]
-      ? `<a class="tile open" href="films/${f[2]}.html"><div><span class="y">${f[0]}</span><b>${f[1]}</b></div><small>${f[4]}</small></a>`
-      : `<div class="tile"><div><span class="y">${f[0]}</span><b>${f[1]}</b></div><small>Coming</small></div>`).join('')}</div>`
-      : `<p class="empty">Films for this period are being chosen.</p>`}
+    <div class="tiles">${p.films.map(f => f.slug
+      ? `<a class="tile open" href="films/${f.slug}.html"><div><span class="y">${f.y}</span><b>${f.t}</b></div><small>${f.line}</small></a>`
+      : `<div class="tile"><div><span class="y">${f.y}</span><b>${f.t}</b></div><small>Coming</small></div>`).join('')}</div>
   </div>`).join('');
 
 /* running finding: share of files whose future rests on the Holocaust (Past = yes) */
-const done = PERIODS.flatMap(p => p.films).filter(f => f[3]);
-const past = done.filter(f => f[3][4] === 'y').length;
+const done = PERIODS.flatMap(p => p.films).filter(f => f.a);
+const past = done.filter(f => f.a[4] === 'y').length;
 document.getElementById('count').textContent = done.length;
 document.getElementById('finding').innerHTML = `In <b>${past} of ${done.length}</b> ${done.length === 1 ? 'film' : 'films'}, the future rests on the Holocaust.`;
 </script>

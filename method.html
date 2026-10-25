@@ -46,6 +46,20 @@ p.body { max-width: 64ch; }
 .key span { display: inline-flex; gap: 7px; align-items: center; }
 ol.refs { padding-left: 18px; color: var(--muted); font-size: .95rem; }
 ol.refs li { margin-bottom: 6px; }
+.log-p { margin-top: 26px; }
+.log-p h3 { margin: 0 0 6px; font-size: 1.02rem; }
+.log-p h3 span { font-family: var(--mono); font-weight: 400; font-size: .78rem; color: var(--muted); margin-left: 8px; }
+.log-r { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 2px 10px; padding: 10px 0; border-top: 1px solid var(--line); }
+@media (min-width: 720px) { .log-r { grid-template-columns: 22px 230px minmax(0, 1fr); } }
+.log-r .dot { margin-top: 5px; }
+.log-r b { font-weight: 600; }
+.log-r small { color: var(--muted); font-family: var(--mono); font-size: .75rem; margin-left: 6px; }
+.log-r .w { color: var(--muted); font-size: .95rem; grid-column: 2 / -1; }
+@media (min-width: 720px) { .log-r .w { grid-column: auto; } }
+.log-r .w a { color: var(--amber-ink); }
+ul.out { padding-left: 18px; color: var(--muted); font-size: .95rem; }
+ul.out li { margin-bottom: 6px; }
+ul.out b { color: var(--ink); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -94,6 +108,26 @@ ol.refs li { margin-bottom: 6px; }
     </div>
   </section>
 
+  <section class="block" id="selection">
+    <p class="eyebrow">Choosing the films</p>
+    <h2>Four rules</h2>
+    <div class="qs">
+      <div class="q"><span class="n">01</span><h3>Scope</h3><p>The Zionist national project is at the centre of the film: founding, immigration, security, or relations with Arabs and Palestinians. Israeli and foreign productions both count. Films made from a Palestinian point of view are set aside for now.</p></div>
+      <div class="q"><span class="n">02</span><h3>Reach</h3><p>At least one of: a high box-office place in its year; a major award or festival selection (Oscar, Cannes, Berlin, Venice, Israel's Ophir); global distribution on a major platform; or a place as a period example in the scholarship.</p></div>
+      <div class="q"><span class="n">03</span><h3>Balance</h3><p>At least three films for every period, and no period with more than half of the list.</p></div>
+      <div class="q"><span class="n">04</span><h3>A record of choices</h3><p>The list is fixed before the films are watched. Every film carries the reason it was chosen, and every candidate left out is listed below with the reason.</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="eyebrow">Selection log</p>
+    <h2>Why each film is here</h2>
+    <div class="key"><span><i class="dot yes"></i>Criterion confirmed in a source</span><span><i class="dot wait"></i>To be confirmed</span></div>
+    <div id="log"></div>
+    <h3 style="font-family:var(--display);font-weight:400;font-size:1.6rem;margin:40px 0 8px">Considered and left out</h3>
+    <ul class="out" id="out"></ul>
+  </section>
+
   <section class="block">
     <p class="eyebrow">Before the film</p>
     <h2>Evidence rules</h2>
@@ -110,10 +144,7 @@ ol.refs li { margin-bottom: 6px; }
     <p class="eyebrow">The answers</p>
     <h2>Every file at a glance</h2>
     <div class="key"><span><i class="dot yes"></i>Yes</span><span><i class="dot part"></i>Partly</span><span><i class="dot"></i>No</span></div>
-    <div class="board" role="table" aria-label="Answers by film">
-      <div class="row head" role="row"><span>Film</span><span class="c">Promise</span><span class="c">Whose</span><span class="c">Belief</span><span class="c">Cost</span><span class="c">Past</span></div>
-      <div class="row" role="row"><span><a href="films/exodus.html"><b>Exodus</b></a><small>1960</small></span><span class="c"><i class="dot yes" aria-label="yes"></i></span><span class="c"><i class="dot part" aria-label="partly"></i></span><span class="c"><i class="dot yes" aria-label="yes"></i></span><span class="c"><i class="dot part" aria-label="partly"></i></span><span class="c"><i class="dot yes" aria-label="yes"></i></span></div>
-    </div>
+    <div class="board" role="table" aria-label="Answers by film" id="board"></div>
   </section>
 
   <section class="block">
@@ -127,5 +158,18 @@ ol.refs li { margin-bottom: 6px; }
 
   <footer><span>antefilm · İbrahim Efe</span><a href="./">Home</a></footer>
 </main>
+<script src="assets/films.js?v=0f784383"></script>
+<script>
+const all = PERIODS.flatMap(p => p.films);
+document.getElementById('log').innerHTML = PERIODS.map(p => `
+  <div class="log-p"><h3>${p.name}<span>${p.years} · ${p.films.length} films</span></h3>
+  ${p.films.map(f => `<div class="log-r"><i class="dot ${f.ok ? 'yes' : 'wait'}" aria-label="${f.ok ? 'confirmed' : 'to be confirmed'}"></i><span><b>${f.t}</b><small>${f.y}</small></span><span class="w">${f.why}${f.src ? ` · <a href="${SOURCES[f.src].url}">${SOURCES[f.src].label}</a>` : ' · to be confirmed'}</span></div>`).join('')}</div>`).join('');
+document.getElementById('out').innerHTML = EXCLUDED.map(e => `<li><b>${e.t}</b>: ${e.why}</li>`).join('');
+const D = { y: ['yes', 'yes'], p: ['part', 'partly'], n: ['', 'no'] };
+const files = all.filter(f => f.a);
+document.getElementById('board').innerHTML =
+  `<div class="row head" role="row"><span>Film</span><span class="c">Promise</span><span class="c">Whose</span><span class="c">Belief</span><span class="c">Cost</span><span class="c">Past</span></div>` +
+  files.map(f => `<div class="row" role="row"><span><a href="films/${f.slug}.html"><b>${f.t}</b></a><small>${f.y}</small></span>${[...f.a].map(k => `<span class="c"><i class="dot ${D[k][0]}" aria-label="${D[k][1]}"></i></span>`).join('')}</div>`).join('');
+</script>
 </body>
 </html>
